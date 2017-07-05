@@ -1,0 +1,21 @@
+.mdi-lg {
+  font-size: 1.2em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+ }
+ 
+.mdi-xl {
+ 	font-size: 1.5em;
+	line-height: 0.75em;
+	vertical-align: -15%;
+ }
+
+.mdi-2x { font-size: 2em; }
+.mdi-3x { font-size: 3em; }
+.mdi-4x { font-size: 4em; }
+.mdi-5x { font-size: 5em; }
+
+.mdi-fw {
+  width: 1.28571429em;
+  text-align: center;
+}

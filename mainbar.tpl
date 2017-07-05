@@ -1,63 +1,54 @@
-{if $loginstatus === true AND $site !==login}
-<td style="width:100px" >
-<table style="width:100px" class="border" cellpadding="1" cellspacing="0">
-	<tr><td style="width:100px" class="maincat">{$lang['server']}</td></tr>
-	{if $hoststatus === true}
-		<tr><td class="green1"><a class="mainbarlink" href="index.php?site=server">{$lang['serverlist']}</a></td></tr>
-	{/if}
-	{if !isset($sid) AND $hoststatus === true}
-		<tr><td class="green2"><a class="mainbarlink" href="index.php?site=createserver">{$lang['createserver']}</a></td></tr>
-		<tr><td class="green1"><a class="mainbarlink" href="index.php?site=servertraffic">{$lang['instancetraffic']}</a></td></tr>
-		<tr><td class="green2"><a class="mainbarlink" href="index.php?site=instanceedit">{$lang['instanceedit']}</a></td></tr>
-		<tr><td class="green1"><a class="mainbarlink" href="index.php?site=logview">{$lang['logview']}</a></td></tr>
-		<tr><td class="green2"><a class="mainbarlink" href="index.php?site=iserverbackup">{$lang['instancebackup']}</a></td></tr>
-		{/if}
-	{if isset($sid)}
-		<tr><td class="green2"><a class="mainbarlink" href="index.php?site=serverview&amp;sid={$sid}">{$lang['serverview']}</a></td></tr>
-		<tr><td class="green1"><a class="mainbarlink" href="index.php?site=servertraffic&amp;sid={$sid}">{$lang['virtualtraffic']}</a></td></tr>
-		<tr><td class="green2"><a class="mainbarlink" href="index.php?site=serveredit&amp;sid={$sid}">{$lang['serveredit']}</a></td></tr>
-		<tr><td class="green1"><a class="mainbarlink" href="index.php?site=temppw&amp;sid={$sid}">{$lang['temppw']}</a></td></tr>
-		<tr><td class="green2"><a class="mainbarlink" href="index.php?site=fileupload&amp;sid={$sid}">{$lang['iconupload']}</a></td></tr>
-		<tr><td class="green1"><a class="mainbarlink" href="index.php?site=logview&amp;sid={$sid}">{$lang['logview']}</a></td></tr>
-		<tr><td class="green2"><a class="mainbarlink" href="index.php?site=filelist&amp;sid={$sid}">{$lang['filelist']}</a></td></tr>				
-		<tr><td class="green1"><a class="mainbarlink" href="javascript:oeffnefenster('site/interactive.php?sid={$sid}&amp;action=action');">{$lang['massaction']}</a></td></tr>
-		<tr><td class="maincat">{$lang['channel']}</td></tr>
-		<tr><td class="green1"><a class="mainbarlink" href="index.php?site=channel&amp;sid={$sid}">{$lang['channellist']}</a></td></tr>
-		<tr><td class="green2"><a class="mainbarlink" href="index.php?site=createchannel&amp;sid={$sid}">{$lang['createchannel']}</a></td></tr>
-		{if isset($cid)}
-			<tr><td class="green1"><a class="mainbarlink" href="index.php?site=channelview&amp;sid={$sid}&amp;cid={$cid}">{$lang['channelview']}</a></td></tr>
-			<tr><td class="green2"><a class="mainbarlink" href="index.php?site=channeledit&amp;sid={$sid}&amp;cid={$cid}">{$lang['channeledit']}</a></td></tr>
-		{/if}
-		<tr><td class="maincat">{$lang['clients']}</td></tr>
-		<tr><td class="green1"><a class="mainbarlink" href="index.php?site=counter&amp;sid={$sid}">{$lang['clientcounter']}</a></td></tr>
-		<tr><td class="green2"><a class="mainbarlink" href="index.php?site=clients&amp;sid={$sid}">{$lang['clientlist']}</a></td></tr>
-		<tr><td class="green1"><a class="mainbarlink" href="index.php?site=complainlist&amp;sid={$sid}">{$lang['complainlist']}</a></td></tr>
-		<tr><td class="green2"><a class="mainbarlink" href="index.php?site=chanclienteditperm&amp;sid={$sid}">{$lang['chanclientperms']}</a></td></tr>
-		<tr><td class="green2"><a class="mainbarlink" href="index.php?site=clientcleaner&amp;sid={$sid}">{$lang['clientcleaner']}</a></td></tr>		
-		
-		<tr><td class="maincat">{$lang['bans']}</td></tr>
-		<tr><td class="green1"><a class="mainbarlink" href="index.php?site=banlist&amp;sid={$sid}">{$lang['banlist']}</a></td></tr>
-		<tr><td class="green2"><a class="mainbarlink" href="index.php?site=banadd&amp;sid={$sid}">{$lang['addban']}</a></td></tr>
-		
-		<tr><td class="maincat">{$lang['groups']}</td></tr>
-		<tr><td class="green1"><a class="mainbarlink" href="index.php?site=sgroups&amp;sid={$sid}">{$lang['servergroups']}</a></td></tr>
-		<tr><td class="green2"><a class="mainbarlink" href="index.php?site=sgroupadd&amp;sid={$sid}">{$lang['addservergroup']}</a></td></tr>
-		<tr><td class="green1"><a class="mainbarlink" href="index.php?site=cgroups&amp;sid={$sid}">{$lang['channelgroups']}</a></td></tr>
-		<tr><td class="green2"><a class="mainbarlink" href="index.php?site=cgroupadd&amp;sid={$sid}">{$lang['addchannelgroup']}</a></td></tr>
-		
-		<tr><td class="maincat">{$lang['token']}</td></tr>
-		<tr><td class="green1"><a class="mainbarlink" href="index.php?site=token&amp;sid={$sid}">{$lang['token']}</a></td></tr>
-		
-		<tr><td class="maincat">{$lang['backup']}</td></tr>
-		<tr><td class="green2"><a class="mainbarlink" href="index.php?site=backup&amp;sid={$sid}">{$lang['chanbackups']}</a></td></tr>
-		<tr><td class="green1"><a class="mainbarlink" href="index.php?site=serverbackup&amp;sid={$sid}">{$lang['serverbackups']}</a></td></tr>
-		<tr><td class="green2"><a class="mainbarlink" href="index.php?site=permexport&amp;sid={$sid}">{$lang['permexport']}</a></td></tr>
-		<tr><td class="green1"><a class="mainbarlink" href="index.php?site=clientsexport&amp;sid={$sid}">{$lang['clientsexport']}</a></td></tr>
-		<tr><td class="green2"><a class="mainbarlink" href="index.php?site=bansexport&amp;sid={$sid}">{$lang['bansexport']}</a></td></tr>
-		
-		<tr><td class="maincat">{$lang['console']}</td></tr>
-		<tr><td class="green1"><a class="mainbarlink" href="index.php?site=console&amp;sid={$sid}">{$lang['queryconsole']}</a></td></tr>
-		{/if}
-</table>
-</td>
+{if $loginstatus === true}
+	<li class="header">{$lang['server']}</li>
+{if $hoststatus === true}
+	<li><a href="index.php?site=server"><i class="mdi mdi-server mdi-lg"></i> <span>{$lang['serverlist']}</span></a></li>
+{/if}
+{if !isset($sid) AND $hoststatus === true}
+	<li><a href="index.php?site=createserver"><i class="mdi mdi-server-plus mdi-lg"></i> {$lang['createserver']}</a></li>
+	<li><a href="index.php?site=servertraffic"><i class="mdi mdi-server-network mdi-lg"></i> {$lang['instancetraffic']}</a></li>
+	<li><a href="index.php?site=instanceedit"><i class="mdi mdi-pencil mdi-lg"></i> {$lang['instanceedit']}</a></li>
+	<li><a href="index.php?site=logview"><i class="mdi mdi-format-list-bulleted mdi-lg"></i> {$lang['logview']}</a></li>
+	<li><a href="index.php?site=iserverbackup"><i class="mdi mdi-backup-restore mdi-lg"></i> {$lang['instancebackup']}</a></li>
+{/if}
+{if isset($sid)}
+	<li><a href="index.php?site=serverview&amp;sid={$sid}"><i class="mdi mdi-information-variant mdi-lg"></i> {$lang['serverview']}</a></li>
+	<li><a href="index.php?site=servertraffic&amp;sid={$sid}"><i class="mdi mdi-server-network mdi-lg"></i> {$lang['virtualtraffic']}</a></li>
+	<li><a href="index.php?site=serveredit&amp;sid={$sid}"><i class="mdi mdi-server-edit mdi-lg"></i> {$lang['serveredit']}</a></li>
+	<li><a href="index.php?site=temppw&amp;sid={$sid}"><i class="mdi mdi-lock mdi-lg"></i> {$lang['temppw']}</a></li>
+	<li><a href="index.php?site=fileupload&amp;sid={$sid}"><i class="mdi mdi-upload mdi-lg"></i>{$lang['iconupload']}</a></li>
+	<li><a href="index.php?site=logview&amp;sid={$sid}"><i class="mdi mdi-format-list-bulleted mdi-lg"></i>{$lang['logview']}</a></li>
+	<li><a href="index.php?site=filelist&amp;sid={$sid}"><i class="mdi mdi-file-multiple mdi-lg"></i> {$lang['filelist']}</a></li>
+	<li><a href="javascript:oeffnefenster('site/interactive.php?sid={$sid}&amp;action=action');"><i class="mdi mdi-checkbox-multiple-marked mdi-lg"></i> {$lang['massaction']}</a></li>
+	<li class="header">{$lang['channel']}</li>
+	<li><a href="index.php?site=channel&amp;sid={$sid}"><i class="mdi mdi-comment-multiple-outline mdi-lg"></i> {$lang['channellist']}</a></li>
+	<li><a href="index.php?site=createchannel&amp;sid={$sid}"><i class="mdi mdi-comment-plus-outline mdi-lg"></i> {$lang['createchannel']}</a></li>
+{if isset($cid)}
+	<li><a href="index.php?site=channelview&amp;sid={$sid}&amp;cid={$cid}"><i class="mdi mdi-comment-alert-outline mdi-lg"></i> {$lang['channelview']}</a></li>
+	<li><a href="index.php?site=channeledit&amp;sid={$sid}&amp;cid={$cid}"><i class="mdi mdi-comment-processing-outline mdi-lg"></i> {$lang['channeledit']}</a></li>
+{/if}
+	<li class="header">{$lang['clients']}</li>
+	<li><a href="index.php?site=counter&amp;sid={$sid}"><i class="mdi mdi-account-multiple-star mdi-lg"></i> {$lang['clientcounter']}</a></li>
+	<li><a href="index.php?site=clients&amp;sid={$sid}"><i class="mdi mdi-account-multiple mdi-lg"></i> {$lang['clientlist']}</a></li>
+	<li><a href="index.php?site=complainlist&amp;sid={$sid}"><i class="mdi mdi-account-alert mdi-lg"></i> {$lang['complainlist']}</a></li>
+	<li><a href="index.php?site=chanclienteditperm&amp;sid={$sid}"><i class="mdi mdi-comment-account-outline mdi-lg"></i> {$lang['chanclientperms']}</a></li>
+	<li><a href="index.php?site=clientcleaner&amp;sid={$sid}"><i class="mdi mdi-account-multiple-minus mdi-lg"></i> {$lang['clientcleaner']}</a></li>
+	<li class="header">{$lang['bans']}</li>
+	<li><a href="index.php?site=banlist&amp;sid={$sid}"><i class="mdi mdi-account-multiple-off mdi-lg"></i> {$lang['banlist']}</a></li>
+	<li><a href="index.php?site=banadd&amp;sid={$sid}"><i class="mdi mdi-account-off-plus mdi-lg"></i> {$lang['addban']}</a></li>
+	<li class="header">{$lang['groups']}</li>
+	<li><a href="index.php?site=sgroups&amp;sid={$sid}"><i class="mdi mdi-server-account mdi-lg"></i> {$lang['servergroups']}</a></li>
+	<li><a href="index.php?site=sgroupadd&amp;sid={$sid}"><i class="mdi mdi-server-account-plus mdi-lg"></i> {$lang['addservergroup']}</a></li>
+	<li><a href="index.php?site=cgroups&amp;sid={$sid}"><i class="mdi mdi-comment-multiple-account-outline mdi-lg"></i>{$lang['channelgroups']}</a></li>
+	<li><a href="index.php?site=cgroupadd&amp;sid={$sid}"><i class="mdi mdi-comment-multiple-account-plus-outline mdi-lg"></i> {$lang['addchannelgroup']}</a></li>
+	<li class="header">{$lang['token']}</li>
+	<li><a href="index.php?site=token&amp;sid={$sid}"><i class="mdi mdi-key-variant mdi-lg"></i> {$lang['token']}</a></li>
+	<li class="header">{$lang['backup']}</li>
+	<li><a href="index.php?site=backup&amp;sid={$sid}"><i class="mdi mdi-comment-download-outline mdi-lg"></i> {$lang['chanbackups']}</a></li>
+	<li><a href="index.php?site=serverbackup&amp;sid={$sid}"><i class="mdi mdi-server-download  mdi-lg"></i> {$lang['serverbackups']}</a></li>
+	<li><a href="index.php?site=permexport&amp;sid={$sid}"><i class="mdi mdi-format-section-download mdi-lg"></i> {$lang['permexport']}</a></li>
+	<li><a href="index.php?site=clientsexport&amp;sid={$sid}"><i class="mdi mdi-account-multiple-download mdi-lg"></i> {$lang['clientsexport']}</a></li>
+	<li><a href="index.php?site=bansexport&amp;sid={$sid}"><i class="mdi mdi-account-off-download mdi-lg"></i> {$lang['bansexport']}</a></li>
+	<li class="header">{$lang['console']}</li>
+	<li><a href="index.php?site=console&amp;sid={$sid}"><i class="mdi mdi-console-line mdi-lg"></i> {$lang['queryconsole']}</a></li>
+{/if}
 {/if}

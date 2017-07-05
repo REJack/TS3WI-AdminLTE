@@ -1,7 +1,5 @@
 {if isset($newwiversion)}
-<tr>
-	<td class="green1 warning center" colspan="2">
+<div class="alert alert-warning">
 	{$newwiversion}
-	</td>
-<tr>
+</div>
 {/if}

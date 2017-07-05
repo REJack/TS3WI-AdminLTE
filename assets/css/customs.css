@@ -1,0 +1,16 @@
+.main-footer strong br {
+	display: none;
+}
+
+a.server_info{
+	color: #000;
+}
+a.start_server{
+	color: #093;
+}
+a.stop_server{
+	color: red;
+}
+a.remove_server{
+	color: #c30;
+}
