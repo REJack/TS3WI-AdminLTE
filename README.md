@@ -14,6 +14,9 @@ AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
    - change yes/no radios to BS-Switch
 
 ### Done
+ - fileupload.tpl
+ - temppw.tpl
+ - serverview.tpl
  - serveredit.tpl (major style changed)
  - createserver.tpl (major style changed)
  - iserverbackup.tpl
@@ -29,9 +32,13 @@ AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
  - index.tpl
 
 ### NEXT
- - serverview.tpl
+ - filelist.tpl
+ - channel.tpl
+ - createchannel.tpl
+ - channeledit.tpl
 
 ### ToDo (not changed from orgin template)
+ - MassAction (change to Modal)
  - backup.tpl
  - banadd.tpl
  - banlist.tpl
@@ -41,8 +48,6 @@ AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
  - cgroupeditperm.tpl
  - cgroups.tpl
  - chanclienteditperm.tpl
- - channel.tpl
- - channeledit.tpl
  - channeleditperm.tpl
  - channelview.tpl
  - cleditperm.tpl
@@ -52,10 +57,7 @@ AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
  - complainlist.tpl
  - console.tpl
  - counter.tpl
- - createchannel.tpl
  - filebrowser.tpl
- - filelist.tpl
- - fileupload.tpl
  - hostlogin.tpl
  - interactive.tpl
  - permexport.tpl
@@ -64,5 +66,4 @@ AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
  - sgroupclients.tpl
  - sgroupeditperm.tpl
  - sgroups.tpl
- - temppw.tpl
  - token.tpl

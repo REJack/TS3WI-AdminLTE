@@ -1,69 +1,84 @@
-{if !empty($error) OR !empty($noerror)}
-<table>
+<section class="content container-fluid">
+	<div class="col-lg-10 col-lg-offset-1">
 	{if !empty($error)}
-	<tr>
-		<td class="error">{$error}</td>
-	</tr>
+		<div class="alert alert-danger">{$error}</div>
 	{/if}
 	{if !empty($noerror)}
-	<tr>
-		<td class="noerror">{$noerror}</td>
-	</tr>
+		<div class="alert alert-info">{$noerror}</div>
 	{/if}
-</table>
-{/if}
-<form enctype="multipart/form-data" action="index.php?site=fileupload&amp;sid={$sid}" method="post">
-<table class="border" cellpadding="1" cellspacing="0">
-	<tr>
-		<td class="thead" colspan="2">{$lang['iconupload']}</td>
-	</tr>
-	<tr>
-		<td class="green1" colspan="2">{$lang['iconupinfo']}</td>
-	</tr>
-	<tr>
-		<td class="green2" colspan="2">
-		<input type="hidden" name="max_file_size" value="81920" />
-		{$lang['iconupload']}: <input name="thefile" type="file" />
-		
-		</td>
-	</tr>
-	<tr>
-		<td class="green1"  style="width:75px">{$lang['option']}</td>
-		<td class="green1"  align="left"><input type="submit" name="upload" value="{$lang['iconupload']}" /></td>
-	</tr>
-</table>
-</form>
-<br />
-<form method="post" action="index.php?site=fileupload&amp;sid={$sid}">
-<table class="border" cellpadding="1" cellspacing="0">
-	<tr>
-		<td class="thead">{$lang['icon']}</td>
-		<td class="thead">{$lang['name']}</td>
-		<td class="thead">{$lang['id']}</td>
-		<td class="thead">Ma&szlig;e</td>
-		<td class="thead">Type</td>
-		<td class="thead">{$lang['delete']} {$lang['selectall']}<input type="checkbox" name="checkall" value="0" onclick="check(2)" /></td>
-	</tr>
-	{foreach key=key item=value from=$allicons}
-	<tr>
-		<td><img style="border:0"src="site/showfile.php?name=icon_{$value.name}&amp;port={$port}" alt="" /></td>
-		<td>{$key}</td>
-		<td>{$value.id}</td>
-		<td>{$value.info.0}*{$value.info.1}</td>
-		<td>
-		{if $value.info.2 == 1}
-		.gif
-		{elseif $value.info.2 == 2}
-		.jpg
-		{elseif $value.info.2 == 3}
-		.png
-		{/if}
-		</td>
-		<td><input type="checkbox" id="list{$value['virtualserver_id']}" name="delicons[]" value="/{$key}" /></td>
-	</tr>
-	{/foreach}
-	<tr>
-		<td colspan="6"><input type="submit" name="delaction" value="{$lang['delete']}" /></td>
-	</tr>
-</table>
-</form>
+	{if $newserverversion !== true AND !empty($serverinfo['virtualserver_version'])}
+		<div class="alert alert-warning">{$lang['serverupdateav']}{$newserverversion}</div>
+	{/if}
+	</div>
+	<div class="col-lg-4 col-lg-offset-4">
+		<form enctype="multipart/form-data" action="index.php?site=fileupload&amp;sid={$sid}" method="post">
+			<div class="box box-primary">
+				<div class="box-header">
+					<h3 class="box-title">{$lang['iconupload']}</h3>
+				</div>
+				<div class="box-body">	
+					<p >{$lang['iconupinfo']}</p>
+					<table class="table" cellpadding="0" cellspacing="0">
+						<tr>
+							<td colspan="2">
+								<input type="hidden" name="max_file_size" value="81920" />
+								<input name="thefile" type="file" class="" />
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="box-footer">
+					<input type="submit" class="btn btn-flat btn-block btn-success" name="upload" value="{$lang['iconupload']}" />
+				</div>
+			</div>
+		</form>		
+	</div>
+	<div class="col-lg-10 col-lg-offset-1">
+		<div class="box box-info">
+			<div class="box-body">
+				<form method="post" action="index.php?site=fileupload&amp;sid={$sid}">
+					<table class="table" cellpadding="0" cellspacing="0">
+						<tr>
+							<th>{$lang['icon']}</th>
+							<th>{$lang['name']}</th>
+							<th>{$lang['id']}</th>
+							<th>Ma&szlig;e</th>
+							<th>Type</th>
+							<th width="30%" class="text-right">
+								<div class="checkbox-inline">
+									<input type="checkbox" name="checkall" value="0" onclick="check(2)" />
+									<b>{$lang['delete']} {$lang['selectall']}</b>
+								</div>
+							</th>
+						</tr>
+						{foreach key=key item=value from=$allicons}
+						<tr>
+							<td><img style="border:0" src="site/showfile.php?name=icon_{$value.name}&amp;port={$port}" alt="" /></td>
+							<td>{$key}</td>
+							<td>{$value.id}</td>
+							<td>{$value.info.0}*{$value.info.1}</td>
+							<td>
+							{if $value.info.2 == 1}
+								.gif
+							{elseif $value.info.2 == 2}
+								.jpg
+							{elseif $value.info.2 == 3}
+								.png
+							{/if}
+							</td>
+							<td class="text-right">
+								<div class="checkbox">
+									<input type="checkbox" id="list{$value['virtualserver_id']}" name="delicons[]" value="/{$key}" />
+								</div>
+							</td>
+						</tr>
+						{/foreach}
+						<tr>
+							<td colspan="6"><input type="submit" name="delaction" class="btn btn-danger btn-flat pull-right" value="{$lang['delete']}" /></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
