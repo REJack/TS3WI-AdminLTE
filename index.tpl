@@ -230,7 +230,7 @@
 		//]]>
 		</script>
     </head>
-    <body class="hold-transition skin-blue sidebar-mini">
+    <body class="hold-transition skin-blue sidebar-mini fixed">
         <div class="wrapper">
           <header class="main-header">
             <a href="/" class="logo">
@@ -293,9 +293,13 @@
 
           <footer class="main-footer">
             <div class="pull-right hidden-xs">
-		       <a href='http://www.psychoscripts.de/donate.php'><img alt="" border="0" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donate_SM.gif" width="86" height="21"></a>
+            	<b>Template Version:</b> 1.0.0-rc0 &nbsp;&nbsp;
             </div>
-            <strong>{$footer} &mdash; This interface contains images from <a href='http://www.teamspeak.com'>www.teamspeak.com</a>.</strong>
+            <strong>
+            	{$footer}. 
+            	&nbsp;<a href='http://www.psychoscripts.de/donate.php'><img alt="" border="0" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donate_SM.gif" width="86" height="20" style="margin-top: -3px;"></a> 
+            	&nbsp;&ndash; <em>This interface contains images from <a href='http://www.teamspeak.com'>www.teamspeak.com</a>.</em>
+            </strong>
           </footer>
         </div>
     </body>
