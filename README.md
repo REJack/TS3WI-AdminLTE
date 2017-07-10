@@ -13,6 +13,24 @@ AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
    - change host message radios to a select
    - change yes/no radios to BS-Switch
 
+### Done
+ - serveredit.tpl (major style changed)
+ - createserver.tpl (major style changed)
+ - iserverbackup.tpl
+ - instanceedit.tpl
+ - logview.tpl
+ - servertraffic.tpl
+ - server.tpl
+ - error.tpl
+ - showupdate.tpl
+ - head.tpl
+ - mainbar.tpl
+ - login.tpl
+ - index.tpl
+
+### NEXT
+ - serverview.tpl
+
 ### ToDo (not changed from orgin template)
  - backup.tpl
  - banadd.tpl
@@ -48,21 +66,3 @@ AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
  - sgroups.tpl
  - temppw.tpl
  - token.tpl
-
-### NEXT
- - serverview.tpl
-
-### Done
- - serveredit.tpl (major style changed)
- - createserver.tpl (major style changed)
- - iserverbackup.tpl
- - instanceedit.tpl
- - logview.tpl
- - servertraffic.tpl
- - server.tpl
- - error.tpl
- - showupdate.tpl
- - head.tpl
- - mainbar.tpl
- - login.tpl
- - index.tpl
