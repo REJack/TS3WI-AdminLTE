@@ -1,5 +1,5 @@
 <section class="content container-fluid">
-	<div class="col-lg-8 col-lg-offset-2">
+	<div class="col-lg-10 col-lg-offset-1">
 		<div class="box box-info">
 			<div class="box-header">
 				<h3 class="box-title">{$lang['pagenotfound']}</h3>

@@ -4,7 +4,7 @@
     </h1>
 </section>
 <section class="content container-fluid">
-	<div class="col-lg-8 col-lg-offset-2" style="position: relative;">
+	<div class="col-lg-10 col-lg-offset-1" style="position: relative;">
 	{if !empty($error)}
 		<div class="alert alert-danger">{$error}</div>
 	{/if}
@@ -30,7 +30,7 @@
 								</td>
 							</tr>
 					</table>
-					<input class="btn btn-flat btn-block btn-success" type="submit" name="editpw" value="Senden" />
+					<input class="btn btn-flat btn-success pull-right" type="submit" name="editpw" value="{$lang['send']}" />
 				</form>
 			</div>
 		</div>

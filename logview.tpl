@@ -1,6 +1,6 @@
 {if isset($permoverview['b_virtualserver_log_view']) AND empty($permoverview['b_virtualserver_log_view'])}
 <section class="content container-fluid">
-	<div class="col-lg-8 col-lg-offset-2">
+	<div class="col-lg-10 col-lg-offset-1">
 		<div class="box box-danger">
 			<div class="box-header"><h3 class="box-title">{$lang['error']}</h3></div>
 			<div class="box-body">
@@ -58,7 +58,7 @@ $(function () {
 });
 </script>
 <section class="content container-fluid">
-	<div class="col-lg-8 col-lg-offset-2">
+	<div class="col-lg-10 col-lg-offset-1">
 		<div class="box box-primary">
 			<div class="box-body" id="main_content">
 				<input type="hidden" id="begin_pos" name="begin_pos" value="{$begin_pos}"/>

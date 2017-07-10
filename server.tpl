@@ -1,5 +1,5 @@
 <section class="content container-fluid">
-	<div class="col-lg-8 col-lg-offset-2">
+	<div class="col-lg-10 col-lg-offset-1">
 		{if $hoststatus === false AND $serverhost === true}
 		<div class="alert alert-warning">{$lang['nohoster']}</div>
 		{else}
@@ -9,7 +9,7 @@
 		{if !empty($noerror)}
 		<div class="alert alert-info">{$noerror}</div>
 		{/if}
-		<div class="box box-info">
+		<div class="box box-border-teal">
 			<div class="box-header">
 				<h3 class="box-title">{$lang['msgtoall']}</h3>
 			</div>
@@ -17,7 +17,7 @@
 				<div class="form-group">
 					<textarea type="text" class="form-control" name="msgtoall" id="msgtoall"></textarea>
 				</div>
-				<input class="btn btn-flat btn-success pull-right" type="submit" name="sendmsg" value="{$lang['send']}" />
+				<input class="btn btn-flat bg-teal pull-right" type="submit" name="sendmsg" value="{$lang['send']}" />
 			</form>
 		</div>
 
@@ -58,7 +58,7 @@
 						<th colspan="7">
 						</th>
 						<th class="text-center">
-							<input class="btn btn-flat btn-primary" type="submit" name="massaction" value="{$lang['action']}" onclick="return confirm(confirmAction())" />
+							<input class="btn btn-flat btn-primary btn-block" type="submit" name="massaction" value="{$lang['action']}" onclick="return confirm(confirmAction())" />
 						</th>
 					</tr>
 				{foreach key=key item=value from=$serverlist}
@@ -92,7 +92,7 @@
 						<th colspan="7">
 						</th>
 						<th class="text-center">
-							<input class="btn btn-flat btn-primary" type="submit" name="massaction" value="{$lang['action']}" onclick="return confirm(confirmAction())" />
+							<input class="btn btn-flat btn-primary btn-block" type="submit" name="massaction" value="{$lang['action']}" onclick="return confirm(confirmAction())" />
 						</th>
 					</tr>
 					{else}

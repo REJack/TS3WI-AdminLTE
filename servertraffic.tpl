@@ -3,7 +3,7 @@
 	<meta http-equiv="refresh" content="3; URL=index.php?site=servertraffic" />
 	{/if}
 <section class="content container-fluid">
-	<div class="col-lg-8 col-lg-offset-2">
+	<div class="col-lg-10 col-lg-offset-1">
 		<div class="box box-primary">
 			<div class="box-header">
 				<h3 class="box-title">{$lang['instancetraffic']}</h3>
@@ -57,7 +57,7 @@
 {else}
 {if isset($permoverview['b_virtualserver_info_view']) AND empty($permoverview['b_virtualserver_info_view'])}
 <section class="content container-fluid">
-	<div class="col-lg-8 col-lg-offset-2">
+	<div class="col-lg-10 col-lg-offset-1">
 		<div class="box box-danger">
 			<div class="box-header"><h3 class="box-title">{$lang['error']}</h3></div>
 			<div class="box-body">
@@ -71,7 +71,7 @@
 	<meta http-equiv="refresh" content="3; URL=index.php?site=servertraffic&amp;sid={$sid}" />
 {/if}
 <section class="content container-fluid">
-	<div class="col-lg-8 col-lg-offset-2">
+	<div class="col-lg-10 col-lg-offset-1">
 		<div class="box box-primary">
 			<div class="box-header">
 				<h3 class="box-title">{$lang['virtualtraffic']}</h3>

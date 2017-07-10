@@ -1,5 +1,5 @@
 <section class="content container-fluid">
-	<div class="col-lg-8 col-lg-offset-2">
+	<div class="col-lg-10 col-lg-offset-1">
 	{if $hoststatus === false AND $serverhost === true}
 		<div class="alert alert-warning">{$lang['nohoster']}</div>
 	{else}

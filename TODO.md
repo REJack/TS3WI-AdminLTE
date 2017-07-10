@@ -1,4 +1,13 @@
 # TODO
+ - Stuff for later
+   - serveredit.tpl (done)
+     - change host message radios to a select
+     - change yes/no radios to BS-Switch
+     - change set icon to modal instead of a popup
+   - createserver.tpl (done)
+     - change host message radios to a select
+     - change yes/no radios to BS-Switch
+
  - backup.tpl
  - banadd.tpl
  - banlist.tpl
