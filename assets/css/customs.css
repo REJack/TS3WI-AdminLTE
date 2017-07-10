@@ -1,3 +1,54 @@
+.box.box-border-gray {
+  border-top-color: #d2d6de;
+}
+.box.box-border-gray-light {
+  border-top-color: #f7f7f7
+}
+.box.box-border-black {
+  border-top-color: #111111;
+}
+.box.box-border-red {
+  border-top-color: #dd4b39;
+}
+.box.box-border-yellow {
+  border-top-color: #f39c12;
+}
+.box.box-border-aqua {
+  border-top-color: #00c0ef;
+}
+.box.box-border-blue {
+  border-top-color: #0073b7;
+}
+.box.box-border-light-blue {
+  border-top-color: #3c8dbc;
+}
+.box.box-border-green {
+  border-top-color: #00a65a;
+}
+.box.box-border-navy {
+  border-top-color: #001f3f;
+}
+.box.box-border-teal {
+  border-top-color: #39cccc;
+}
+.box.box-border-olive {
+  border-top-color: #3d9970;
+}
+.box.box-border-lime {
+  border-top-color: #01ff70;
+}
+.box.box-border-orange {
+  border-top-color: #ff851b;
+}
+.box.box-border-fuchsia {
+  border-top-color: #f012be;
+}
+.box.box-border-purple {
+  border-top-color: #605ca8;
+}
+.box.box-border-maroon {
+  border-top-color: #d81b60;
+}
 .main-footer strong br {
 	display: none;
 }

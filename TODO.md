@@ -36,14 +36,14 @@
 
 
 # NEXT
- - serveredit.tpl
-   - change host message radios to a select
-   - change yes/no radios to BS-Switch
  - serverview.tpl
 
-
 # Done
- - createserver.tpl
+ - serveredit.tpl (done)
+   - change host message radios to a select
+   - change yes/no radios to BS-Switch
+   - change set icon to modal instead of a popup
+ - createserver.tpl (done)
    - change host message radios to a select
    - change yes/no radios to BS-Switch
  - iserverbackup.tpl
