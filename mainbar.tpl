@@ -21,11 +21,13 @@
 	<li><a href="javascript:oeffnefenster('site/interactive.php?sid={$sid}&amp;action=action');"><i class="mdi mdi-checkbox-multiple-marked mdi-lg"></i> {$lang['massaction']}</a></li>
 	<li class="header">{$lang['channel']}</li>
 	<li><a href="index.php?site=channel&amp;sid={$sid}"><i class="mdi mdi-comment-multiple-outline mdi-lg"></i> {$lang['channellist']}</a></li>
-	<li><a href="index.php?site=createchannel&amp;sid={$sid}"><i class="mdi mdi-comment-plus-outline mdi-lg"></i> {$lang['createchannel']}</a></li>
 {if isset($cid)}
 	<li><a href="index.php?site=channelview&amp;sid={$sid}&amp;cid={$cid}"><i class="mdi mdi-comment-alert-outline mdi-lg"></i> {$lang['channelview']}</a></li>
+{/if}
+{if isset($cid)}
 	<li><a href="index.php?site=channeledit&amp;sid={$sid}&amp;cid={$cid}"><i class="mdi mdi-comment-processing-outline mdi-lg"></i> {$lang['channeledit']}</a></li>
 {/if}
+	<li><a href="index.php?site=createchannel&amp;sid={$sid}"><i class="mdi mdi-comment-plus-outline mdi-lg"></i> {$lang['createchannel']}</a></li>
 	<li class="header">{$lang['clients']}</li>
 	<li><a href="index.php?site=counter&amp;sid={$sid}"><i class="mdi mdi-account-multiple-star mdi-lg"></i> {$lang['clientcounter']}</a></li>
 	<li><a href="index.php?site=clients&amp;sid={$sid}"><i class="mdi mdi-account-multiple mdi-lg"></i> {$lang['clientlist']}</a></li>

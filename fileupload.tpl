@@ -28,7 +28,7 @@
 					</table>
 				</div>
 				<div class="box-footer">
-					<input type="submit" class="btn btn-flat btn-block btn-success" name="upload" value="{$lang['iconupload']}" />
+					<input type="submit" class="btn btn-flat btn-block btn-primary" name="upload" value="{$lang['iconupload']}" />
 				</div>
 			</div>
 		</form>		
@@ -37,14 +37,14 @@
 		<div class="box box-info">
 			<div class="box-body">
 				<form method="post" action="index.php?site=fileupload&amp;sid={$sid}">
-					<table class="table" cellpadding="0" cellspacing="0">
+					<table class="table table-striped" cellpadding="0" cellspacing="0">
 						<tr>
-							<th>{$lang['icon']}</th>
-							<th>{$lang['name']}</th>
-							<th>{$lang['id']}</th>
-							<th>Ma&szlig;e</th>
-							<th>Type</th>
-							<th width="30%" class="text-right">
+							<th class="text-center">{$lang['icon']}</th>
+							<th class="text-center">{$lang['name']}</th>
+							<th class="text-center">{$lang['id']}</th>
+							<th class="text-center">Ma&szlig;e</th>
+							<th class="text-center">Type</th>
+							<th width="30%" class="text-center">
 								<div class="checkbox-inline">
 									<input type="checkbox" name="checkall" value="0" onclick="check(2)" />
 									<b>{$lang['delete']} {$lang['selectall']}</b>
@@ -53,11 +53,11 @@
 						</tr>
 						{foreach key=key item=value from=$allicons}
 						<tr>
-							<td><img style="border:0" src="site/showfile.php?name=icon_{$value.name}&amp;port={$port}" alt="" /></td>
-							<td>{$key}</td>
-							<td>{$value.id}</td>
-							<td>{$value.info.0}*{$value.info.1}</td>
-							<td>
+							<td class="text-center"><img style="border:0" src="site/showfile.php?name=icon_{$value.name}&amp;port={$port}" alt="" /></td>
+							<td class="text-center">{$key}</td>
+							<td class="text-center">{$value.id}</td>
+							<td class="text-center">{$value.info.0}*{$value.info.1}</td>
+							<td class="text-center">
 							{if $value.info.2 == 1}
 								.gif
 							{elseif $value.info.2 == 2}
@@ -66,10 +66,8 @@
 								.png
 							{/if}
 							</td>
-							<td class="text-right">
-								<div class="checkbox">
-									<input type="checkbox" id="list{$value['virtualserver_id']}" name="delicons[]" value="/{$key}" />
-								</div>
+							<td class="text-center">
+								<input type="checkbox" id="list{$value['virtualserver_id']}" name="delicons[]" value="/{$key}" />
 							</td>
 						</tr>
 						{/foreach}

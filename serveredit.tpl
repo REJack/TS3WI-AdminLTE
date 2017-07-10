@@ -30,7 +30,7 @@
 								</td>
 							</tr>
 					</table>
-					<input class="btn btn-flat btn-success pull-right" type="submit" name="editpw" value="{$lang['send']}" />
+					<input class="btn btn-flat bg-lime pull-right" type="submit" name="editpw" value="{$lang['send']}" />
 				</form>
 			</div>
 		</div>
