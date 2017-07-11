@@ -14,6 +14,8 @@ AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
    - change yes/no radios to BS-Switch
 
 ### Done
+ - channeleditperm.tpl
+ - createchannel.tpl
  - channeledit.tpl
  - channelview.tpl
  - channel.tpl
@@ -36,8 +38,6 @@ AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
  - index.tpl
 
 ### NEXT
- - channeleditperm.tpl
- - createchannel.tpl
  - console.tpl
  - counter.tpl
 

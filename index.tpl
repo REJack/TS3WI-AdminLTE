@@ -68,63 +68,60 @@
 		<script type="text/javascript">
 		//<![CDATA[
 			function Klappen(Id) 
-				{
-				
+			{
 				if(Id == 0)
-					{
+				{
 					var i = 1;
-					var jetec_Minus="gfx/images/minus.png", jetec_Plus="gfx/images/plus.png";
-					
-					if(document.getElementById('Pic0').name == 'plus')
+					var openAll;
+					if($('#Pic0').hasClass('mdi-plus-box'))
+					{
+						$('#Pic0').removeClass('mdi-plus-box').addClass('mdi-minus-box');
+						openAll = 1;
+					}
+					else
+					{
+						$('#Pic0').removeClass('mdi-minus-box').addClass('mdi-plus-box');
+						openAll = 0;
+					}
+
+					while(i < 100)
+					{
+						if($('#Pic'+i) != null)
 						{
-						document.getElementById('Pic0').src = jetec_Minus;
-						document.getElementById('Pic0').name = 'minus';
-						var openAll = 1;
+							var KlappText = $('#Lay'+i);
+							var KlappBild = $('#Pic'+i);
+							if (openAll == 1) 
+							{
+								KlappText.fadeIn(1000);
+								KlappBild.removeClass('mdi-plus-box').addClass('mdi-minus-box');
+							} 
+							else 
+							{
+								KlappText.fadeOut(1000);
+								KlappBild.removeClass('mdi-minus-box').addClass('mdi-plus-box');
+							}
+							i++;
 						}
 						else
 						{
-						document.getElementById('Pic0').src = jetec_Plus;
-						document.getElementById('Pic0').name = 'plus';
-						var openAll = 0;
-						}
-					while(i<100)
-						{
-						if(document.getElementById('Pic'+i)!=null)
-							{
-							var KlappText = document.getElementById('Lay'+i);
-							var KlappBild = document.getElementById('Pic'+i);
-							if (openAll == 1) 
-								{
-								KlappText.style.display = 'block';
-								KlappBild.src = jetec_Minus;
-								} 
-								else 
-								{
-								KlappText.style.display = 'none';
-								KlappBild.src = jetec_Plus;
-								}
-							i++;
-							}
-							else
-							{
 							break;
-							}
 						}
 					}
-				var KlappText = document.getElementById('Lay'+Id);
-				var KlappBild = document.getElementById('Pic'+Id);
-				var jetec_Minus="gfx/images/minus.png", jetec_Plus="gfx/images/plus.png";
-				if (KlappText.style.display == 'none') 
+				} else {
+					var KlappTextID = $('#Lay'+Id);
+					var KlappBildID = $('#Pic'+Id);
+					if (KlappTextID.is(':visible')) 
 					{
-					KlappText.style.display = 'block';
-					KlappBild.src = jetec_Minus;
+						KlappTextID.fadeOut(1000);
+						KlappBildID.removeClass('mdi-minus-box').addClass('mdi-plus-box');
 					} 
 					else 
 					{
-					KlappText.style.display = 'none';
-					KlappBild.src = jetec_Plus;
+						KlappTextID.fadeIn(1000);
+						KlappBildID.removeClass('mdi-plus-box').addClass('mdi-minus-box');
 					}
 				}
+			}
 				
 			function oeffnefenster (url) {
 			 fenster = window.open(url, "fenster1", "width=350,height=150,status=no,scrollbars=yes,resizable=no");
