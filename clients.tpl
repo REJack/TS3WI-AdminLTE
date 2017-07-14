@@ -8,8 +8,8 @@
 	  		],
 	      	"buttons": [
 	        		{
-	    	        text: "{$lang['showmoreentrys']} <span id='more_entry_act_page'>1</span>/<span id='more_entry_max_pages'>{$pages}</span>",
-		            className: "btn btn-primary btn-flat",
+	    	        text: "{$lang['showmoreentrys']} <span id='more_entry_act_page'>1</span>/<span id='more_entry_max_pages'>{if $pages|string_format:'%d' == 0}1{else}{$pages}{/if}</span>",
+		            className: "btn btn-primary btn-flat {if $pages|string_format:'%d' == 0}disabled{/if}",
 	              	action: function ( e, dt, node, config ) {
 	                	add_entries();
 	              	}
