@@ -27,7 +27,7 @@
 						<th class="text-center" width="10%">{$lang['id']}</th>
 						<th class="text-center" width="10%">{$lang['pid']}</th>
 						<th class="text-center">{$lang['name']}</th>
-						<th class="text-center" width="40%">{$lang['option']}</th>
+						<th class="text-center" width="40%"></th>
 					</tr>
 					{if !empty($channellist)}
 						{foreach key=key item=value from=$channellist}

@@ -22,8 +22,8 @@
 						<th>{$lang['online']}</th>
 						<td>
 							<div class="progress progress-xs">
-		                        <div class="progress-bar progress-bar-aqua" style="width: {$perc_month}%" role="progressbar" aria-valuenow="{$perc_month}" aria-valuemin="0" aria-valuemax="100">
-		                        	<span class="sr-only">{$perc_month}%</span>
+		                        <div class="progress-bar progress-bar-aqua" style="width: {$perc_online}%" role="progressbar" aria-valuenow="{$perc_online}" aria-valuemin="0" aria-valuemax="100">
+		                        	<span class="sr-only">{$perc_online}%</span>
 		                        </div>
 		                    </div>
 							{$count_online} {$lang['clients']} | {$perc_online}%
@@ -33,8 +33,8 @@
 						<th>{$lang['today']}</th>
 						<td>
 							<div class="progress progress-xs">
-		                        <div class="progress-bar progress-bar-aqua" style="width: {$perc_month}%" role="progressbar" aria-valuenow="{$perc_month}" aria-valuemin="0" aria-valuemax="100">
-		                        	<span class="sr-only">{$perc_month}%</span>
+		                        <div class="progress-bar progress-bar-aqua" style="width: {$perc_today}%" role="progressbar" aria-valuenow="{$perc_today}" aria-valuemin="0" aria-valuemax="100">
+		                        	<span class="sr-only">{$perc_today}%</span>
 		                        </div>
 		                    </div>
 							{$count_today} {$lang['clients']} | {$perc_today}%
@@ -44,8 +44,8 @@
 						<th>{$lang['thisweek']}</th>
 						<td>
 							<div class="progress progress-xs">
-		                        <div class="progress-bar progress-bar-aqua" style="width: {$perc_month}%" role="progressbar" aria-valuenow="{$perc_month}" aria-valuemin="0" aria-valuemax="100">
-		                        	<span class="sr-only">{$perc_month}%</span>
+		                        <div class="progress-bar progress-bar-aqua" style="width: {$perc_week}%" role="progressbar" aria-valuenow="{$perc_week}" aria-valuemin="0" aria-valuemax="100">
+		                        	<span class="sr-only">{$perc_week}%</span>
 		                        </div>
 		                    </div>
 							{$count_week} {$lang['clients']} | {$perc_week}%

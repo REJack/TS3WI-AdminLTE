@@ -1,63 +1,70 @@
-{if isset($permoverview['b_client_complain_list']) AND empty($permoverview['b_client_complain_list'])}
-	<table class="border" style="width:50%;" cellpadding="1" cellspacing="0">
-		<tr>
-			<td class="thead">{$lang['error']}</td>
-		</tr>
-		<tr>
-			<td class="green1">{$lang['nopermissions']}</td>
-		</tr>
-	</table>
-{else}
-<table style="width:892px" class="border" cellpadding="1" cellspacing="0">
-	<tr>
-		<td class="thead" colspan="4">{$lang['complainlist']}</td>
-	</tr>
-	<tr>
-		<td class="thead" style="width:223px">{$lang['targetnick']}</td>
-		<td class="thead" style="width:223px">{$lang['sourcenick']}</td>
-		<td class="thead" style="width:223px">{$lang['reason']}</td>
-		<td class="thead" style="width:223px">{$lang['option']}</td>
-	</tr>
-		{assign var=i value="1"}
-		{foreach key=key item=value from=$newcomplainlist}
-			{foreach key=key2 item=value2 from=$value}
+<section class="content container-fluid">
+	<div class="col-lg-10 col-lg-offset-1">
+	{if isset($permoverview['b_client_complain_list']) AND empty($permoverview['b_client_complain_list'])}
+		<div class="box box-danger">
+			<div class="box-header"><h3 class="box-title">{$lang['error']}</h3></div>
+			<div class="box-body">
+				<p class="lead">{$lang['nopermissions']}</p>
+			</div>
+		</div>
+	{else}
+		<div class="box box-primary">
+			<div class="box-header">
+				<h3 class="box-title">{$lang['complainlist']}</h3>
+			</div>
+			<table class="table" cellpadding="1" cellspacing="0">
 				<tr>
-					<td class="green1"><a href="javascript:Klappen('{$i}')"><img src="gfx/images/plus.png" id="Pic{$i}" border="0" alt="aus/ein-klappen" /></a> {$key2}</td>
-					<td class="green1">&nbsp;</td>
-					<td class="green1">{sprintf($lang['countcomplain'], count($value2))}</td>
-					<td class="green1">
-					{if !isset($permoverview['b_client_complain_delete']) OR $permoverview['b_client_complain_delete'] == 1}
-						<form method="post" action="index.php?site=complainlist&amp;sid={$sid}">
-						<input type="hidden" name="tcldbid" value="{$key}" />
-						<input class="delete" type="submit" name="delall" value="" title="{$lang['delall']}" />
-						</form>
-					{/if}
-					</td>
+					<th style="width: 20%">{$lang['targetnick']}</th>
+					<th style="width: 20%">{$lang['sourcenick']}</th>
+					<th>{$lang['reason']}</th>
+					<th style="width: 15%"></th>
 				</tr>
-				<tr>
-					<td class="green1" colspan="4">
-				<table id="Lay{$i}" style="width:892px;display:none;border-collapse:collapse;border:0" cellpadding="0" cellspacing="0">
-					{foreach key=key3 item=value3 from=$value2}
+					{assign var=i value="1"}
+					{foreach key=key item=value from=$newcomplainlist}
+						{foreach key=key2 item=value2 from=$value}
 							<tr>
-								<td class="green1" style="width:223px;border:0">&nbsp;{date("d.m.Y - H:i", $value3['timestamp'])}</td>
-								<td class="green1" style="width:223px;border:0">{secure($value3['fname'])}</td>
-								<td class="green1" style="width:223px;border:0">{secure($value3['message'])}</td>
-								<td class="green1" style="width:223px;border:0">
+								<td>
+									<a href="javascript:Klappen('{$i}')"><i class="mdi mdi-plus-box mdi-lg" title="aus/ein-klappen" id="Pic{$i}"></i></a>
+									{$key2}
+								</td>
+								<td> &nbsp;</td>
+								<td> {sprintf($lang['countcomplain'], count($value2))}</td>
+								<td> 
 								{if !isset($permoverview['b_client_complain_delete']) OR $permoverview['b_client_complain_delete'] == 1}
 									<form method="post" action="index.php?site=complainlist&amp;sid={$sid}">
-									<input type="hidden" name="tcldbid" value="{$key}" />
-									<input type="hidden" name="fcldbid" value="{$key3}" />
-									<input class="delete" type="submit" name="delete" value="" title="{$lang['delete']}" />
+										<input type="hidden" name="tcldbid" value="{$key}" />
+										<input class="btn btn-flat btn-block btn-danger" type="submit" name="delall" value="{$lang['delall']}" />
 									</form>
 								{/if}
 								</td>
 							</tr>
+							<tr>
+								<td colspan="4" class="no-padding">
+									<table class="table" id="Lay{$i}" style="display:none;" cellpadding="0" cellspacing="0">
+									{foreach key=key3 item=value3 from=$value2}
+										<tr>
+											<td style="width: 20%;">&nbsp;{date("d.m.Y - H:i", $value3['timestamp'])}</td>
+											<td style="width: 20%;">{secure($value3['fname'])}</td>
+											<td >{secure($value3['message'])}</td>
+											<td style="width: 15%;">
+											{if !isset($permoverview['b_client_complain_delete']) OR $permoverview['b_client_complain_delete'] == 1}
+												<form method="post" action="index.php?site=complainlist&amp;sid={$sid}">
+													<input type="hidden" name="tcldbid" value="{$key}" />
+													<input type="hidden" name="fcldbid" value="{$key3}" />
+													<input class="btn btn-flat btn-block btn-danger" type="submit" name="delete" value="{$lang['delete']}" />
+												</form>
+											{/if}
+											</td>
+										</tr>
+									{/foreach}
+									</table>
+								</td>
+							</tr>
+						{/foreach}
+						{assign var=i value="`$i+1`"}
 					{/foreach}
-				</table>
-					</td>
-				</tr>
-			{/foreach}
-			{assign var=i value="`$i+1`"}
-		{/foreach}
-</table>
-{/if}
+			</table>
+		</div>
+	{/if}
+	</div>
+</section>

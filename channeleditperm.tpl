@@ -1,3 +1,16 @@
+<script>
+	function resizeTable() {
+		var ContentWidth = $('#TableContent').width();
+		$('#TableHeader').width(ContentWidth);
+	}
+
+	$(function () {
+		resizeTable();
+	});
+	$(window).on('resize', function(){
+		resizeTable();
+	});
+</script>
 <section class="content container-fluid">
 	<div class="col-lg-10 col-lg-offset-1">
 	{if !empty($error)}
@@ -33,15 +46,17 @@
 					<h3 class="box-title">({$cid}) {$channelname} {$lang['permissionlist']}</h3>
 				</div>
 				<div class="box-body">
-					<table class="table table-striped" cellpadding="0" cellspacing="0">
+					<table data-spy="affix" data-offset-top="240" style="top: 50px; z-index: 1000;"  class="table bg-white" id="TableHeader" cellpadding="0" cellspacing="0">
 						<tr>
-							<th style="width:5%">&nbsp;<a href="javascript:Klappen(0)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" alt="aus/ein-klappen" id="Pic0"></i></a></th>
-							<th style="width:10%">{$lang['permid']}</th>
+							<th style="width: 5%;">&nbsp;<a href="javascript:Klappen(0)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" alt="aus/ein-klappen" id="Pic0"></i></a></th>
+							<th style="width: 10%;" class="text-center">{$lang['permid']}</th>
 							<th>{$lang['permname']}</th>
-							<th style="width:10%" class="text-center">{$lang['value']}</th>
-							<th style="width:10%" class="text-center">{$lang['options']}</th>
-							<th style="width:10%" class="text-center"><label>{$lang['grant']} <input type="text" class="form-control " name="granttoall" size="3" maxlength="3" /></label></th>
+							<th style="width: 5%;" class="text-center">{$lang['value']}</th>
+							<th style="width: 10%;" class="text-center">{$lang['options']}</th>
+							<th style="width: 10%;" class="text-center"><label>{$lang['grant']} <input type="text" class="form-control " name="granttoall" size="3" maxlength="3" /></label></th>
 						</tr>
+					</table>
+					<table class="table table-striped" id="TableContent" cellpadding="0" cellspacing="0">
 						{foreach key=key item=value from=$allperms}
 							{if $key == 0}
 								<tr >
@@ -400,7 +415,7 @@
 								{if $showmyperms == 0 AND empty($searchperms) OR $showmyperms == 1 AND $value2['available'] == 1 OR $showmyperms == 0 AND $value2['permname']|strpos:{$searchperms} !== false OR $showmyperms == 0 AND $value2['permid']|strpos:{$searchperms} !== false}
 								<tr>
 									<td style="width:5%">&nbsp;</td>
-									<td style="width:10%">{$value2['permid']}</td>
+									<td style="width:10%" class="text-center">{$value2['permid']}</td>
 									<td >{$value2['permname']} <br />({$value2['permdesc']})</td>
 									<td style="width:10%; vertical-align: middle;" class="text-center">
 									{if $value2['permname']|substr:0:2 != 'i_'}
@@ -442,7 +457,7 @@
 						</td>
 						</tr>
 						<tr>
-							<td colspan="6" class="center">
+							<td colspan="6">
 								<input type="hidden" name="showmyperms" value="{$showmyperms}" />
 								<input type="submit" class="btn btn-block btn-flat btn-primary" name="editall" value="{$lang['edit']}" />
 							</td>

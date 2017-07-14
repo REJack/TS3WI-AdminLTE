@@ -14,6 +14,9 @@ AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
    - change yes/no radios to BS-Switch
 
 ### Done
+ - chanclienteditperm.tpl
+ - complainlist.tpl
+ - cleditperm.tpl
  - clients.tpl
  - counter.tpl
  - channeleditperm.tpl
@@ -40,9 +43,6 @@ AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
  - index.tpl
 
 ### NEXT
- - cleditperm.tpl
- - complainlist.tpl
- - chanclienteditperm.tpl
  - clientcleaner.tpl
  - banlist.tpl
  - banadd.tpl
