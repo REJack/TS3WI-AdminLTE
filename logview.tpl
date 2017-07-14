@@ -11,51 +11,63 @@
 </section>
 {else}
 <script>
-$(function () {
-    var table = $("#traffic").DataTable({
-      "order": [[ 0, "desc" ]],
-      "buttons": [
-          {
-              text: "{$lang['showmoreentrys']}",
-              className: "btn btn-primary btn-flat",
-              action: function ( e, dt, node, config ) {
-                add_entries();
-              }
-          }
-      ]
-    });
+	$(function () {
+	    var table = $("#traffic").DataTable({
+	      "order": [[ 0, "desc" ]],
+	      "processing": true,
+	      "buttons": [
+	          {
+	              text: "{$lang['showmoreentrys']}",
+	              className: "btn btn-primary btn-flat btn_showmoreentrys",
+	              action: function ( e, dt, node, config ) {
+	                add_entries();
+	              }
+	          }
+	      ]
+	    });
 
-    table.buttons().container().appendTo( '#traffic_wrapper .col-sm-6:eq(0)' );
-    
-    $('.pagination').addClass('pagination-flat');
+	    table.buttons().container().appendTo( '#traffic_wrapper .col-sm-6:eq(0)' );
+	    
+	    $('.pagination').addClass('pagination-flat');
+	    $('#traffic_processing').css('top', '5%');
 
-    function add_entries(){
-      var begin_pos = $('#begin_pos').val();
-      var url = "index.php?site=logview&sid={$sid}";
-{literal}
-      $.post(url, {begin_pos: begin_pos }, function(data){
-{/literal}
-		data = $.parseHTML(data);
-		$.each(data, function(key, itm){
-			if (itm.className == 'wrapper') {
-				var base = itm.children[2].children[0].children[0].children[0];
-				$('#begin_pos').val(base.children[0].value);
-				$.each(base.children[1].children[1].children, function(uKey, uItm){
-					table.row.add( [
-						uItm.children[0].innerText,
-						uItm.children[1].innerText,
-						uItm.children[2].innerText,
-						uItm.children[3].innerText,
-						uItm.children[4].innerText
-					] ).draw( false );
-
+	    function add_entries(){
+	      	var begin_pos = $('#begin_pos').val();
+	      	var url = "index.php?site=logview&sid={$sid}";
+			table.processing(true);   
+			$('.btn_showmoreentrys').addClass('disabled');
+		
+		{literal}
+	      	$.post(url, {begin_pos: begin_pos }, function(data){
+		{/literal}
+				data = $.parseHTML(data);
+				$.each(data, function(key, itm){
+					if (itm.className == 'wrapper') {
+						var base = itm.children[2].children[0].children[0].children[0];
+						console.log(base.children[0].children[0].value);
+						console.log(base);
+						var elems = base.children[0].children[1].children[1].children;
+						var lastID = elems.length - 1;
+						$.each(elems, function(uKey, uItm){
+							console.log(uKey);
+							table.row.add( [
+								uItm.children[0].innerText,
+								uItm.children[1].innerText,
+								uItm.children[2].innerText,
+								uItm.children[3].innerText,
+								uItm.children[4].innerText
+							] ).draw( false );
+					        if (uKey == lastID) {
+								$('#begin_pos').val(base.children[0].children[0].value);
+								$('.btn_showmoreentrys').removeClass('disabled');
+					           	table.processing( false );
+					        }
+						});
+					}
 				});
-			}
-		});
-		begin_pos = "{$begin_pos}";
-      });
-    }
-});
+	      	});
+	    }
+	});
 </script>
 <section class="content container-fluid">
 	<div class="col-lg-10 col-lg-offset-1">

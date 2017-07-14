@@ -1,48 +1,70 @@
-{if isset($permoverview['b_virtualserver_client_list']) AND empty($permoverview['b_virtualserver_client_list']) OR isset($permoverview['b_virtualserver_client_dblist']) AND empty($permoverview['b_virtualserver_client_dblist'])}
-	<table class="border" style="width:50%;" cellpadding="1" cellspacing="0">
-		<tr>
-			<td class="thead">{$lang['error']}</td>
-		</tr>
-		<tr>
-			<td class="green1">{$lang['nopermissions']}</td>
-		</tr>
-	</table>
-{else}
-<table style="width:50%" align="center" class="border" cellpadding="1" cellspacing="0">
-	<tr>
-		<td style="width:100%" class="thead" colspan="2">{$lang['clientcounter']}</td>
-	</tr>
-	<tr>
-		<td style="width:50%" class="green1">{$lang['total']}</td>
-		<td style="width:50%" class="green1">{$totalclients} {$lang['clients']}</td>
-	</tr>
-	<tr>
-		<td class="green2">{$lang['online']}</td>
-		<td class="green2">
-		<img src="templates/default/gfx/images/stats.png"  height="10" width="{$perc_online}" alt="" />
-		{$count_online} {$lang['clients']} | {$perc_online}%
-		</td>
-	</tr>
-	<tr>
-		<td class="green1">{$lang['today']}</td>
-		<td class="green1">
-		<img src="templates/default/gfx/images/stats.png"  height="10" width="{$perc_today}" alt="" />
-		{$count_today} {$lang['clients']} | {$perc_today}%
-		</td>
-	</tr>
-	<tr>
-		<td class="green2">{$lang['thisweek']}</td>
-		<td class="green2">
-		<img src="templates/default/gfx/images/stats.png"  height="10" width="{$perc_week}" alt="" />
-		{$count_week} {$lang['clients']} | {$perc_week}%
-		</td>
-	</tr>
-	<tr>
-		<td class="green1">{$lang['thismonth']}</td>
-		<td class="green1">
-		<img src="templates/default/gfx/images/stats.png"  height="10" width="{$perc_month}" alt="" />
-		{$count_month} {$lang['clients']} | {$perc_month}%
-		</td>
-	</tr>
-</table>
-{/if}
+<section class="content container-fluid">
+	<div class="col-lg-6 col-lg-offset-3">
+	{if isset($permoverview['b_virtualserver_client_list']) AND empty($permoverview['b_virtualserver_client_list']) OR isset($permoverview['b_virtualserver_client_dblist']) AND empty($permoverview['b_virtualserver_client_dblist'])}
+		<div class="box box-danger">
+			<div class="box-header"><h3 class="box-title">{$lang['error']}</h3></div>
+			<div class="box-body">
+				<p class="lead">{$lang['nopermissions']}</p>
+			</div>
+		</div>
+	{else}
+		<div class="box box-primary">
+			<div class="box-header">
+				<h3 class="box-title">{$lang['clientcounter']}</h3>
+			</div>
+			<div class="box-body">
+				<table class="table table-striped" cellpadding="1" cellspacing="0">
+					<tr>
+						<th style="width:50%">{$lang['total']}</th>
+						<td style="width:50%">{$totalclients} {$lang['clients']}</td>
+					</tr>
+					<tr>
+						<th>{$lang['online']}</th>
+						<td>
+							<div class="progress progress-xs">
+		                        <div class="progress-bar progress-bar-aqua" style="width: {$perc_month}%" role="progressbar" aria-valuenow="{$perc_month}" aria-valuemin="0" aria-valuemax="100">
+		                        	<span class="sr-only">{$perc_month}%</span>
+		                        </div>
+		                    </div>
+							{$count_online} {$lang['clients']} | {$perc_online}%
+						</td>
+					</tr>
+					<tr>
+						<th>{$lang['today']}</th>
+						<td>
+							<div class="progress progress-xs">
+		                        <div class="progress-bar progress-bar-aqua" style="width: {$perc_month}%" role="progressbar" aria-valuenow="{$perc_month}" aria-valuemin="0" aria-valuemax="100">
+		                        	<span class="sr-only">{$perc_month}%</span>
+		                        </div>
+		                    </div>
+							{$count_today} {$lang['clients']} | {$perc_today}%
+						</td>
+					</tr>
+					<tr>
+						<th>{$lang['thisweek']}</th>
+						<td>
+							<div class="progress progress-xs">
+		                        <div class="progress-bar progress-bar-aqua" style="width: {$perc_month}%" role="progressbar" aria-valuenow="{$perc_month}" aria-valuemin="0" aria-valuemax="100">
+		                        	<span class="sr-only">{$perc_month}%</span>
+		                        </div>
+		                    </div>
+							{$count_week} {$lang['clients']} | {$perc_week}%
+						</td>
+					</tr>
+					<tr>
+						<th>{$lang['thismonth']}</th>
+						<td>
+							<div class="progress progress-xs">
+		                        <div class="progress-bar progress-bar-aqua" style="width: {$perc_month}%" role="progressbar" aria-valuenow="{$perc_month}" aria-valuemin="0" aria-valuemax="100">
+		                        	<span class="sr-only">{$perc_month}%</span>
+		                        </div>
+		                    </div>
+							{$count_month} {$lang['clients']} | {$perc_month}%
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	{/if}
+	</div>
+</section>

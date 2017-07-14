@@ -61,6 +61,7 @@
         <script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
         <script src="//cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
         <script src="//cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
+        <script src="//cdn.datatables.net/plug-ins/1.10.15/api/processing().js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>
