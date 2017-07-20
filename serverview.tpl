@@ -62,7 +62,7 @@
 						</div>
 					</div>
 					<div class="box-body">
-						<table class="table table-striped" cellpadding="0" cellspacing="0">
+						<table class="table table-striped">
 							<tr>
 								<td width="50%"><b>{$lang['autostart']}:</b></td>
 								<td width="50%">
@@ -190,7 +190,7 @@
 						</div>
 					</div>
 					<div class="box-body">
-						<table class="table table-striped" cellpadding="0" cellspacing="0">
+						<table class="table table-striped">
 							<tr>
 								<td width="50%"><b>{$lang['servergroup']}:</b></td>
 								<td width="50%">
@@ -238,7 +238,7 @@
 						</div>
 					</div>
 					<div class="box-body">
-						<table class="table table-striped" cellpadding="0" cellspacing="0">
+						<table class="table table-striped">
 							<tr>
 								<td width="50%"><b>{$lang['hostmessage']}:</b></td>
 								<td width="50%">{$serverinfo['virtualserver_hostmessage']}</td>
@@ -302,7 +302,7 @@
 						</div>
 					</div>
 					<div class="box-body">
-						<table class="table table-striped" cellpadding="0" cellspacing="0">
+						<table class="table table-striped">
 							<tr>
 								<td width="50%"><b>{$lang['autobancount']}:</b></td>
 								<td width="50%">{$serverinfo['virtualserver_complain_autoban_count']}</td>
@@ -326,7 +326,7 @@
 						</div>
 					</div>
 					<div class="box-body">
-						<table class="table table-striped" cellpadding="0" cellspacing="0">
+						<table class="table table-striped">
 							<tr>
 								<td width="50%"><b>{$lang['pointstickreduce']}:</b></td>
 								<td width="50%">{$serverinfo['virtualserver_antiflood_points_tick_reduce']}</td>
@@ -350,7 +350,7 @@
 						</div>
 					</div>
 					<div class="box-body">
-						<table class="table table-striped" cellpadding="0" cellspacing="0">
+						<table class="table table-striped">
 							<tr>
 								<td width="50%"><b>{$lang['upbandlimit']}:</b></td>
 								<td width="50%">{$serverinfo['virtualserver_max_upload_total_bandwidth']} Byte/s</td>
@@ -378,7 +378,7 @@
 						</div>
 					</div>
 					<div class="box-body">
-						<table class="table table-striped" cellpadding="0" cellspacing="0">
+						<table class="table table-striped">
 							<tr>
 								<td width="50%"><b>{$lang['logclient']}:</b></td>
 								<td width="50%">

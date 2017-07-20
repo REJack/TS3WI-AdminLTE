@@ -86,7 +86,7 @@
 					</div>
 				</div>
 				<div class="box-body">
-					<table class="table" cellpadding="0" cellspacing="0">
+					<table class="table">
 						<tr>
 							<td width="50%"><label for="new_virtualserver_hostmessage">{$lang['hostmessage']}:</label></td>
 							<td width="50%"><input type="text" class="form-control" id="new_virtualserver_hostmessage" name="newsettings[virtualserver_hostmessage]" value="{$screate_tmp['hostmsg']}"/></td>

@@ -22,7 +22,7 @@
 			</div>
 			<div class="box-body">
 				<form method="post" action="index.php?site=serveredit&amp;sid={$sid}">
-					<table class="table" cellpadding="0" cellspacing="0">
+					<table class="table">
 							<tr>
 								<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_password">{$lang['newpassword']}:</label></td>
 								<td class="col-xs-6 col-md-8 col-lg-9">
@@ -44,7 +44,7 @@
 					</div>
 				</div>
 				<div class="box-body">
-					<table class="table" cellpadding="0" cellspacing="0">
+					<table class="table">
 						<tr>
 							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_name">{$lang['name']}:</label></td>
 							<td class="col-xs-6 col-md-8 col-lg-9">
@@ -199,7 +199,7 @@
 					</div>
 				</div>
 				<div class="box-body">
-					<table class="table" cellpadding="0" cellspacing="0">
+					<table class="table">
 						<tr>
 							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_default_server_group">{$lang['servergroup']}:</label></td>
 							<td class="col-xs-6 col-md-8 col-lg-9">
@@ -260,7 +260,7 @@
 					</div>
 				</div>
 				<div class="box-body">
-					<table class="table" cellpadding="0" cellspacing="0">
+					<table class="table">
 						<tr>
 							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_hostmessage">{$lang['hostmessage']}:</label></td>
 							<td class="col-xs-6 col-md-8 col-lg-9">
@@ -367,7 +367,7 @@
 					</div>
 				</div>
 				<div class="box-body">
-					<table class="table" cellpadding="0" cellspacing="0">
+					<table class="table">
 						<tr>
 							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_complain_autoban_count">{$lang['autobancount']}:</label></td>
 							<td class="col-xs-6 col-md-8 col-lg-9">
@@ -410,7 +410,7 @@
 					</div>
 				</div>
 				<div class="box-body">
-					<table class="table" cellpadding="0" cellspacing="0">
+					<table class="table">
 						<tr>
 							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_antiflood_points_tick_reduce">{$lang['pointstickreduce']}:</label></td>
 							<td class="col-xs-6 col-md-8 col-lg-9">
@@ -453,7 +453,7 @@
 					</div>
 				</div>
 				<div class="box-body">
-					<table class="table" cellpadding="0" cellspacing="0">
+					<table class="table">
 						<tr>
 							<td class="col-xs-6 col-md-4 col-lg-3"><label for="">{$lang['upbandlimit']}:</label></td>
 							<td class="col-xs-6 col-md-8 col-lg-9">
@@ -507,7 +507,7 @@
 					</div>
 				</div>
 				<div class="box-body">
-					<table class="table" cellpadding="0" cellspacing="0">
+					<table class="table">
 						<tr>
 							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_log_client">{$lang['logclient']}:</label></td>
 							<td class="col-xs-6 col-md-8 col-lg-9">

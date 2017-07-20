@@ -17,7 +17,7 @@
 					<p>{$lang['snapwarning']}</p>
 					<p>{$lang['serverbackups']}</p>
 				</div>
-				<table class="table table-striped" cellpadding="0" cellspacing="0">
+				<table class="table table-striped">
 					<tr>
 						<th>{$lang['created']}</th>
 			{if isset($files[0]) AND !empty($files[0]) OR isset($folder[2]) AND !empty($folder[2])}
@@ -96,7 +96,7 @@
 				<h3 class="box-title">{$lang['host']} {$lang['serverbackups']}</h3>
 			</div>
 			<div class="box-body">
-				<table class="table table-striped" cellpadding="0" cellspacing="0">
+				<table class="table table-striped">
 					<tr>
 						<th class="text-center">{$lang['created']}</th>
 			{if isset($files[1]) AND !empty($files[1]) OR isset($folder[1]) AND !empty($folder[1])}

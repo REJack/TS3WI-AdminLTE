@@ -46,7 +46,7 @@
 					<h3 class="box-title">({$cid}) {$channelname} {$lang['permissionlist']}</h3>
 				</div>
 				<div class="box-body">
-					<table data-spy="affix" data-offset-top="240" style="top: 50px; z-index: 1000;"  class="table bg-white" id="TableHeader" cellpadding="0" cellspacing="0">
+					<table data-spy="affix" data-offset-top="240" style="top: 50px; z-index: 1000;"  class="table bg-white" id="TableHeader">
 						<tr>
 							<th style="width: 5%;">&nbsp;<a href="javascript:Klappen(0)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" alt="aus/ein-klappen" id="Pic0"></i></a></th>
 							<th style="width: 10%;" class="text-center">{$lang['permid']}</th>
@@ -56,7 +56,7 @@
 							<th style="width: 10%;" class="text-center"><label>{$lang['grant']} <input type="text" class="form-control " name="granttoall" size="3" maxlength="3" /></label></th>
 						</tr>
 					</table>
-					<table class="table table-striped" id="TableContent" cellpadding="0" cellspacing="0">
+					<table class="table table-striped" id="TableContent">
 						{foreach key=key item=value from=$allperms}
 							{if $key == 0}
 								<tr >
@@ -67,9 +67,9 @@
 							{/if}
 							{if $key == 1}
 								<tr>
-									<td style="width:100%" colspan="6" class="no-padding">
+									<td colspan="6" class="no-padding">
 									<div style="display:{$display}" id="Lay1">
-									<table class="table" cellpadding="0" cellspacing="0">
+									<table class="table">
 										<tr>
 											<td class='subcat' style='width:5%'>&nbsp;</td>
 											<td class='subcat' colspan="5">&nbsp;<a href="javascript:Klappen(2)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" alt="aus/ein-klappen" id="Pic2"></i></a>&nbsp;{$lang['information']}</td>
@@ -77,7 +77,7 @@
 										<tr>
 										<td colspan="6" class="no-padding">
 										<div style="display:{$display}" id="Lay2">
-										<table class="table" cellpadding="0" cellspacing="0">
+										<table class="table">
 							{/if}
 							{if $key == 2}
 										</table>
@@ -90,7 +90,7 @@
 									<tr>
 										<td colspan="6" class="no-padding">
 										<div style="display:{$display}" id="Lay3">
-										<table class="table" cellpadding="0" cellspacing="0">
+										<table class="table">
 							{/if}
 							{if $key == 3}
 										</table>
@@ -104,7 +104,7 @@
 									<tr>
 										<td colspan="6" class="no-padding">
 										<div style="display:{$display}" id="Lay4">
-										<table class="table" cellpadding="0" cellspacing="0">
+										<table class="table">
 							{/if}
 							{if $key == 4}
 								 		</table>
@@ -118,7 +118,7 @@
 									<tr>
 										<td colspan="6" class="no-padding">
 										<div style="display:{$display}" id="Lay5">
-										<table class="table" cellpadding="0" cellspacing="0">
+										<table class="table">
 							{/if}
 							{if $key == 5}
 										</table>
@@ -133,9 +133,9 @@
 									<td class='maincat left' colspan="6">&nbsp;<a href="javascript:Klappen(6)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" alt="aus/ein-klappen" id="Pic6"></i></a>&nbsp;{$lang['virtualserver']}</td>
 								</tr>
 								<tr>
-									<td style="width:100%" colspan="6" class="no-padding">
+									<td colspan="6" class="no-padding">
 									<div style="display:{$display}" id="Lay6">
-									<table class="table" cellpadding="0" cellspacing="0">
+									<table class="table">
 										<tr>
 											<td class='subcat' style='width:5%'>&nbsp;</td>
 											<td class='subcat' colspan="5">&nbsp;<a href="javascript:Klappen(7)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" alt="aus/ein-klappen" id="Pic7"></i></a>&nbsp;{$lang['information']}</td>
@@ -143,7 +143,7 @@
 										<tr>
 											<td colspan="6">
 											<div style="display:{$display}" id="Lay7">
-											<table class="table" cellpadding="0" cellspacing="0">
+											<table class="table">
 							{/if}
 							{if $key == 7}
 								 			</table>
@@ -157,7 +157,7 @@
 										<tr>
 											<td colspan="6">
 											<div style="display:{$display}" id="Lay8">
-											<table class="table" cellpadding="0" cellspacing="0">
+											<table class="table">
 							{/if}
 							{if $key == 8}
 								 			</table>
@@ -171,7 +171,7 @@
 										<tr>
 											<td colspan="6">
 											<div style="display:{$display}" id="Lay9">
-											<table class="table" cellpadding="0" cellspacing="0">
+											<table class="table">
 							{/if}
 							{if $key == 9}
 											</table>
@@ -186,9 +186,9 @@
 									<td class='maincat left' colspan="6">&nbsp;<a href="javascript:Klappen(10)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" alt="aus/ein-klappen" id="Pic10"></i></a>&nbsp;{$lang['channel']}</td>
 								</tr>
 								<tr>
-									<td style="width:100%" colspan="6" class="no-padding">
+									<td colspan="6" class="no-padding">
 									<div style="display:{$display}" id="Lay10">
-									<table class="table" cellpadding="0" cellspacing="0">
+									<table class="table">
 							{/if}
 							{if $key == 10}
 										<tr>
@@ -198,7 +198,7 @@
 										<tr>
 											<td colspan="6">
 											<div style="display:{$display}" id="Lay11">
-											<table class="table" cellpadding="0" cellspacing="0">
+											<table class="table">
 							{/if}
 							{if $key == 11}
 								 			</table>
@@ -212,7 +212,7 @@
 										<tr>
 											<td colspan="6">
 											<div style="display:{$display}" id="Lay12">
-											<table class="table" cellpadding="0" cellspacing="0">
+											<table class="table">
 							{/if}
 							{if $key == 12}
 								 			</table>
@@ -226,7 +226,7 @@
 										<tr>
 											<td colspan="6">
 											<div style="display:{$display}" id="Lay13">
-											<table class="table" cellpadding="0" cellspacing="0">
+											<table class="table">
 							{/if}
 							{if $key == 13}
 								 			</table>
@@ -240,7 +240,7 @@
 										<tr>
 											<td colspan="6">
 											<div style="display:{$display}" id="Lay14">
-											<table class="table" cellpadding="0" cellspacing="0">
+											<table class="table">
 							{/if}
 							{if $key == 14}
 								 			</table>
@@ -254,7 +254,7 @@
 										<tr>
 											<td colspan="6">
 											<div style="display:{$display}" id="Lay15">
-											<table class="table" cellpadding="0" cellspacing="0">
+											<table class="table">
 							{/if}
 							{if $key == 15}
 								 			</table>
@@ -269,9 +269,9 @@
 									<td colspan="6">&nbsp;<a href="javascript:Klappen(16)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" alt="aus/ein-klappen" id="Pic16"></i></a>&nbsp;{$lang['group']}</td>
 								</tr>
 								<tr>
-									<td style="width:100%" colspan="6" class="no-padding">
+									<td colspan="6" class="no-padding">
 									<div style="display:{$display}" id="Lay16">
-									<table class="table" cellpadding="0" cellspacing="0">
+									<table class="table">
 							{/if}
 							{if $key == 16}
 										<tr>
@@ -281,7 +281,7 @@
 										<tr>
 											<td colspan="6">
 											<div style="display:{$display}" id="Lay17">
-											<table class="table" cellpadding="0" cellspacing="0">
+											<table class="table">
 							{/if}
 							{if $key == 17}
 								 			</table>
@@ -295,7 +295,7 @@
 										<tr>
 											<td colspan="6">
 											<div style="display:{$display}" id="Lay18">
-											<table class="table" cellpadding="0" cellspacing="0">
+											<table class="table">
 							{/if}
 							{if $key == 18}
 								 			</table>
@@ -309,7 +309,7 @@
 										<tr>
 											<td colspan="6">
 											<div style="display:{$display}" id="Lay19">
-											<table class="table" cellpadding="0" cellspacing="0">
+											<table class="table">
 							{/if}
 							{if $key == 19}
 								 			</table>
@@ -323,7 +323,7 @@
 										<tr>
 											<td colspan="6">
 											<div style="display:{$display}" id="Lay20">
-											<table class="table" cellpadding="0" cellspacing="0">
+											<table class="table">
 							{/if}
 							{if $key == 20}
 											</table>
@@ -338,9 +338,9 @@
 									<td colspan="6">&nbsp;<a href="javascript:Klappen(21)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" alt="aus/ein-klappen" id="Pic21"></i></a>&nbsp;{$lang['client']}</td>
 								</tr>
 								<tr>
-									 <td style="width:100%" colspan="6" class="no-padding">
+									 <td colspan="6" class="no-padding">
 									 <div style="display:{$display}" id="Lay21">
-									 <table class="table" cellpadding="0" cellspacing="0">
+									 <table class="table">
 							{/if}
 							{if $key == 21}
 										<tr>
@@ -350,7 +350,7 @@
 										<tr>
 											<td colspan="6">
 											<div style="display:{$display}" id="Lay22">
-											<table class="table" cellpadding="0" cellspacing="0">
+											<table class="table">
 							{/if}
 							{if $key == 22}
 								 			</table>
@@ -364,7 +364,7 @@
 										<tr>
 											<td colspan="6">
 											<div style="display:{$display}" id="Lay23">
-											<table class="table" cellpadding="0" cellspacing="0">
+											<table class="table">
 							{/if}
 							{if $key == 23}
 								 			</table>
@@ -378,7 +378,7 @@
 										<tr>
 											<td colspan="6">
 											<div style="display:{$display}" id="Lay24">
-											<table class="table" cellpadding="0" cellspacing="0">
+											<table class="table">
 							{/if}
 							{if $key == 24}
 								 			</table>
@@ -392,7 +392,7 @@
 										<tr>
 											<td colspan="6">
 											<div style="display:{$display}" id="Lay25">
-												<table class="table" cellpadding="0" cellspacing="0">
+												<table class="table">
 							{/if}
 							{if $key == 25}
 									 			</table>
@@ -406,9 +406,9 @@
 								<tr class='maincat left'>
 									<td colspan="6">&nbsp;<a href="javascript:Klappen(26)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" alt="aus/ein-klappen" id="Pic26"></i></a>&nbsp;{$lang['filetransfer']}</td></tr>
 								<tr>
-									 <td style="width:100%" colspan="6" class="no-padding">
+									 <td colspan="6" class="no-padding">
 									 <div style="display:{$display}" id="Lay26">
-									 <table class="table no-padding" cellpadding="0" cellspacing="0">
+									 <table class="table">
 							{/if}
 							{foreach key=key2 item=value2 from=$value.permissions}
 								{if $change_col % 2} {assign var=td_col value="green1"} {else} {assign var=td_col value="green2"} {/if}	

@@ -13,7 +13,7 @@
 				<h3 class="box-title">{$lang['channelinfo']}</h3>
 			</div>
 			<div class="box-body">
-				<table class="table table-striped" cellpadding="0" cellspacing="0">
+				<table class="table table-striped">
 					<tr>
 						<td width="50%"><b>{$lang['name']}:</b></td>
 						<td width="50%">{$channelinfo['channel_name']}</td>

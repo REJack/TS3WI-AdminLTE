@@ -18,7 +18,7 @@
 				</div>
 				<div class="box-body">	
 					<p >{$lang['iconupinfo']}</p>
-					<table class="table" cellpadding="0" cellspacing="0">
+					<table class="table">
 						<tr>
 							<td colspan="2">
 								<input type="hidden" name="max_file_size" value="81920" />
@@ -37,7 +37,7 @@
 		<div class="box box-info">
 			<div class="box-body">
 				<form method="post" action="index.php?site=fileupload&amp;sid={$sid}">
-					<table class="table table-striped" cellpadding="0" cellspacing="0">
+					<table class="table table-striped">
 						<tr>
 							<th class="text-center">{$lang['icon']}</th>
 							<th class="text-center">{$lang['name']}</th>

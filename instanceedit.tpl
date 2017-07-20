@@ -14,7 +14,7 @@
 				<h3 class="box-title">{$lang['instanceedit']}</h3>
 			</div>
 			<form class="box-body" method="post" action="index.php?site=instanceedit">
-				<table class="table" cellpadding="0" cellspacing="0">
+				<table class="table">
 					<tr>
 						<th><label for="new_serverinstance_guest_serverquery_group">{$lang['questsquerygroup']}</label></th>
 						<td><input type="text" class="form-control" id="new_serverinstance_guest_serverquery_group" name="newsettings[serverinstance_guest_serverquery_group]" value="{$instanceinfo['serverinstance_guest_serverquery_group']}" /></td>
@@ -71,7 +71,7 @@
 				<h3 class="box-title">{$lang['showonweblist']}</h3>
 			</div>
 			<form class="box-body" method="post" action="index.php?site=instanceedit">
-				<table class="table" cellpadding="0" cellspacing="0">
+				<table class="table">
 					<tr>
 						<th>{$lang['serverid']}</th>
 						<th>{$lang['name']}</th>

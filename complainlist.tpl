@@ -40,7 +40,7 @@
 							</tr>
 							<tr>
 								<td colspan="4" class="no-padding">
-									<table class="table" id="Lay{$i}" style="display:none;" cellpadding="0" cellspacing="0">
+									<table class="table" id="Lay{$i}" style="display:none;">
 									{foreach key=key3 item=value3 from=$value2}
 										<tr>
 											<td style="width: 20%;">&nbsp;{date("d.m.Y - H:i", $value3['timestamp'])}</td>

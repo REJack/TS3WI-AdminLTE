@@ -14,7 +14,7 @@
 				<h3 class="box-title">{$lang['temppw']}</h3>
 			</div>
 			<div class="box-body">
-				<table class="table table-striped" cellpadding="0" cellspacing="0">
+				<table class="table table-striped">
 					<tr>
 						<th>Nickname</th>
 						<th>Uid</th>
@@ -54,7 +54,7 @@
 				<h3 class="box-title">{$lang['create']} {$lang['temppw']}</h3>
 			</div>
 			<div class="box-body">
-				<table class="table" cellpadding="0" cellspacing="0">
+				<table class="table">
 					<tr>
 						<td><label for="newpw_password">{$lang['password']}</label></td>
 						<td><input class="form-control" type="text" id="newpw_password" name="password" value="" /></td>

@@ -22,7 +22,7 @@
 				<h3 class="box-title">{$lang['channel']}</h3>
 			</div>
 			<div class="box-body">
-				<table class="table" cellpadding="0" cellspacing="0">
+				<table class="table">
 					<tr> 
 						<th class="text-center" width="10%">{$lang['id']}</th>
 						<th class="text-center" width="10%">{$lang['pid']}</th>

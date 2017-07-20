@@ -9,7 +9,7 @@
 				<h3 class="box-title">{$lang['instancetraffic']}</h3>
 			</div>
 			<div class="box-body">
-				<table class="table" cellpadding="0" cellspacing="0">
+				<table class="table">
 					<tr>
 						<th style="width:33%">{$lang['description']}</th>
 						<th style="width:33%" class="text-center">{$lang['incoming']}</th>
@@ -77,7 +77,7 @@
 				<h3 class="box-title">{$lang['virtualtraffic']}</h3>
 			</div>
 			<div class="box-body">
-				<table class="table" cellpadding="0" cellspacing="0">
+				<table class="table">
 					<tr>
 						<th style="width:33%">{$lang['description']}</th>
 						<th style="width:33%" class="text-center">{$lang['incoming']}</th>

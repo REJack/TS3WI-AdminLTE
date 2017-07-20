@@ -30,7 +30,7 @@
 				<p>{$serverstats}</p>
 				{/if}
 
-				<table class="table table-striped" cellpadding="0" cellspacing="0">
+				<table class="table table-striped">
 					<tr>
 						<th class="text-center">
 							<a class="headlink" href="index.php?site=server&amp;sortby=id&amp;sorttype={if $sortby == 'virtualserver_id' AND $sorttype == $smarty.const.SORT_ASC}desc{else}asc{/if}">{$lang['id']}</a>
