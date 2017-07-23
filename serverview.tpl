@@ -1,3 +1,15 @@
+{if isset($permoverview['b_virtualserver_info_view']) AND empty($permoverview['b_virtualserver_info_view'])}
+<section class="content container-fluid">
+	<div class="col-lg-10 col-lg-offset-1">
+		<div class="box box-danger">
+			<div class="box-header"><h3 class="box-title">{$lang['error']}</h3></div>
+			<div class="box-body">
+				<p class="lead">{$lang['nopermissions']}</p>
+			</div>
+		</div>
+	</div>
+</section>
+{else}
 <section class="content-header">
 	<h1>
 		{$lang['virtualserver']} #{$serverinfo['virtualserver_id']}
@@ -14,15 +26,6 @@
 	{if $newserverversion !== true AND !empty($serverinfo['virtualserver_version'])}
 		<div class="alert alert-warning">{$lang['serverupdateav']}{$newserverversion}</div>
 	{/if}
-
-	{if isset($permoverview['b_virtualserver_info_view']) AND empty($permoverview['b_virtualserver_info_view'])}
-		<div class="box box-danger">
-			<div class="box-header"><h3 class="box-title">{$lang['error']}</h3></div>
-			<div class="box-body">
-				<p class="lead">{$lang['nopermissions']}</p>
-			</div>
-		</div>
-	{else}
 		<div class="box box-border-teal">
 			<div class="box-header">
 				<h3 class="box-title">{$lang['msgtoserver']}</h3>

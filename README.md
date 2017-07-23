@@ -12,8 +12,15 @@ AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
  - createserver.tpl (major style changed)
    - change host message radios to a select
    - change yes/no radios to BS-Switch
+ - set JavaScript Plugins (e.g. DataTable) lang trough WI Setting
+
 
 ### Done
+ - cgroups.tpl
+ - sgroupadd.tpl
+ - sgroupeditperm.tpl
+ - sgroupclients.tpl
+ - sgroups.tpl
  - banadd.tpl
  - banlist.tpl
  - clientcleaner.tpl
@@ -46,14 +53,9 @@ AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
  - index.tpl
 
 ### NEXT
- - sgroups.tpl
- - sgroupadd.tpl
- - sgroupclients.tpl
- - sgroupeditperm.tpl
- - cgroups.tpl
- - cgroupadd.tpl
  - cgroupclients.tpl
  - cgroupeditperm.tpl
+ - cgroupadd.tpl
 
 ### ToDo (not changed from orgin template)
  - token.tpl

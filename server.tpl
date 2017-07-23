@@ -57,16 +57,16 @@
 					<tr>
 						<th colspan="7">
 						</th>
-						<th class="text-center">
+						<th class="no-padding">
 							<input class="btn btn-flat btn-primary btn-block" type="submit" name="massaction" value="{$lang['action']}" onclick="return confirm(confirmAction())" />
 						</th>
 					</tr>
 				{foreach key=key item=value from=$serverlist}
 					<tr>
-						<td class="text-center">{$value['virtualserver_id']}</td>
-						<td class="text-center"><a href="index.php?site=serverview&amp;sid={$value['virtualserver_id']}">{$value['virtualserver_name']}</a></td>
-						<td class="text-center">{$value['virtualserver_port']}</td>
-						<td class="text-center">
+						<td style="vertical-align: middle;" class="text-center">{$value['virtualserver_id']}</td>
+						<td style="vertical-align: middle;" class="text-center"><a href="index.php?site=serverview&amp;sid={$value['virtualserver_id']}">{$value['virtualserver_name']}</a></td>
+						<td style="vertical-align: middle;" class="text-center">{$value['virtualserver_port']}</td>
+						<td style="vertical-align: middle;" class="text-center">
 						{if $value['virtualserver_status'] == "online"}
 							<span class="text-success">{$lang['online']}</span>
 						{elseif $value['virtualserver_status'] == "online virtual"}
@@ -75,10 +75,10 @@
 							<span class="text-danger">{$lang['offline']}</span>
 						{/if}
 						</td>
-						<td class="text-center">{$value['virtualserver_uptime']}</td>
-						<td class="text-center">{$value['virtualserver_clientsonline']} / {$value['virtualserver_maxclients']}</td>
-						<td class="text-center"><input type="checkbox" name="caction[{$value['virtualserver_id']}][auto]" value="1" {if $value['virtualserver_autostart'] == 1}checked="checked"{/if}/></td>
-						<td class="text-center">
+						<td style="vertical-align: middle;" class="text-center">{$value['virtualserver_uptime']}</td>
+						<td style="vertical-align: middle;" class="text-center">{$value['virtualserver_clientsonline']} / {$value['virtualserver_maxclients']}</td>
+						<td style="vertical-align: middle;" class="text-center"><input type="checkbox" name="caction[{$value['virtualserver_id']}][auto]" value="1" {if $value['virtualserver_autostart'] == 1}checked="checked"{/if}/></td>
+						<td class="text-right no-padding">
 							<select class="form-control" id="caction{$value['virtualserver_id']}" name="caction[{$value['virtualserver_id']}][action]" onchange="confirmArray('{$value['virtualserver_id']}', '{$value['virtualserver_name']|addslashes}', '{$value['virtualserver_port']}', '');">
 								<option value="">{$lang['select']}</option>
 								<option value="start">{$lang['start']}</option>
@@ -91,7 +91,7 @@
 					<tr>
 						<th colspan="7">
 						</th>
-						<th class="text-center">
+						<th class="no-padding">
 							<input class="btn btn-flat btn-primary btn-block" type="submit" name="massaction" value="{$lang['action']}" onclick="return confirm(confirmAction())" />
 						</th>
 					</tr>

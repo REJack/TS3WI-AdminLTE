@@ -1,13 +1,17 @@
+{if isset($permoverview['b_virtualserver_client_list']) AND empty($permoverview['b_virtualserver_client_list']) OR isset($permoverview['b_virtualserver_client_dblist']) AND empty($permoverview['b_virtualserver_client_dblist'])}
 <section class="content container-fluid">
-	<div class="col-lg-6 col-lg-offset-3">
-	{if isset($permoverview['b_virtualserver_client_list']) AND empty($permoverview['b_virtualserver_client_list']) OR isset($permoverview['b_virtualserver_client_dblist']) AND empty($permoverview['b_virtualserver_client_dblist'])}
+	<div class="col-lg-10 col-lg-offset-1">
 		<div class="box box-danger">
 			<div class="box-header"><h3 class="box-title">{$lang['error']}</h3></div>
 			<div class="box-body">
 				<p class="lead">{$lang['nopermissions']}</p>
 			</div>
 		</div>
-	{else}
+	</div>
+</section>
+{else}
+<section class="content container-fluid">
+	<div class="col-lg-6 col-lg-offset-3">
 		<div class="box box-primary">
 			<div class="box-header">
 				<h3 class="box-title">{$lang['clientcounter']}</h3>

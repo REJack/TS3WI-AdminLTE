@@ -74,7 +74,7 @@
 		<div class="box box-primary">
 			<div class="box-body" id="main_content">
 				<input type="hidden" id="begin_pos" name="begin_pos" value="{$begin_pos}"/>
-				<table class="table table-bordered table-striped" id="traffic">
+				<table class="table table-striped" id="traffic">
 					<thead>
 						<tr>
 							<th style="width:20%">{$lang['date']}</th>

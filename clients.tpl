@@ -1,3 +1,15 @@
+{if isset($permoverview['b_virtualserver_client_list']) AND empty($permoverview['b_virtualserver_client_list']) OR isset($permoverview['b_virtualserver_client_dblist']) AND empty($permoverview['b_virtualserver_client_dblist'])}
+<section class="content container-fluid">
+	<div class="col-lg-10 col-lg-offset-1">
+		<div class="box box-danger">
+			<div class="box-header"><h3 class="box-title">{$lang['error']}</h3></div>
+			<div class="box-body">
+				<p class="lead">{$lang['nopermissions']}</p>
+			</div>
+		</div>
+	</div>
+</section>
+{else}
 <script>
 	$(function () {
 	    var table = $("#clients").DataTable({
@@ -69,14 +81,6 @@
 </script>
 <section class="content container-fluid">
 	<div class="col-lg-10 col-lg-offset-1">
-	{if isset($permoverview['b_virtualserver_client_list']) AND empty($permoverview['b_virtualserver_client_list']) OR isset($permoverview['b_virtualserver_client_dblist']) AND empty($permoverview['b_virtualserver_client_dblist'])}
-		<div class="box box-danger">
-			<div class="box-header"><h3 class="box-title">{$lang['error']}</h3></div>
-			<div class="box-body">
-				<p class="lead">{$lang['nopermissions']}</p>
-			</div>
-		</div>
-	{else}
 		<div class="box box-info">
 			<div class="box-header">
 				<h3 class="box-title">{$lang['searchfor']}{$lang['client']}</h3>
@@ -107,59 +111,42 @@
 			</div>
 			<div class="box-body">
 				<input type="hidden" name="next_page" id="next_page" value="0">
-				<table class="table table-bordered table-striped" id="clients">
+				<table class="table table-striped" id="clients">
 					<thead>				
 						<tr>
-							<th class="text-center">
-								<a class="headlink" href="index.php?site=clients&amp;sid={$sid}&amp;sortby=cldbid&amp;sorttype={if $sortby == 'cldbid' AND $sorttype == $smarty.const.SORT_ASC}desc{else}asc{/if}">{$lang['dbid']}</a>
-							</th>
-							<th class="text-center">
-								<a class="headlink" href="index.php?site=clients&amp;sid={$sid}&amp;sortby=unique&amp;sorttype={if $sortby == 'client_unique_identifier' AND $smarty.const.SORT_ASC}desc{else}asc{/if}">{$lang['uniqueid']}</a>
-							</th>
-							<th class="text-center">
-								<a class="headlink" href="index.php?site=clients&amp;sid={$sid}&amp;sortby=name&amp;sorttype={if $sortby == 'client_nickname' AND $sorttype == $smarty.const.SORT_ASC}desc{else}asc{/if}">{$lang['nickname']}</a>
-							</th>
-							<th class="text-center">
-								<a class="headlink" href="index.php?site=clients&amp;sid={$sid}&amp;sortby=created&amp;sorttype={if $sortby == 'client_created' AND $sorttype == $smarty.const.SORT_ASC}desc{else}asc{/if}">{$lang['created']}</a>
-							</th>
-							<th class="text-center">
-								<a class="headlink" href="index.php?site=clients&amp;sid={$sid}&amp;sortby=lastcon&amp;sorttype={if $sortby == 'client_lastconnected' AND $sorttype == $smarty.const.SORT_ASC}desc{else}asc{/if}">{$lang['lastonline']}</a>
-							</th>
-							<th class="text-center">
-								<a class="headlink" href="index.php?site=clients&amp;sid={$sid}&amp;sortby=status&amp;sorttype={if $sortby == 'clid' AND $sorttype == $smarty.const.SORT_ASC}desc{else}asc{/if}">{$lang['status']}</a>
-							</th>
-							<th class="text-center">{$lang['option']}</td>
+							<th class="text-center">{$lang['dbid']}</th>
+							<th class="text-center">{$lang['uniqueid']}</th>
+							<th class="text-center">{$lang['nickname']}</th>
+							<th class="text-center">{$lang['created']}</th>
+							<th class="text-center">{$lang['lastonline']}</th>
+							<th class="text-center">{$lang['status']}</th>
+							<th></th>
 						</tr>
 					</thead>
 					{while $showclients <= $duration AND isset($clientdblist[$getstart])}
-						{if $change_col % 2} {assign var=td_col value="green1"} {else} {assign var=td_col value="green2"} {/if}
 						<tr>
-							<td class="text-center" style="vertical-align: middle;">{$clientdblist[$getstart]['cldbid']}</td>
-							<td class="text-center" style="vertical-align: middle;">{$clientdblist[{$getstart}]['client_unique_identifier']}</td>
-							<td class="text-center" style="vertical-align: middle;">{$clientdblist[{$getstart}]['client_nickname']}</td>
-							<td class="text-center" style="vertical-align: middle;">{$clientdblist[{$getstart}]['client_created']|date_format:"%d.%m.%Y - %H:%M:%S"}</td>
-							<td class="text-center" style="vertical-align: middle;">{$clientdblist[{$getstart}]['client_lastconnected']|date_format:"%d.%m.%Y - %H:%M:%S"}</td>
-							<td class="text-center" style="vertical-align: middle;">
+							<td style="vertical-align: middle;" class="text-center">{$clientdblist[$getstart]['cldbid']}</td>
+							<td style="vertical-align: middle;" class="text-center">{$clientdblist[{$getstart}]['client_unique_identifier']}</td>
+							<td style="vertical-align: middle;" class="text-center">{$clientdblist[{$getstart}]['client_nickname']}</td>
+							<td style="vertical-align: middle;" class="text-center">{$clientdblist[{$getstart}]['client_created']|date_format:"%d.%m.%Y - %H:%M:%S"}</td>
+							<td style="vertical-align: middle;" class="text-center">{$clientdblist[{$getstart}]['client_lastconnected']|date_format:"%d.%m.%Y - %H:%M:%S"}</td>
+							<td style="vertical-align: middle;" class="text-center">
 							{if isset($clientdblist[{$getstart}]['clid'])}
 								<span class="text-green">{$lang['online']}</span>
 							{else}
 								<span class="text-red">{$lang['offline']}</span>
 							{/if}
 							</td>
-							<td class="text-center" style="vertical-align: middle;">
+							<td style="vertical-align: middle;" class="text-right no-padding">
+								<a class="btn btn-sm btn-flat btn-info no-margin" href="index.php?site=cleditperm&amp;sid={$sid}&amp;cldbid={$clientdblist[{$getstart}]['cldbid']}">{$lang['editperms']}</a>
 							{if !isset($permoverview['b_client_delete_dbproperties']) OR $permoverview['b_client_delete_dbproperties'] == 1}
-								<form method="post" class="pull-right" action="index.php?site=clients&amp;sid={$sid}">
+								<form method="post" style="display: inline;" action="index.php?site=clients&amp;sid={$sid}">
 									<input type="hidden" name="cldbid" value="{$clientdblist[{$getstart}]['cldbid']}" />
-									<input type="submit" class="btn btn-flat btn-danger" name="clientdel" value="{$lang['delete']}" onclick="return confirm('{$lang['deletemsgclient']}')" />
+									<input type="submit" class="btn btn-sm btn-flat btn-danger" name="clientdel" value="{$lang['delete']}" onclick="return confirm('{$lang['deletemsgclient']}')" />
 								</form>
 							{/if}
-								<a class="btn btn-flat btn-info pull-right" href="index.php?site=cleditperm&amp;sid={$sid}&amp;cldbid={$clientdblist[{$getstart}]['cldbid']}">
-									{$lang['editperms']}
-								</a>
 							</td>
 						</tr>
-						
-						{assign var=change_col value="`$change_col+1`"}
 						{assign var=showclients value="`$showclients+1`"}
 						{assign var=getstart value="`$getstart+1`"}
 					{/while}

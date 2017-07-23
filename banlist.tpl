@@ -37,7 +37,6 @@
 					</tr>
 					{if !empty($banlist)}
 						{foreach key=key item=value from=$banlist}
-							{if $change_col % 2} {assign var=td_col value="green1"} {else} {assign var=td_col value="green2"} {/if}	
 							<tr>
 								<td style="vertical-align: middle;" class="text-center">{$value['banid']}</td>
 								<td style="vertical-align: middle;" class="text-center">{$value['ip']}{$value['name']}{$value['uid']}</td>
