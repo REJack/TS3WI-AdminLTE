@@ -116,7 +116,7 @@
 					{/if}
 						<tr>
 							<td><label for="newfolder_name">{$lang['name']}:</label></td>
-							<td colspan="2"><input id="newfolder_name" class="form-control" type="text" name="fname" value="" /></td>
+							<td colspan="2"><input id="newfolder_name" class="form-control" type="text" name="fname" /></td>
 						</tr>
 					</table>
 					<input type="submit" class="btn btn-flat btn-block bg-teal" name="createdir" value="{$lang['createfolder']}" />

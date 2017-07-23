@@ -38,7 +38,7 @@
 							</tr>
 							<tr>
 								<td><label for="new_channel_name">{$lang['name']}:</label></td>
-								<td><input type="text" class="form-control" id="new_channel_name" name="settings[channel_name]" value="" /></td>
+								<td><input type="text" class="form-control" id="new_channel_name" name="settings[channel_name]" /></td>
 							</tr>
 							<tr>
 								<td><label for="new_channel_topic">{$lang['topic']}:</label></td>
@@ -46,7 +46,7 @@
 								{if isset($permoverview['b_channel_create_with_topic']) AND empty($permoverview['b_channel_create_with_topic'])}
 									-
 								{else}
-									<input type="text" class="form-control" id="new_channel_topic" name="settings[channel_topic]" value="" />
+									<input type="text" class="form-control" id="new_channel_topic" name="settings[channel_topic]" />
 								{/if}
 								</td>
 							</tr>
@@ -56,7 +56,7 @@
 								{if isset($permoverview['b_channel_create_with_description']) AND empty($permoverview['b_channel_create_with_description'])}
 									-
 								{else}
-									<input type="text" class="form-control" id="new_channel_description" name="settings[channel_description]" value="" />
+									<input type="text" class="form-control" id="new_channel_description" name="settings[channel_description]" />
 								{/if}
 								</td>
 							</tr>
@@ -181,7 +181,7 @@
 							</tr>
 							<tr>
 								<td><label for="new_channel_name_phonetic">{$lang['phoneticname']}:</label></td>
-								<td><input type="text" class="form-control" id="new_channel_name_phonetic" name="settings[channel_name_phonetic]" value="" /></td>
+								<td><input type="text" class="form-control" id="new_channel_name_phonetic" name="settings[channel_name_phonetic]" /></td>
 							</tr>
 						</table>
 					<input type="submit" name="createchannel" class="btn btn-flat btn-primary btn-block" value="{$lang['create']}" />

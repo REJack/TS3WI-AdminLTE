@@ -26,7 +26,7 @@
 							<tr>
 								<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_password">{$lang['newpassword']}:</label></td>
 								<td class="col-xs-6 col-md-8 col-lg-9">
-									<input type="text" class="form-control" id="new_virtualserver_password" name="newsettings[virtualserver_password]" value=""/>
+									<input type="text" class="form-control" id="new_virtualserver_password" name="newsettings[virtualserver_password]"/>
 								</td>
 							</tr>
 					</table>

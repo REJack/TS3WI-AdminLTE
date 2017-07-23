@@ -24,23 +24,23 @@
 			</div>
 			<div class="box-body">
 				<form method="post" action="index.php?site=sgroupadd&amp;sid={$sid}">
-					<table class="table table-striped">
+					<table class="table table-striped no-margin">
 						<tr>
 							<th width="35%"><label>{$lang['type']}:</label></th>
-							<td class="no-padding">
-								<div class="checkbox">
+							<td>
+								<div class="radio">
 									<label>
 										<input type="radio" name="type" value="0" />
 										{$lang['template']}
 									</label>
 								</div>
-								<div class="checkbox">
+								<div class="radio">
 									<label>
 										<input checked="checked" type="radio" name="type" value="1" />
 										{$lang['normal']}
 									</label>
 								</div>
-								<div class="checkbox">
+								<div class="radio">
 									<label>	
 										<input type="radio" name="type" value="2" />
 										{$lang['query']}
@@ -50,13 +50,13 @@
 						</tr>
 						<tr>
 							<th><label for="new_name">{$lang['name']}:</label></th>
-							<td>
-								<input type="text" class="form-control" id="new_name" name="name" value="" />
+							<td class="no-padding">
+								<input type="text" class="form-control" id="new_name" name="name" />
 							</td>
 						</tr>
 						<tr>
 							<th><label for="new_copyfrom">{$lang['copypermsfrom']}:</label></th>
-							<td>
+							<td class="no-padding">
 								<select name="copyfrom" class="form-control" id="new_copyfrom">
 									<option value="0">-</option>
 								{foreach key=key item=value from=$servergroups}
@@ -67,7 +67,7 @@
 						</tr>
 						<tr>
 							<th><label for="new_overwrite">{$lang['overwritegroup']}:</label></th>
-							<td>
+							<td class="no-padding">
 								<select name="overwrite" class="form-control" id="new_overwrite">
 									<option value="0">-</option>
 								{foreach key=key item=value from=$servergroups}
@@ -76,10 +76,8 @@
 								</select>
 							</td>
 						</tr>
-						<tr>
-							<td colspan="2"><input class="btn btn-flat btn-primary btn-block" type="submit" name="addgroup" value="{$lang['add']}" /></td>
-						</tr>
 					</table>
+					<input class="btn btn-flat btn-primary btn-block" type="submit" name="addgroup" value="{$lang['add']}" />
 				</form>
 			</div>
 		</div>

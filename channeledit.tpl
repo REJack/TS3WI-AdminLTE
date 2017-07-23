@@ -235,7 +235,7 @@
 								{if $channelinfo['channel_flag_default'] == 1}
 									{$lang['defaultnopw']}
 								{else}
-									<input type="text" class="form-control" id="new_channel_password" name="newsettings[channel_password]" value="" />
+									<input type="text" class="form-control" id="new_channel_password" name="newsettings[channel_password]" />
 								{/if}
 							</td>
 						</tr>

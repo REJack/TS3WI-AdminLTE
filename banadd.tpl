@@ -27,28 +27,27 @@
 					<table class="table">
 						<tr>
 							<th><label for="new_banip">{$lang['ip']}</label></th>
-							<td><input type="text" id="new_banip" class="form-control" name="banip" value="" /></td>
+							<td><input type="text" id="new_banip" class="form-control" name="banip" /></td>
 						</tr>
 						<tr>
 							<th><label for="new_banname">{$lang['name']}</label></th>
-							<td><input type="text" id="new_banname" class="form-control" name="banname" value="" /></td>
+							<td><input type="text" id="new_banname" class="form-control" name="banname" /></td>
 						</tr>
 						<tr>
 							<th><label for="new_banuid">{$lang['uniqueid']}</label></th>
-							<td><input type="text" id="new_banuid" class="form-control" name="banuid" value="" /></td>
+							<td><input type="text" id="new_banuid" class="form-control" name="banuid" /></td>
 						</tr>
 						<tr>
 							<th><label for="new_reason">{$lang['reason']}</label></th>
-							<td><input type="text" id="new_reason" class="form-control" name="reason" value="" /></td>
+							<td><input type="text" id="new_reason" class="form-control" name="reason" /></td>
 						</tr>
 						<tr>
 							<th><label for="new_bantime">{$lang['bantime']}</label></th>
 							<td>
 								<div class="input-group">
-									<input type="text" id="new_bantime" class="form-control" name="bantime" value="" required />
+									<input type="text" id="new_bantime" class="form-control" name="bantime" required />
 									<span class="input-group-addon">{$lang['seconds']}</span>
 								</div>
-
 							</td>
 						</tr>
 					</table>

@@ -1,101 +1,122 @@
-{if !empty($error)}
-	<div class="alert alert-danger">{$error}</div>
-{/if}
-{if !empty($noerror)}
-	<div class="alert alert-info">{$noerror}</div>
-{/if}
-<table class="border" style="width:100%" cellpadding="1" cellspacing="0">
-	<tr>
-		<td class="center" colspan="3" style="font-size:12px;">{$lang['chanbackdesc']}</td>
-	</tr>
-	<tr>
-		<td class="thead" colspan="3">{$lang['chanbackups']}</td>
-	</tr>
-	<tr>
-		<td class="thead">{$lang['created']}</td>
-		<td class="thead">{$lang['server']}</td>
-		<td class="thead">{$lang['options']}</td>
-	</tr>
-{if isset($files[0]) AND !empty($files[0])}
-	{foreach key=key item=value from=$files[0]}
-		{if $serverhost === true AND $hoststatus === false AND $value['server'] == $getserverip OR $serverhost === false OR $hoststatus === true}
-			{if $change_col % 2} {assign var=td_col value="green1"} {else} {assign var=td_col value="green2"} {/if}
-			<tr>
-				<td class="{$td_col} center">{$value['timestamp']|date_format:"%d.%m.%Y - %H:%M:%S"}</td>
-				<td class="{$td_col} center">{$value['server']}</td>
-				<td class="{$td_col} center">
-				<input class="view" type="button" name="view" value="" title="{$lang['view']}" onClick="oeffnefenster('site/chanbackupview.php?backupid={$value['timestamp']}&amp;fileport={$value['server']}');"/>
-				<form method="post" action="index.php?site=backup&amp;sid={$sid}">
-				<input type="hidden" name="backupid" value="{$value['timestamp']}" />
-				<input type="hidden" name="fileport" value="{$value['server']}" />
-				<input class="start" type="submit" name="deploy" value="" title="{$lang['deploy']}" />
-				</form>
-				<form method="post" action="index.php?site=backup&amp;sid={$sid}">
-				<input type="hidden" name="backupid" value="{$value['timestamp']}" />
-				<input type="hidden" name="fileport" value="{$value['server']}" />
-				<input class="delete" type="submit" name="delete" value="" title="{$lang['delete']}" />
-				</form>
-				</td>
-			</tr>
-			{assign var=change_col value="`$change_col+1`"}
-		{/if}
-	{/foreach}	
-{/if}
-</table>
-{if $serverhost == true AND $hoststatus == true OR $serverhost == false}
-	<br />
-	<table class="border" style="width:100%" cellpadding="1" cellspacing="0">
-		<tr>
-			<td class="thead" colspan="3">{$lang['host']} {$lang['chanbackups']}</td>
-		</tr>
-		<tr>
-			<td class="thead">{$lang['created']}</td>
-			<td class="thead">{$lang['server']}</td>
-			<td class="thead">{$lang['options']}</td>
-		</tr>
-	{if isset($files[1]) AND !empty($files[1])}
-		{foreach key=key item=value from=$files[1]}
-			{if $change_col % 2} {assign var=td_col value="green1"} {else} {assign var=td_col value="green2"} {/if}
-			<tr>
-				<td class="{$td_col} center">{$value['timestamp']|date_format:"%d.%m.%Y - %H:%M:%S"}</td>
-				<td class="{$td_col} center">{$value['server']}</td>
-				<td class="{$td_col} center">
-				<input class="view" type="button" name="view" value="" title="{$lang['view']}" onClick="oeffnefenster('site/chanbackupview.php?backupid={$value['timestamp']}&amp;fileport={$value['server']}&amp;hostbackup=1');"/>
-				<form method="post" action="index.php?site=backup&amp;sid={$sid}">
-				<input type="hidden" name="hostbackup" value="1" />
-				<input type="hidden" name="backupid" value="{$value['timestamp']}" />
-				<input type="hidden" name="fileport" value="{$value['server']}" />
-				<input class="start" type="submit" name="deploy" value="" title="{$lang['deploy']}" />
-				</form>
-				<form method="post" action="index.php?site=backup&amp;sid={$sid}">
-				<input type="hidden" name="hostbackup" value="1" />
-				<input type="hidden" name="backupid" value="{$value['timestamp']}" />
-				<input type="hidden" name="fileport" value="{$value['server']}" />
-				<input class="delete" type="submit" name="delete" value="" title="{$lang['delete']}" />
-				</form>
-				</td>
-			</tr>
-			{assign var=change_col value="`$change_col+1`"}
-		{/foreach}	
+<section class="content container-fluid">
+	<div class="col-lg-10 col-lg-offset-1">
+	{if !empty($error)}
+		<div class="alert alert-danger">{$error}</div>
 	{/if}
-	</table>
-{/if}
-<br />
-<table class="border" cellpadding="1" cellspacing="0">
-<tr>
-	<td class="thead">{$lang['createchanbackup']}</td>
-</tr>
-<tr>
-	<td class="green1 center">
-	<form method="post" action="index.php?site=backup&amp;sid={$sid}">
-	<input class="button" type="submit" name="create" value="{$lang['create']}" />
-	</form>
+	{if !empty($noerror)}
+		<div class="alert alert-info">{$noerror}</div>
+	{/if}
+		<div class="box box-warning">
+			<div class="box-body">
+				<p>{$lang['chanbackdesc']}</p>
+			</div>	
+		</div>
+		<div class="box box-primary">
+			<div class="box-header">
+				<h3 class="box-title">{$lang['chanbackups']}</h3>
+			</div>
+			<div class="box-body">
+				<table class="table table-striped">
+					<tr>
+						<th width="30%" class="text-center">{$lang['created']}</th>
+						<th width="30%" class="text-center">{$lang['server']}</th>
+						<th></th>
+					</tr>
+					{if isset($files[0]) AND !empty($files[0])}
+						{foreach key=key item=value from=$files[0]}
+							{if $serverhost === true AND $hoststatus === false AND $value['server'] == $getserverip OR $serverhost === false OR $hoststatus === true}
+					<tr>
+						<td style="vertical-align: middle;" class="text-center">{$value['timestamp']|date_format:"%d.%m.%Y - %H:%M:%S"}</td>
+						<td style="vertical-align: middle;" class="text-center">{$value['server']}</td>
+						<td style="vertical-align: middle;" class="text-center no-padding">
+							<a href="#" class="btn btn-info btn-sm btn-flat" onClick="oeffnefenster('site/chanbackupview.php?backupid={$value['timestamp']}&amp;fileport={$value['server']}');">{$lang['view']}</a>
+							<form style="display: inline;" method="post" action="index.php?site=backup&amp;sid={$sid}">
+								<input type="hidden" name="backupid" value="{$value['timestamp']}" />
+								<input type="hidden" name="fileport" value="{$value['server']}" />
+								<input class="btn btn-flat btn-sm btn-success" type="submit" name="deploy" value="{$lang['deploy']}" />
+							</form>
+							<form style="display: inline;" method="post" action="index.php?site=backup&amp;sid={$sid}">
+								<input type="hidden" name="backupid" value="{$value['timestamp']}" />
+								<input type="hidden" name="fileport" value="{$value['server']}" />
+								<input class="btn btn-flat btn-sm btn-danger" type="submit" name="delete" value="{$lang['delete']}" />
+							</form>
+						</td>
+					</tr>
+							{/if}
+						{/foreach}
+					{else}
+					<tr>
+						<td colspan="3" class="text-center">No Backups found!</td>
+					</tr>
+					{/if}
+				</table>
+			</div>
+		</div>
 {if $serverhost == true AND $hoststatus == true OR $serverhost == false}
-	<form method="post" action="index.php?site=backup&amp;sid={$sid}">
-	<input type="hidden" name="hostbackup" value="1" />
-	<input class="button" type="submit" name="create" value="{$lang['host']} {$lang['create']}" />
-	</form>
+		<div class="box box-info">
+			<div class="box-header">
+				<h3 class="box-title">{$lang['host']} {$lang['chanbackups']}</h3>
+			</div>
+			<div class="box-body">
+				<table class="table table-striped">
+					<tr>
+						<th width="30%" class="text-center">{$lang['created']}</th>
+						<th width="30%" class="text-center">{$lang['server']}</th>
+						<th></th>
+					</tr>
+					{if isset($files[1]) AND !empty($files[1])}
+						{foreach key=key item=value from=$files[1]}
+					<tr>
+						<td style="vertical-align: middle;" class="text-center">{$value['timestamp']|date_format:"%d.%m.%Y - %H:%M:%S"}</td>
+						<td style="vertical-align: middle;" class="text-center">{$value['server']}</td>
+						<td style="vertical-align: middle;" class="text-center no-padding">
+							<a href="#" class="btn btn-flat btn-sm btn-info" onClick="oeffnefenster('site/chanbackupview.php?backupid={$value['timestamp']}&amp;fileport={$value['server']}&amp;hostbackup=1');">{$lang['view']}</a>
+							<form style="display: inline;" method="post" action="index.php?site=backup&amp;sid={$sid}">
+								<input type="hidden" name="hostbackup" value="1" />
+								<input type="hidden" name="backupid" value="{$value['timestamp']}" />
+								<input type="hidden" name="fileport" value="{$value['server']}" />
+								<input class="btn btn-flat btn-sm btn-success" type="submit" name="deploy" value="{$lang['deploy']}" />
+							</form>
+							<form style="display: inline;" method="post" action="index.php?site=backup&amp;sid={$sid}">
+								<input type="hidden" name="hostbackup" value="1" />
+								<input type="hidden" name="backupid" value="{$value['timestamp']}" />
+								<input type="hidden" name="fileport" value="{$value['server']}" />
+								<input class="btn btn-flat btn-sm btn-danger" type="submit" name="delete" value="{$lang['delete']}" />
+							</form>
+						</td>
+					</tr>
+						{/foreach}
+					{else}
+					<tr>
+						<td colspan="3" class="text-center">No Backups found!</td>
+					</tr>
+					{/if}
+				</table>
+			</div>
+		</div>
 {/if}
-	</td>
-</tr>
-</table>
+		<div class="box box-success">
+			<div class="box-header">
+				<h3 class="box-title">{$lang['createchanbackup']}</h3>
+			</div>
+			<div class="box-body">
+				<br />
+				<div class="row">
+					<div class="col-md-6">
+						<form style="display: inline;" method="post" action="index.php?site=backup&amp;sid={$sid}">
+							<input class="btn btn-flat btn-block btn-primary" type="submit" name="create" value="{$lang['create']}" />
+						</form>
+					</div>
+					<div class="col-md-6">
+					{if $serverhost == true AND $hoststatus == true OR $serverhost == false}
+						<form style="display: inline;" method="post" action="index.php?site=backup&amp;sid={$sid}">
+							<input type="hidden" name="hostbackup" value="1" />
+							<input class="btn btn-flat btn-block btn-info" type="submit" name="create" value="{$lang['host']} {$lang['create']}" />
+						</form>
+					{/if}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

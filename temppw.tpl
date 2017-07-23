@@ -38,7 +38,7 @@
 						<td>
 							<form method="post" action="index.php?site=temppw&amp;sid={$sid}">
 								<input name="pw" value="{$temppw.pw_clear}" type="hidden">
-								<input class="btn btn-danger btn-flat btn-block" name="temppwdel" value="" title="L&ouml;schen" type="submit">
+								<input class="btn btn-danger btn-flat btn-block" name="temppwdel" title="L&ouml;schen" type="submit">
 							</form>
 						</td>
 					</tr>
@@ -57,15 +57,15 @@
 				<table class="table">
 					<tr>
 						<td><label for="newpw_password">{$lang['password']}</label></td>
-						<td><input class="form-control" type="text" id="newpw_password" name="password" value="" /></td>
+						<td><input class="form-control" type="text" id="newpw_password" name="password" /></td>
 					</tr>
 					<tr>
 						<td><label for="newpw_duration">{$lang['duration']}</label></td>
-						<td><input class="form-control" type="text" id="newpw_duration" name="duration" value="" /></td>
+						<td><input class="form-control" type="text" id="newpw_duration" name="duration" /></td>
 					</tr>
 					<tr>
 						<td><label for="newpw_description">{$lang['description']}</label></td>
-						<td><input class="form-control" type="text" id="newpw_description" name="description" value="" /></td>
+						<td><input class="form-control" type="text" id="newpw_description" name="description" /></td>
 					</tr>
 					<tr>
 						<td><label for="newpw_tcid">{$lang['channel']}</label></td>

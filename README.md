@@ -16,6 +16,12 @@ AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
 
 
 ### Done
+ - serverbackup.tpl
+ - backup.tpl
+ - token.tpl
+ - cgroupadd.tpl
+ - cgroupeditperm.tpl
+ - cgroupclients.tpl
  - cgroups.tpl
  - sgroupadd.tpl
  - sgroupeditperm.tpl
@@ -53,19 +59,14 @@ AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
  - index.tpl
 
 ### NEXT
- - cgroupclients.tpl
- - cgroupeditperm.tpl
- - cgroupadd.tpl
-
-### ToDo (not changed from orgin template)
- - token.tpl
- - backup.tpl
- - serverbackup.tpl
  - permexport.tpl
  - clientsexport.tpl
  - bansexport.tpl
+
+### ToDo (not changed from orgin template)
  - console.tpl
  - filebrowser.tpl
  - hostlogin.tpl
  - interactive.tpl
- - MassAction (change to Modal)
+ - change oeffnefenster function (open modal instead of popup)
+ - rename oeffnefenster & Klappen function to better english name

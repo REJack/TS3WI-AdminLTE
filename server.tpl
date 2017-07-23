@@ -80,7 +80,7 @@
 						<td style="vertical-align: middle;" class="text-center"><input type="checkbox" name="caction[{$value['virtualserver_id']}][auto]" value="1" {if $value['virtualserver_autostart'] == 1}checked="checked"{/if}/></td>
 						<td class="text-right no-padding">
 							<select class="form-control" id="caction{$value['virtualserver_id']}" name="caction[{$value['virtualserver_id']}][action]" onchange="confirmArray('{$value['virtualserver_id']}', '{$value['virtualserver_name']|addslashes}', '{$value['virtualserver_port']}', '');">
-								<option value="">{$lang['select']}</option>
+								<option value="false">{$lang['select']}</option>
 								<option value="start">{$lang['start']}</option>
 								<option value="stop">{$lang['stop']}</option>
 								<option value="del">{$lang['delete']}</option>

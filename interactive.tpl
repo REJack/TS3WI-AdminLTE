@@ -29,7 +29,7 @@
 				<td class="green1">{$lang['select']}:</td>
 				<td class="green1">
 				<select name="action" onchange="this.form.submit()">
-					<option value="">{$lang['select']}</option>
+					<option disabled selected>{$lang['select']}</option>
 					<option value="kick">{$lang['kick']}</option>
 					<option value="ban">{$lang['ban']}</option>
 					<option value="move">{$lang['move']}</option>
@@ -142,7 +142,7 @@
 			</tr>
 			<tr>
 				<td class="green1">{$lang['kickmsg']}:</td>
-				<td class="green1"><input type="text" name="kickmsg" value="" /></td>
+				<td class="green1"><input type="text" name="kickmsg" /></td>
 			</tr>
 			<tr>
 				<td class="green2">{$lang['option']}:</td>
@@ -196,11 +196,11 @@
 			</tr>
 			<tr>
 				<td class="green1">{$lang['banmsg']}:</td>
-				<td class="green1"><input type="text" name="banmsg" value=""></td>
+				<td class="green1"><input type="text" name="banmsg"></td>
 			</tr>
 			<tr>
 				<td class="green2">{$lang['bantime']}:</td>
-				<td class="green2"><input type="text" name="bantime" value="">{$lang['seconds']}</td>
+				<td class="green2"><input type="text" name="bantime">{$lang['seconds']}</td>
 			</tr>
 			<tr>
 				<td class="green1">{$lang['option']}:</td>
@@ -222,7 +222,7 @@
 				<td class="green1">{$lang['select']}:</td>
 				<td class="green1">
 				<select name="action" onchange="this.form.submit()">
-					<option value="">{$lang['select']}</option>
+					<option>{$lang['select']}</option>
 					<option value="kick">{$lang['kick']}</option>
 					<option value="ban">{$lang['ban']}</option>
 					<option value="poke">{$lang['poke']}</option>
@@ -241,7 +241,7 @@
 		</tr>
 		<tr>
 			<td class="green1">{$lang['kickmsg']}:</td>
-			<td class="green1"><input type="text" name="kickmsg" value="" /></td>
+			<td class="green1"><input type="text" name="kickmsg" /></td>
 		</tr>
 		<tr>
 			<td class="green2">{$lang['option']}:</td>
@@ -263,12 +263,12 @@
 		<tr>
 			<td class="green1">{$lang['banmsg']}:</td>
 			<td class="green1">
-			<input type="text" name="banmsg" value=""></td>
+			<input type="text" name="banmsg"></td>
 		</tr>
 		<tr>
 			<td class="green2">{$lang['bantime']}:</td>
 			<td class="green2">
-			<input type="text" name="bantime" value="">{$lang['seconds']}</td>
+			<input type="text" name="bantime">{$lang['seconds']}</td>
 		</tr>
 		<tr>
 			<td class="green1">{$lang['option']}:</td>
@@ -290,7 +290,7 @@
 		<tr>
 			<td class="green1">{$lang['pokemsg']}:</td>
 			<td class="green1">
-			<input type="text" name="pokemsg" value=""></td>
+			<input type="text" name="pokemsg"></td>
 		<tr>
 			<td class="green2">{$lang['option']}:</td>
 			<td class="green2">

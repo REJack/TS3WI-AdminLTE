@@ -17,7 +17,7 @@
 				<form method="post" class="form-inline" action="index.php?site=clientcleaner&amp;sid={$sid}">
 					<table class="table">
 						<tr>
-							<td><label>{$lang['deleteallclientsoffline']}<input class="form-control" type="text" name="number" value="30" size="3"/>{$lang['deleteallclientsoffline2']}</label></td>
+							<td><label>{$lang['deleteallclientsoffline']}<input class="form-control" type="text" name="number" value="30"<td style="vertical-align: middle;" colspan="2" class="no-padding text-center">/>{$lang['deleteallclientsoffline2']}</label></td>
 						</tr>
 						<tr>
 							<td>{$lang['checkgroupsprotected']}</td>

@@ -67,14 +67,17 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/js/app.min.js"></script>
 		<script type="text/javascript">
-		//<![CDATA[
-			function Klappen(Id) 
+			var checkflag = false;
+			var conf_arr = new Array();
+
+			function Klappen(selected_id) 
 			{
-				if(Id == 0)
+				if(selected_id == 0)
 				{
 					var i = 1;
 					var openAll;
-					if($('#Pic0').hasClass('mdi-plus-box'))
+
+					if ($('#Pic0').hasClass('mdi-plus-box'))
 					{
 						$('#Pic0').removeClass('mdi-plus-box').addClass('mdi-minus-box');
 						openAll = 1;
@@ -85,9 +88,9 @@
 						openAll = 0;
 					}
 
-					while(i < 100)
+					while (i < 100)
 					{
-						if($('#Pic'+i) != null)
+						if ($('#Pic'+i) != null)
 						{
 							var KlappText = $('#Lay'+i);
 							var KlappBild = $('#Pic'+i);
@@ -109,8 +112,9 @@
 						}
 					}
 				} else {
-					var KlappTextID = $('#Lay'+Id);
-					var KlappBildID = $('#Pic'+Id);
+					var KlappTextID = $('#Lay'+selected_id);
+					var KlappBildID = $('#Pic'+selected_id);
+
 					if (KlappTextID.is(':visible')) 
 					{
 						KlappTextID.fadeOut(1000);
@@ -124,108 +128,115 @@
 				}
 			}
 				
-			function oeffnefenster (url) {
-			 fenster = window.open(url, "fenster1", "width=350,height=150,status=no,scrollbars=yes,resizable=no");
-			 fenster.opener.name="opener";
-			 fenster.focus();
+			function oeffnefenster (url)
+			{
+				fenster = window.open(url, "fenster1", "width=350,height=150,status=no,scrollbars=yes,resizable=no");
+				fenster.opener.name="opener";
+				fenster.focus();
 			}
 
-			function hide_select(selectId)
+			function hide_select(selected_value)
+			{
+				if ($('#groups').is(':hidden'))
 				{
-				if(selectId==0)
+					$('#groups').fadeIn(1000);
+					if (selected_value == 0)
 					{
-					document.getElementById("groups").style.display = "";
-					document.getElementById("servergroups").style.display = "";
-					document.getElementById("channelgroups").style.display = "none";
-					document.getElementById("channel").style.display = "none";
+						$('#servergroups').show();
+						$('#channel').hide();
+						$('#channelgroups').hide();
 					}
-				  else if (selectId==1)
+					else if (selected_value == 1)
 					{
-					document.getElementById("groups").style.display = "";
-					document.getElementById("servergroups").style.display = "none";
-					document.getElementById("channelgroups").style.display = "";
-					document.getElementById("channel").style.display = "";
+						$('#servergroups').hide();
+						$('#channel').show();
+						$('#channelgroups').show();
 					}
-					else
+				} else {
+					if (selected_value == 0)
 					{
-					document.getElementById("groups").style.display = "none";
-					document.getElementById("servergroups").style.display = "none";
-					document.getElementById("channelgroups").style.display = "none";
-					document.getElementById("channel").style.display = "none";
+						$('#servergroups').fadeIn(1000);
+						$('#channel').fadeOut(1000);
+						$('#channelgroups').fadeOut(1000);
+					}
+					else if (selected_value == 1)
+					{
+						$('#servergroups').fadeOut(1000);
+						$('#channel').fadeIn(1000);
+						$('#channelgroups').fadeIn(1000);
 					}
 				}
-
-			var checkflag = "false";
+			}
 
 			function check(form) 
+			{
+				if (checkflag == false) 
 				{
-				if (checkflag == "false") 
-					{
-					for (i = 0; i < document.forms[form].elements.length; i++) 
-						{
-						if(document.forms[form].elements[i].name != 'checkall')
-							{
-							document.forms[form].elements[i].checked = true;
-							}
-						}
-					checkflag = "true";
-					return checkflag; 
-					}
-					else 
-					{
-					for (i = 0; i < document.forms[form].elements.length; i++) 
-						{
-							document.forms[form].elements[i].checked = false;
-						}
-					checkflag = "false";
-					return checkflag; 
-					}
+					$('form input[type="checkbox"]').prop('checked', true);
+					checkflag = true;
 				}
-			var conf_arr = new Array();
+				else 
+				{
+					$('form input[type="checkbox"]').prop('checked', false);
+					checkflag = false;
+				}
+				return checkflag;
+			}
+		
 			function confirmArray(sid, name, port, action)
+			{
+				conf_arr[sid] = new Object();
+				conf_arr[sid]['name'] = name;
+				conf_arr[sid]['port'] = port;
+
+				if($("#caction" + sid + ' option:selected').val() == 'false')
 				{
-				conf_arr[sid]=new Object();
-				conf_arr[sid]['name']=name;
-				conf_arr[sid]['port']=port;
-				if(document.getElementById("caction"+sid).options.selectedIndex == 0)
-					{
-					conf_arr[sid]['action']='';
-					}
-					else if(document.getElementById("caction"+sid).options.selectedIndex == 1)
-					{
-					conf_arr[sid]['action']='start';
-					}
-					else if(document.getElementById("caction"+sid).options.selectedIndex == 2)
-					{
-					conf_arr[sid]['action']='stop';
-					}
-					else if(document.getElementById("caction"+sid).options.selectedIndex == 3)
-					{
-					conf_arr[sid]['action']='del';
-					}
+					conf_arr[sid]['action'] = '';
 				}
-				
+				else
+				{
+					conf_arr[sid]['action'] = $("#caction" + sid + ' option:selected').val();
+				}
+			}
+
 			function confirmAction()
 			{
-			var text="Möchtest du folgende Aktion wirklich ausführen?\n\n";
-			for(var i in conf_arr)
+				var text = "Möchtest du folgende Aktion wirklich ausführen?\n\n";
+				for(var i in conf_arr)
 				{
-				if(conf_arr[i]['action'] == 'start')
+					if(conf_arr[i]['action'] == 'start')
 					{
-					text = text+"***Starten*** "+conf_arr[i]['name']+" "+conf_arr[i]['port']+"\n";
+						text += "***Starten*** "+conf_arr[i]['name']+" "+conf_arr[i]['port']+"\n";
 					}
 					else if(conf_arr[i]['action'] == 'stop')
 					{
-					text = text+"***Stoppen*** "+conf_arr[i]['name']+" "+conf_arr[i]['port']+"\n";
+						text += "***Stoppen*** "+conf_arr[i]['name']+" "+conf_arr[i]['port']+"\n";
 					}
 					else if(conf_arr[i]['action'] == 'del')
 					{
-					text = text+"***Löschen*** "+conf_arr[i]['name']+" "+conf_arr[i]['port']+"\n";
+						text += "***Löschen*** "+conf_arr[i]['name']+" "+conf_arr[i]['port']+"\n";
 					}
 				}
-			return text;
+				return text;
 			}
-		//]]>
+
+			function resizeTable()
+			{
+				var ContentWidth = $('#TableContent').width();
+				$('#TableHeader').width(ContentWidth);
+			}
+
+			$(function ()
+			{
+				if ($('#TableHeader'))
+				{				
+					$(window).on('resize', function(){
+						resizeTable();
+					});
+				
+					resizeTable();
+				} 
+			});
 		</script>
     </head>
     <body class="hold-transition skin-blue sidebar-mini fixed">
@@ -276,7 +287,6 @@
               </div>
             </nav>
           </header>
-
           <aside class="main-sidebar">
             <section class="sidebar">
               <ul class="sidebar-menu">
@@ -288,7 +298,6 @@
 				{include file="{$tmpl}/showupdate.tpl"}
 				{include file="{$tmpl}/{$site}.tpl"}				
           </div>
-
           <footer class="main-footer">
             <div class="pull-right hidden-xs">
             	<b>Template Version:</b> 1.0.0-rc0 &nbsp;&nbsp;
