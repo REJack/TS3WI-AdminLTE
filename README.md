@@ -1,4 +1,4 @@
-# TS3WI-AdminLTE
+# TS3WI-AdminLTE (85% done)
 AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
 
 
@@ -13,7 +13,17 @@ AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
    - change host message radios to a select
    - change yes/no radios to BS-Switch
  - set JavaScript Plugins (e.g. DataTable) lang trough WI Setting
+ - change oeffnefenster function (open modal instead of popup)
+ - rename oeffnefenster & Klappen function to better english name
 
+### NEXT (not changed from orgin template)
+ - permexport.tpl
+ - clientsexport.tpl
+ - bansexport.tpl
+ - console.tpl
+ - filebrowser.tpl
+ - hostlogin.tpl
+ - interactive.tpl
 
 ### Done
  - serverbackup.tpl
@@ -57,16 +67,3 @@ AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
  - mainbar.tpl
  - login.tpl
  - index.tpl
-
-### NEXT
- - permexport.tpl
- - clientsexport.tpl
- - bansexport.tpl
-
-### ToDo (not changed from orgin template)
- - console.tpl
- - filebrowser.tpl
- - hostlogin.tpl
- - interactive.tpl
- - change oeffnefenster function (open modal instead of popup)
- - rename oeffnefenster & Klappen function to better english name
