@@ -1,38 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!--
-*Copyright (C) 2012-2013  Psychokiller
-*
-*This program is free software; you can redistribute it and/or modify it under the terms of 
-*the GNU General Public License as published by the Free Software Foundation; either 
-*version 3 of the License, or any later version.
-*
-*This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
-*without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
-*See the GNU General Public License for more details.
-*
-*You should have received a copy of the GNU General Public License along with this program; if not, see http://www.gnu.org/licenses/. 
--->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="de">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="../templates/{$tmpl}/gfx/style.css" type="text/css" media="screen" />
-<title>Webinterface - Filebrowser</title>
-</head>
-<body onload="window.resizeTo(500,600)">
-	{if !empty($error) OR !empty($noerror)}
-	<table align="center">
-		{if !empty($error)}
-		<tr>
-			<td class="error">{$error}</td>
-		</tr>
-		{/if}
-		{if !empty($noerror)}
-		<tr>
-			<td class="noerror">{$noerror}</td>
-		</tr>
-		{/if}
-	</table>
-	{/if}
+{if !empty($error)}
+	<div class="alert alert-danger">{$error}</div>
+{/if}
+{if !empty($noerror)}
+	<div class="alert alert-info">{$noerror}</div>
+{/if}
 	<table class="border" style="width:100%">
 		<tr>
 			<td colspan="4" class="thead">{$lang['channel']} ({$smarty.get.cid} {$chaninfo['channel_name']})</td>
@@ -86,8 +57,8 @@
 		</td>
 	</tr>
 	<tr>
-		<td class="green2"  style="width:75px">{$lang['option']}</td>
-		<td class="green2"  align="left"><input type="submit" name="upload" value="{$lang['upload']}" /></td>
+		<td class="green2" style="width:75px">{$lang['option']}</td>
+		<td class="green2" align="left"><input type="submit" name="upload" value="{$lang['upload']}" /></td>
 	</tr>
 </table>
 </form>
@@ -102,8 +73,8 @@
 		<td class="green1" colspan="2"><input type="text" name="fname" value="" /></td>
 	</tr>
 	<tr>
-		<td class="green2"  style="width:75px">{$lang['option']}</td>
-		<td class="green2"  align="left"><input type="submit" name="createdir" value="{$lang['create']}" /></td>
+		<td class="green2" style="width:75px">{$lang['option']}</td>
+		<td class="green2" align="left"><input type="submit" name="createdir" value="{$lang['create']}" /></td>
 	</tr>
 </table>
 </form>

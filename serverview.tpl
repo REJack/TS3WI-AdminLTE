@@ -13,7 +13,7 @@
 <section class="content-header">
 	<h1>
 		{$lang['virtualserver']} #{$serverinfo['virtualserver_id']}
-    </h1>
+	</h1>
 </section>
 <section class="content container-fluid">
 	<div class="col-lg-10 col-lg-offset-1">
@@ -29,13 +29,13 @@
 		<div class="box box-border-teal">
 			<div class="box-header">
 				<h3 class="box-title">{$lang['msgtoserver']}</h3>
-	          	<div class="box-tools pull-right">
-	            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+				<div class="box-tools pull-right">
+				<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 				</div>
 			</div>
 			<form class="box-body" method="post" action="index.php?site=serverview&amp;sid={$sid}">
 				<div class="form-group">
-					<textarea type="text" class="form-control" name="msgtoall" id="msgtoall"></textarea>
+					<textarea type="text" class="form-control resize-vert" name="msgtoall" id="msgtoall"></textarea>
 				</div>
 				<input class="btn btn-flat bg-teal pull-right" type="submit" name="sendmsg" value="{$lang['send']}" />
 			</form>
@@ -60,8 +60,8 @@
 				<div class="box box-primary">
 					<div class="box-header">
 						<h3 class="box-title">{$lang['basics']}</h3>
-			          	<div class="box-tools pull-right">
-			            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+						<div class="box-tools pull-right">
+							<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 						</div>
 					</div>
 					<div class="box-body">
@@ -181,15 +181,14 @@
 								<td><b>{$lang['iconid']}:</b></td>
 								<td>{$serverinfo['virtualserver_icon_id']}</td>
 							</tr>
-
 						</table>
 					</div>
 				</div>
 				<div class="box box-border-olive">
 					<div class="box-header">
 						<h3 class="box-title">{$lang['standardgroups']}</h3>
-			          	<div class="box-tools pull-right">
-			            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+						<div class="box-tools pull-right">
+							<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 						</div>
 					</div>
 					<div class="box-body">
@@ -236,8 +235,8 @@
 				<div class="box box-info">
 					<div class="box-header">
 						<h3 class="box-title">{$lang['host']}</h3>
-			          	<div class="box-tools pull-right">
-			            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+						<div class="box-tools pull-right">
+							<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 						</div>
 					</div>
 					<div class="box-body">
@@ -300,8 +299,8 @@
 				<div class="box box-warning">
 					<div class="box-header">
 						<h3 class="box-title">{$lang['autoban']}</h3>
-			          	<div class="box-tools pull-right">
-			            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+						<div class="box-tools pull-right">
+							<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 						</div>
 					</div>
 					<div class="box-body">
@@ -324,8 +323,8 @@
 				<div class="box box-danger">
 					<div class="box-header">
 						<h3 class="box-title">{$lang['antiflood']}</h3>
-			          	<div class="box-tools pull-right">
-			            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+						<div class="box-tools pull-right">
+							<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 						</div>
 					</div>
 					<div class="box-body">
@@ -348,8 +347,8 @@
 				<div class="box box-success">
 					<div class="box-header">
 						<h3 class="box-title">{$lang['transfers']}</h3>
-			          	<div class="box-tools pull-right">
-			            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+						<div class="box-tools pull-right">
+							<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 						</div>
 					</div>
 					<div class="box-body">
@@ -376,8 +375,8 @@
 				<div class="box box-default">
 					<div class="box-header">
 						<h3 class="box-title">{$lang['logs']}</h3>
-			          	<div class="box-tools pull-right">
-			            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+						<div class="box-tools pull-right">
+							<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 						</div>
 					</div>
 					<div class="box-body">
@@ -453,7 +452,7 @@
 					</div>
 					<div class="box-footer">						
 						{$lang['tsviewpubhtml']}
-						<textarea rows="5" class="form-control" readonly>{$pubtsview}</textarea>
+						<textarea rows="5" class="form-control resize-vert" readonly>{$pubtsview}</textarea>
 					</div>
 				</div>
 			</div>

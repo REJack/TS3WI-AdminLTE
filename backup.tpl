@@ -29,7 +29,7 @@
 						<td style="vertical-align: middle;" class="text-center">{$value['timestamp']|date_format:"%d.%m.%Y - %H:%M:%S"}</td>
 						<td style="vertical-align: middle;" class="text-center">{$value['server']}</td>
 						<td style="vertical-align: middle;" class="text-center no-padding">
-							<a href="#" class="btn btn-info btn-sm btn-flat" onClick="oeffnefenster('site/chanbackupview.php?backupid={$value['timestamp']}&amp;fileport={$value['server']}');">{$lang['view']}</a>
+							<a href="#" class="btn btn-info btn-sm btn-flat" onClick="oeffnefenster('site/chanbackupview.php?backupid={$value['timestamp']}&amp;fileport={$value['server']}', '{$lang['view']}');">{$lang['view']}</a>
 							<form style="display: inline;" method="post" action="index.php?site=backup&amp;sid={$sid}">
 								<input type="hidden" name="backupid" value="{$value['timestamp']}" />
 								<input type="hidden" name="fileport" value="{$value['server']}" />
@@ -70,7 +70,7 @@
 						<td style="vertical-align: middle;" class="text-center">{$value['timestamp']|date_format:"%d.%m.%Y - %H:%M:%S"}</td>
 						<td style="vertical-align: middle;" class="text-center">{$value['server']}</td>
 						<td style="vertical-align: middle;" class="text-center no-padding">
-							<a href="#" class="btn btn-flat btn-sm btn-info" onClick="oeffnefenster('site/chanbackupview.php?backupid={$value['timestamp']}&amp;fileport={$value['server']}&amp;hostbackup=1');">{$lang['view']}</a>
+							<a href="#" class="btn btn-flat btn-sm btn-info" onClick="oeffnefenster('site/chanbackupview.php?backupid={$value['timestamp']}&amp;fileport={$value['server']}&amp;hostbackup=1', '{$lang['view']}');">{$lang['view']}</a>
 							<form style="display: inline;" method="post" action="index.php?site=backup&amp;sid={$sid}">
 								<input type="hidden" name="hostbackup" value="1" />
 								<input type="hidden" name="backupid" value="{$value['timestamp']}" />

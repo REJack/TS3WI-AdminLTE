@@ -1,9 +1,9 @@
 {if !isset($smarty.post.createserver) OR !empty($error)}
 <section class="content-header">
 	<h1>
-        {$lang['createnewserver']}
-    </h1>
-    <p class="lead">{$lang['createserverdesc']}</p>
+		{$lang['createnewserver']}
+	</h1>
+	<p class="lead">{$lang['createserverdesc']}</p>
 </section>
 {/if}
 <section class="content container-fluid">
@@ -22,8 +22,8 @@
 			<div class="box box-primary">
 				<div class="box-header">
 					<h3 class="box-title">{$lang['basics']}</h3>
-		          	<div class="box-tools pull-right">
-		            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+					<div class="box-tools pull-right">
+						<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 					</div>
 				</div>
 				<div class="box-body">
@@ -81,8 +81,8 @@
 			<div class="box box-info">
 				<div class="box-header">
 					<h3 class="box-title">{$lang['host']}</h3>
-		          	<div class="box-tools pull-right">
-		            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+					<div class="box-tools pull-right">
+						<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 					</div>
 				</div>
 				<div class="box-body">
@@ -156,8 +156,8 @@
 			<div class="box box-warning">
 				<div class="box-header">
 					<h3 class="box-title">{$lang['autoban']}</h3>	
-		          	<div class="box-tools pull-right">
-		            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+					<div class="box-tools pull-right">
+						<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 					</div>
 				</div>
 				<div class="box-body">
@@ -190,8 +190,8 @@
 			<div class="box box-danger">
 				<div class="box-header">
 					<h3 class="box-title">{$lang['antiflood']}</h3>	
-		          	<div class="box-tools pull-right">
-		            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+					<div class="box-tools pull-right">
+						<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 					</div>
 				</div>
 				<div class="box-body">
@@ -214,8 +214,8 @@
 			<div class="box box-success">
 				<div class="box-header">
 					<h3 class="box-title">{$lang['transfers']}</h3>	
-		          	<div class="box-tools pull-right">
-		            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+					<div class="box-tools pull-right">
+						<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 					</div>
 				</div>
 				<div class="box-body">
@@ -262,8 +262,8 @@
 			<div class="box box-default">
 				<div class="box-header">
 					<h3 class="box-title">{$lang['logs']}</h3>	
-		          	<div class="box-tools pull-right">
-		            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+					<div class="box-tools pull-right">
+						<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 					</div>
 				</div>
 				<div class="box-body">

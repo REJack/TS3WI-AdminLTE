@@ -1,7 +1,7 @@
 <section class="content-header">
 	<h1>
-        {$lang['virtualserver']} #{$serverinfo['virtualserver_id']} {$lang['editor']}
-    </h1>
+		{$lang['virtualserver']} #{$serverinfo['virtualserver_id']} {$lang['editor']}
+	</h1>
 </section>
 <section class="content container-fluid">
 	<div class="col-lg-10 col-lg-offset-1" style="position: relative;">
@@ -16,8 +16,8 @@
 		<div class="box box-border-lime">
 			<div class="box-header">
 				<h3 class="box-title">{$lang['serverpassword']}</h3>
-	          	<div class="box-tools pull-right">
-	            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+				<div class="box-tools pull-right">
+					<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 				</div>
 			</div>
 			<div class="box-body">
@@ -39,8 +39,8 @@
 			<div class="box box-primary">
 				<div class="box-header">
 					<h3 class="box-title">{$lang['basics']}</h3>
-		          	<div class="box-tools pull-right">
-		            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+					<div class="box-tools pull-right">
+						<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 					</div>
 				</div>
 				<div class="box-body">
@@ -95,7 +95,7 @@
 							{if isset($permoverview['b_virtualserver_modify_welcomemessage']) AND empty($permoverview['b_virtualserver_modify_welcomemessage'])}
 								 - 
 							{else}
-								<textarea class="form-control" name="newsettings[virtualserver_welcomemessage]" id="new_virtualserver_welcomemessage" rows="5" cols="30">{$serverinfo['virtualserver_welcomemessage']}</textarea>
+								<textarea class="form-control resize-vert" name="newsettings[virtualserver_welcomemessage]" id="new_virtualserver_welcomemessage" rows="5" cols="30">{$serverinfo['virtualserver_welcomemessage']}</textarea>
 							{/if}
 							</td>
 						</tr>
@@ -183,7 +183,7 @@
 								 - 
 							{else}
 								<input id="new_virtualserver_iconid" class="form-control" type="text" name="newsettings[virtualserver_icon_id]" value="{$serverinfo['virtualserver_icon_id']}" />
-								<a href="javascript:oeffnefenster('site/showallicons.php?ip={$smarty.session.server_ip}&amp;sid={$sid}&amp;port={$serverinfo['virtualserver_port']}');">{$lang['set']}</a>
+								<a href="javascript:oeffnefenster('site/showallicons.php?ip={$smarty.session.server_ip}&amp;sid={$sid}&amp;port={$serverinfo['virtualserver_port']}', '{$lang['set']}');">{$lang['set']}</a>
 							{/if}
 							</td>
 						</tr>
@@ -194,8 +194,8 @@
 			<div class="box box-border-olive">
 				<div class="box-header">
 					<h3 class="box-title">{$lang['standardgroups']}</h3>
-		          	<div class="box-tools pull-right">
-		            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+					<div class="box-tools pull-right">
+						<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 					</div>
 				</div>
 				<div class="box-body">
@@ -204,7 +204,7 @@
 							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_default_server_group">{$lang['servergroup']}:</label></td>
 							<td class="col-xs-6 col-md-8 col-lg-9">
 							{if isset($permoverview['b_virtualserver_modify_default_servergroup']) AND empty($permoverview['b_virtualserver_modify_default_servergroup'])}
-								-
+								- 
 							{else}
 								<select class="form-control" id="new_virtualserver_default_server_group" name="newsettings[virtualserver_default_server_group]">
 								{foreach key=key item=value from=$servergroups}
@@ -220,7 +220,7 @@
 							<td><label for="new_virtualserver_default_channel_group">{$lang['channelgroup']}:</label></td>
 							<td>
 							{if isset($permoverview['b_virtualserver_modify_default_channelgroup']) AND empty($permoverview['b_virtualserver_modify_default_channelgroup'])}
-								-
+								- 
 							{else}
 								<select class="form-control" id="new_virtualserver_default_channel_group" name="newsettings[virtualserver_default_channel_group]">
 								{foreach key=key item=value from=$channelgroups}
@@ -236,7 +236,7 @@
 							<td><label for="new_virtualserver_default_channel_admin_group">{$lang['chanadmingroup']}:</label></td>
 							<td>
 							{if isset($permoverview['b_virtualserver_modify_default_channeladmingroup']) AND empty($permoverview['b_virtualserver_modify_default_channeladmingroup'])}
-								-
+								- 
 							{else}
 								<select class="form-control" id="new_virtualserver_default_channel_admin_group" name="newsettings[virtualserver_default_channel_admin_group]">
 								{foreach key=key item=value from=$channelgroups}
@@ -255,8 +255,8 @@
 			<div class="box box-info">
 				<div class="box-header">
 					<h3 class="box-title">{$lang['host']}</h3>
-		          	<div class="box-tools pull-right">
-		            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+					<div class="box-tools pull-right">
+						<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 					</div>
 				</div>
 				<div class="box-body">
@@ -265,9 +265,9 @@
 							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_hostmessage">{$lang['hostmessage']}:</label></td>
 							<td class="col-xs-6 col-md-8 col-lg-9">
 							{if isset($permoverview['b_virtualserver_modify_hostmessage']) AND empty($permoverview['b_virtualserver_modify_hostmessage'])}
-								-
+								- 
 							{else}
-								<textarea class="form-control" id="new_virtualserver_hostmessage" name="newsettings[virtualserver_hostmessage]" rows="5" cols="30">{$serverinfo['virtualserver_hostmessage']}</textarea>
+								<textarea class="form-control resize-vert" id="new_virtualserver_hostmessage" name="newsettings[virtualserver_hostmessage]" rows="5" cols="30">{$serverinfo['virtualserver_hostmessage']}</textarea>
 							{/if}
 							</td>
 						</tr>
@@ -275,7 +275,7 @@
 							<td><label for="new_virtualserver_hostmessage_mode">{$lang['hostmessageshow']}:</label></td>
 							<td>
 							{if isset($permoverview['b_virtualserver_modify_hostmessage']) AND empty($permoverview['b_virtualserver_modify_hostmessage'])}
-								-
+								- 
 							{else}
 							<select class="form-control" id="new_virtualserver_hostmessage_mode" name="newsettings[virtualserver_hostmessage_mode]">
 								<option value="0" {if $serverinfo['virtualserver_hostmessage_mode'] == 0}selected='selected'{/if}>{$lang['nomessage']}</option>
@@ -293,7 +293,7 @@
 							<td><label for="new_virtualserver_hostbanner_url">{$lang['hosturl']}:</label></td>
 							<td>
 							{if isset($permoverview['b_virtualserver_modify_hostbanner']) AND empty($permoverview['b_virtualserver_modify_hostbanner'])}
-								-
+								- 
 							{else}
 								<input type="text" class="form-control" id="new_virtualserver_hostbanner_url" name="newsettings[virtualserver_hostbanner_url]" value="{$serverinfo['virtualserver_hostbanner_url']}" />
 							{/if}
@@ -303,7 +303,7 @@
 							<td><label for="new_virtualserver_hostbanner_gfx_url">{$lang['hostbannerurl']}:</label></td>
 							<td>
 							{if isset($permoverview['b_virtualserver_modify_hostbanner']) AND empty($permoverview['b_virtualserver_modify_hostbanner'])}
-								-
+								- 
 							{else}
 								{if $serverinfo['virtualserver_hostbanner_gfx_url']!=''}
 								<img style="width:350px" src="{$serverinfo['virtualserver_hostbanner_gfx_url']}" alt="" /><br />
@@ -316,7 +316,7 @@
 							<td><label for="new_virtualserver_hostbanner_gfx_interval">{$lang['hostbannerintval']}:</label></td>
 							<td>
 							{if isset($permoverview['b_virtualserver_modify_hostbanner']) AND empty($permoverview['b_virtualserver_modify_hostbanner'])}
-								-
+								- 
 							{else}
 								<input type="text" class="form-control" id="new_virtualserver_hostbanner_gfx_interval" name="newsettings[virtualserver_hostbanner_gfx_interval]" value="{$serverinfo['virtualserver_hostbanner_gfx_interval']}" />
 							{/if}
@@ -329,7 +329,7 @@
 							<td><label for="new_virtualserver_hostbutton_tooltip">{$lang['hostbuttontooltip']}:</label></td>
 							<td>
 							{if isset($permoverview['b_virtualserver_modify_hostbutton']) AND empty($permoverview['b_virtualserver_modify_hostbutton'])}
-								-
+								- 
 							{else}
 								<input type="text" class="form-control" id="new_virtualserver_hostbutton_tooltip" name="newsettings[virtualserver_hostbutton_tooltip]" value="{$serverinfo['virtualserver_hostbutton_tooltip']}" />
 							{/if}
@@ -339,7 +339,7 @@
 							<td><label for="new_virtualserver_hostbutton_gfx_url">{$lang['hostbuttongfx']}:</label></td>
 							<td>
 							{if isset($permoverview['b_virtualserver_modify_hostbutton']) AND empty($permoverview['b_virtualserver_modify_hostbutton'])}
-								-
+								- 
 							{else}
 								<input type="text" class="form-control" id="new_virtualserver_hostbutton_gfx_url" name="newsettings[virtualserver_hostbutton_gfx_url]" value="{$serverinfo['virtualserver_hostbutton_gfx_url']}" />
 							{/if}
@@ -349,7 +349,7 @@
 							<td><label for="new_virtualserver_hostbutton_url">{$lang['hostbuttonurl']}:</label></td>
 							<td>
 							{if isset($permoverview['b_virtualserver_modify_hostbutton']) AND empty($permoverview['b_virtualserver_modify_hostbutton'])}
-								-
+								- 
 							{else}
 								<input type="text" class="form-control" id="new_virtualserver_hostbutton_url" name="newsettings[virtualserver_hostbutton_url]" value="{$serverinfo['virtualserver_hostbutton_url']}" />
 							{/if}
@@ -362,8 +362,8 @@
 			<div class="box box-warning">
 				<div class="box-header">
 					<h3 class="box-title">{$lang['autoban']}</h3>
-		          	<div class="box-tools pull-right">
-		            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+					<div class="box-tools pull-right">
+						<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 					</div>
 				</div>
 				<div class="box-body">
@@ -372,7 +372,7 @@
 							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_complain_autoban_count">{$lang['autobancount']}:</label></td>
 							<td class="col-xs-6 col-md-8 col-lg-9">
 							{if isset($permoverview['b_virtualserver_modify_complain']) AND empty($permoverview['b_virtualserver_modify_complain'])}
-								-
+								- 
 							{else}
 								<input type="text" class="form-control" id="new_virtualserver_complain_autoban_count" name="newsettings[virtualserver_complain_autoban_count]" value="{$serverinfo['virtualserver_complain_autoban_count']}" />
 							{/if}
@@ -382,7 +382,7 @@
 							<td><label for="new_virtualserver_complain_autoban_time">{$lang['autobantime']}:</label></td>
 							<td>
 							{if isset($permoverview['b_virtualserver_modify_complain']) AND empty($permoverview['b_virtualserver_modify_complain'])}
-								-
+								- 
 							{else}
 								<input type="text" class="form-control" id="new_virtualserver_complain_autoban_time" name="newsettings[virtualserver_complain_autoban_time]" value="{$serverinfo['virtualserver_complain_autoban_time']}" />{$lang['seconds']}
 							{/if}
@@ -392,7 +392,7 @@
 							<td><label for="new_virtualserver_complain_remove_time">{$lang['removetime']}:</label></td>
 							<td>
 							{if isset($permoverview['b_virtualserver_modify_complain']) AND empty($permoverview['b_virtualserver_modify_complain'])}
-								-
+								- 
 							{else}
 								<input type="text" class="form-control" id="new_virtualserver_complain_remove_time" name="newsettings[virtualserver_complain_remove_time]" value="{$serverinfo['virtualserver_complain_remove_time']}" />{$lang['seconds']}
 							{/if}
@@ -405,8 +405,8 @@
 			<div class="box box-danger">
 				<div class="box-header">
 					<h3 class="box-title">{$lang['antiflood']}</h3>
-		          	<div class="box-tools pull-right">
-		            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+					<div class="box-tools pull-right">
+						<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 					</div>
 				</div>
 				<div class="box-body">
@@ -415,7 +415,7 @@
 							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_antiflood_points_tick_reduce">{$lang['pointstickreduce']}:</label></td>
 							<td class="col-xs-6 col-md-8 col-lg-9">
 							{if isset($permoverview['b_virtualserver_modify_antiflood']) AND empty($permoverview['b_virtualserver_modify_antiflood'])}
-								-
+								- 
 							{else}
 								<input type="text" class="form-control" id="new_virtualserver_antiflood_points_tick_reduce" name="newsettings[virtualserver_antiflood_points_tick_reduce]" value="{$serverinfo['virtualserver_antiflood_points_tick_reduce']}" />
 							{/if}
@@ -425,7 +425,7 @@
 							<td><label for="new_virtualserver_antiflood_points_needed_command_block">{$lang['pointsneededblockcmd']}:</label></td>
 							<td>
 							{if isset($permoverview['b_virtualserver_modify_antiflood']) AND empty($permoverview['b_virtualserver_modify_antiflood'])}
-								-
+								- 
 							{else}
 								<input type="text" class="form-control" id="new_virtualserver_antiflood_points_needed_command_block" name="newsettings[virtualserver_antiflood_points_needed_command_block]" value="{$serverinfo['virtualserver_antiflood_points_needed_command_block']}" />
 							{/if}
@@ -435,7 +435,7 @@
 							<td><label for="new_virtualserver_antiflood_points_needed_ip_block">{$lang['pointsneededblockip']}:</label></td>
 							<td>
 							{if isset($permoverview['b_virtualserver_modify_antiflood']) AND empty($permoverview['b_virtualserver_modify_antiflood'])}
-								-
+								- 
 							{else}
 								<input type="text" class="form-control" id="new_virtualserver_antiflood_points_needed_ip_block" name="newsettings[virtualserver_antiflood_points_needed_ip_block]" value="{$serverinfo['virtualserver_antiflood_points_needed_ip_block']}" />
 							{/if}
@@ -448,8 +448,8 @@
 			<div class="box box-success">
 				<div class="box-header">
 					<h3 class="box-title">{$lang['transfers']}</h3>
-		          	<div class="box-tools pull-right">
-		            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+					<div class="box-tools pull-right">
+						<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 					</div>
 				</div>
 				<div class="box-body">
@@ -458,7 +458,7 @@
 							<td class="col-xs-6 col-md-4 col-lg-3"><label for="">{$lang['upbandlimit']}:</label></td>
 							<td class="col-xs-6 col-md-8 col-lg-9">
 							{if isset($permoverview['b_virtualserver_modify_ft_settings']) AND empty($permoverview['b_virtualserver_modify_ft_settings'])}
-								-
+								- 
 							{else}
 								<input type="text" class="form-control" id="new_virtualserver_max_upload_total_bandwidth" name="newsettings[virtualserver_max_upload_total_bandwidth]" value="{$serverinfo['virtualserver_max_upload_total_bandwidth']}" />Byte/s
 							{/if}
@@ -468,7 +468,7 @@
 							<td><label for="new_virtualserver_upload_quota">{$lang['uploadquota']}:</label></td>
 							<td>
 							{if isset($permoverview['b_virtualserver_modify_ft_quotas']) AND empty($permoverview['b_virtualserver_modify_ft_quotas'])}
-								-
+								- 
 							{else}
 								<input type="text" class="form-control" id="new_virtualserver_upload_quota" name="newsettings[virtualserver_upload_quota]" value="{$serverinfo['virtualserver_upload_quota']}" />MiB
 							{/if}
@@ -478,7 +478,7 @@
 							<td><label for="new_virtualserver_max_download_total_bandwidth">{$lang['downbandlimit']}:</label></td>
 							<td>
 							{if isset($permoverview['b_virtualserver_modify_ft_settings']) AND empty($permoverview['b_virtualserver_modify_ft_settings'])}
-								-
+								- 
 							{else}
 								<input type="text" class="form-control" id="new_virtualserver_max_download_total_bandwidth" name="newsettings[virtualserver_max_download_total_bandwidth]" value="{$serverinfo['virtualserver_max_download_total_bandwidth']}" />Byte/s
 							{/if}
@@ -488,8 +488,8 @@
 							<td><label for="new_virtualserver_download_quota">{$lang['downloadquota']}:</label></td>
 							<td>
 							{if isset($permoverview['b_virtualserver_modify_ft_quotas']) AND empty($permoverview['b_virtualserver_modify_ft_quotas'])}
-								-
-							{else}	
+								- 
+							{else}
 								<input type="text" class="form-control" id="new_virtualserver_download_quota" name="newsettings[virtualserver_download_quota]" value="{$serverinfo['virtualserver_download_quota']}" />MiB
 							{/if}
 							</td>
@@ -502,8 +502,8 @@
 			<div class="box box-default">
 				<div class="box-header">
 					<h3 class="box-title">{$lang['logs']}</h3>
-		          	<div class="box-tools pull-right">
-		            	<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+					<div class="box-tools pull-right">
+						<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
 					</div>
 				</div>
 				<div class="box-body">
@@ -565,7 +565,6 @@
 					</table>
 				</div>
 			</div>
-
 			<input class="btn btn-block btn-flat btn-success" type="submit" name="editserver" value="Edit" />
 		</form>
 	</div>

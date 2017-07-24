@@ -57,7 +57,7 @@
 							<a href="index.php?site=sgroupeditperm&amp;sid={$sid}&amp;sgid={$value['sgid']}" class="btn btn-sm btn-flat btn-warning no-margin">{$lang['editperms']}</a>
 						{if !isset($permoverview['b_virtualserver_servergroup_delete']) or $permoverview['b_virtualserver_servergroup_delete'] == 1}
 							<form style="display: inline;" method="post" action="index.php?site=sgroups&amp;sid={$sid}&amp;sgid={$value['sgid']}">
-								<input type="submit" class="btn btn-sm btn-flat btn-danger" name="delgroup" value="{$lang['delete']}"  onclick="return confirm('{$lang['deletemsgservergroup']}')" />
+								<input type="submit" class="btn btn-sm btn-flat btn-danger" name="delgroup" value="{$lang['delete']}" onclick="return confirm('{$lang['deletemsgservergroup']}')" />
 							</form>
 						{/if}
 						</td>

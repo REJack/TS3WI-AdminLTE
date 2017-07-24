@@ -31,7 +31,7 @@
 						<th class="text-center" width="10%">{$lang['id']}</th>
 						<th class="text-center" width="10%">{$lang['pid']}</th>
 						<th>{$lang['name']}</th>
-						<th width="30%"></th>
+						<th width="38%"></th>
 					</tr>
 				{if !empty($channellist)}
 					{foreach key=key item=value from=$channellist}
@@ -40,6 +40,7 @@
 						<td style="vertical-align: middle;" class="text-center">{$value['pid']}</td>
 						<td style="vertical-align: middle;">{$value['channel_name']}</td>
 						<td style="vertical-align: middle;" class="no-padding text-right">
+							<!-- <a class="btn btn-default btn-flat btn-sm no-margin" href="#" onclick="oeffnefenster('site/filebrowser.php?sid={$sid}&amp;cid={$value['cid']}')">{$lang['filelist']}</a> -->
 							<a class="btn btn-info btn-flat btn-sm no-margin" href="index.php?site=channeleditperm&amp;sid={$sid}&amp;cid={$value['cid']}">{$lang['editperms']}</a>
 							<a class="btn btn-warning btn-flat btn-sm no-margin" href="index.php?site=channeledit&amp;sid={$sid}&amp;cid={$value['cid']}">{$lang['channeledit']}</a>
 							<a class="btn btn-success btn-flat btn-sm no-margin" href="index.php?site=channelview&amp;sid={$sid}&amp;cid={$value['cid']}">{$lang['channelview']}</a>

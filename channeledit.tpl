@@ -1,7 +1,7 @@
 <section class="content-header">
 	<h1>
 		{$lang['channel']} {$lang['editor']} &quot;{$channelinfo['channel_name']}&quot;
-    </h1>
+	</h1>
 </section>
 <section class="content container-fluid">
 	<div class="col-lg-10 col-lg-offset-1">

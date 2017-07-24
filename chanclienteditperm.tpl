@@ -58,7 +58,7 @@
 			</div>
 			<div class="box-body">
 				<form method="post" action="index.php?site=chanclienteditperm&amp;sid={$sid}">
-					<table data-spy="affix" data-offset-top="470" style="top: 50px; z-index: 1000;"  class="table bg-white" id="TableHeader">
+					<table data-spy="affix" data-offset-top="470" style="top: 50px; z-index: 1000;" class="table bg-white" id="TableHeader">
 						<tr>
 							<th style="width: 5%;">&nbsp;<a href="javascript:Klappen(0)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic0"></i></a></th>
 							<th style="width: 10%;" class="text-center">{$lang['permid']}</th>
@@ -433,7 +433,7 @@
 									<input type='checkbox' {if $value2['permvalue'] == 1}checked="checked"{/if} name="perm[{$value2['permid']}][value]" value="1" />
 								{else}
 									<input {if $value2['permname'] == 'i_icon_id'}id="iconid"{/if} type='text' name="perm[{$value2['permid']}][value]" value="{$value2['permvalue']}" />
-									{if $value2['permname'] == 'i_icon_id'}<a href="javascript:oeffnefenster('site/showallicons.php?ip={$smarty.session.server_ip}&amp;sid={$sid}');">{$lang['set']}</a>{/if}
+									{if $value2['permname'] == 'i_icon_id'}<a href="javascript:oeffnefenster('site/showallicons.php?ip={$smarty.session.server_ip}&amp;sid={$sid}', '{$lang['set']}');">{$lang['set']}</a>{/if}
 								{/if}
 								</td>
 								<td style="width: 10%; vertical-align: middle;" class="text-center">

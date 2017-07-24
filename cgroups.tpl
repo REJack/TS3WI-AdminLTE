@@ -56,7 +56,7 @@
 							<a class="btn btn-sm btn-warning btn-flat no-margin" href="index.php?site=cgroupeditperm&amp;sid={$sid}&amp;cgid={$value['cgid']}">{$lang['editperms']}</a>
 						{if !isset($permoverview['b_virtualserver_channelgroup_delete']) or $permoverview['b_virtualserver_channelgroup_delete']==1}
 							<form style="display: inline;" method="post" action="index.php?site=cgroups&amp;sid={$sid}&amp;cgid={$value['cgid']}">
-								<input type="submit" class="btn btn-sm btn-danger btn-flat" name="delgroup" value="{$lang['delete']}"  onclick="return confirm('{$lang['deletemsgchannelgroup']}')" />
+								<input type="submit" class="btn btn-sm btn-danger btn-flat" name="delgroup" value="{$lang['delete']}" onclick="return confirm('{$lang['deletemsgchannelgroup']}')" />
 							</form>
 						{/if}
 						</td>

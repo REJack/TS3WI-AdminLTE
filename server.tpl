@@ -15,7 +15,7 @@
 			</div>
 			<form class="box-body" method="post" action="index.php?site=server">
 				<div class="form-group">
-					<textarea type="text" class="form-control" name="msgtoall" id="msgtoall"></textarea>
+					<textarea type="text" class="form-control resize-vert" name="msgtoall" id="msgtoall"></textarea>
 				</div>
 				<input class="btn btn-flat bg-teal pull-right" type="submit" name="sendmsg" value="{$lang['send']}" />
 			</form>
@@ -47,8 +47,7 @@
 						<th class="text-center">
 							<a class="headlink" href="index.php?site=server&amp;sortby=uptime&amp;sorttype={if $sortby == 'virtualserver_uptime' AND $sorttype == $smarty.const.SORT_ASC}desc{else}asc{/if}">{$lang['runtime']}</a>
 						</th>
-						<th class="text-center"><a class="headlink" href="index.php?site=server&amp;sortby=clients&amp;sorttype={if $sortby == 'virtualserver_clientsonline'
-						 AND $sorttype == $smarty.const.SORT_ASC}desc{else}asc{/if}">{$lang['clients']}</a>
+						<th class="text-center"><a class="headlink" href="index.php?site=server&amp;sortby=clients&amp;sorttype={if $sortby == 'virtualserver_clientsonline' AND $sorttype == $smarty.const.SORT_ASC}desc{else}asc{/if}">{$lang['clients']}</a>
 						</th>
 						<th class="text-center">{$lang['autostart']}</th>
 						<th class="text-center">{$lang['options']}</th>

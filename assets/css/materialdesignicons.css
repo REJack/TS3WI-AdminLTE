@@ -1,22 +1,22 @@
 @font-face {
-  font-family: "Material Design Icons";
+	font-family: "Material Design Icons";
 	src:url("../fonts/mdi-e07524fb19001df687e5b2173b7c33fd.eot?e07524fb19001df687e5b2173b7c33fd");
 	src:url("../fonts/mdi-e07524fb19001df687e5b2173b7c33fd.eot?#iefix") format("embedded-opentype"),
 		url("../fonts/mdi-e07524fb19001df687e5b2173b7c33fd.woff?e07524fb19001df687e5b2173b7c33fd") format("woff"),
 		url("../fonts/mdi-e07524fb19001df687e5b2173b7c33fd.ttf?e07524fb19001df687e5b2173b7c33fd") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+	font-weight: normal;
+	font-style: normal;
 }
 
 .mdi:before,
 .mdi-set {
-  display: inline-block;
-  font: normal normal normal 24px/1 "Material Design Icons";
-  font-size: inherit;
-  text-rendering: auto;
-  line-height: inherit;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	display: inline-block;
+	font: normal normal normal 24px/1 "Material Design Icons";
+	font-size: inherit;
+	text-rendering: auto;
+	line-height: inherit;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 

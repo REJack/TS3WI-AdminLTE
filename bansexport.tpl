@@ -1,14 +1,13 @@
-<table class="border" style="width:100%" cellpadding="1" cellspacing="0">
-
-	<tr>
-		<td class="thead" colspan="9">{$lang['bansexport']}</td>
-	</tr>
-	<tr>
-		<td colspan="9">{$lang['bansexportdesc']}</td>
-	</tr>
-	<tr>
-		<td>
-		<textarea rows="10" cols="70" readonly="readonly">{$banexport}</textarea>
-		</td>
-	</tr>
-</table>
+<section class="content container-fluid">
+	<div class="col-lg-10 col-lg-offset-1">
+		<div class="box box-primary">
+			<div class="box-header">
+				<h3 class="box-title">{$lang['bansexport']}</h3>
+			</div>
+			<div class="box-body">
+				<p>{$lang['bansexportdesc']}</p>
+				<textarea rows="10" class="form-control resize-vert" readonly>{$banexport}</textarea>
+			</div>
+		</div>
+	</div>
+</section>

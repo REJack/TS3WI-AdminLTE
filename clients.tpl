@@ -12,38 +12,38 @@
 {else}
 <script>
 	$(function () {
-	    var table = $("#clients").DataTable({
-	    	"order": [[ 0, "desc" ]],
-	      	"processing": true,
-	      	"columnDefs": [
-			    { "orderable": false, "targets": 6 }
-	  		],
-	      	"buttons": [
-	        		{
-	    	        text: "{$lang['showmoreentrys']} <span id='more_entry_act_page'>1</span>/<span id='more_entry_max_pages'>{if $pages|string_format:'%d' == 0}1{else}{$pages}{/if}</span>",
-		            className: "btn btn-primary btn-flat {if $pages|string_format:'%d' == 0}disabled{/if}",
-	              	action: function ( e, dt, node, config ) {
-	                	add_entries();
-	              	}
-	          	}
-	      	]
-	    });
+		var table = $("#clients").DataTable({
+			"order": [[ 0, "desc" ]],
+			"processing": true,
+			"columnDefs": [
+				{ "orderable": false, "targets": 6 }
+			],
+			"buttons": [
+					{
+					text: "{$lang['showmoreentrys']} <span id='more_entry_act_page'>1</span>/<span id='more_entry_max_pages'>{if $pages|string_format:'%d' == 0}1{else}{$pages}{/if}</span>",
+					className: "btn btn-primary btn-flat {if $pages|string_format:'%d' == 0}disabled{/if}",
+					action: function ( e, dt, node, config ) {
+						add_entries();
+					}
+				}
+			]
+		});
 
-	    table.buttons().container().appendTo( '#clients_wrapper .col-sm-6:eq(0)' );
-	    $('#clients_processing').css('top', '5%');
-	    $('.pagination').addClass('pagination-flat');
+		table.buttons().container().appendTo( '#clients_wrapper .col-sm-6:eq(0)' );
+		$('#clients_processing').css('top', '5%');
+		$('.pagination').addClass('pagination-flat');
 
-	    var next_page = 0;
+		var next_page = 0;
 
-	    function add_entries(){
-		    var max_pages = parseInt("{$pages}");
-		    	max_pages = max_pages-1;
-	      	var url = "index.php?site=clients&sid={$sid}&getstart="+((next_page+1)*100);
+		function add_entries(){
+			var max_pages = parseInt("{$pages}");
+				max_pages = max_pages-1;
+			var url = "index.php?site=clients&sid={$sid}&getstart="+((next_page+1)*100);
 
 			table.processing(true);
 			$('#more_entry_act_page').parents('a').addClass('disabled');
 
-	    	if (max_pages != next_page) {
+			if (max_pages != next_page) {
 				$.get(url, function(data) {
 					data = $.parseHTML(data);
 					$.each(data, function(key, itm) {
@@ -61,22 +61,22 @@
 									uItm.children[5].innerHTML,
 									uItm.children[6].innerHTML
 								] ).draw( false );
-						        if (uKey == lastID) {
-		      						next_page += 1;
+								if (uKey == lastID) {
+									next_page += 1;
 
 									if (next_page != max_pages){
 										$('#more_entry_act_page').parents('a').removeClass('disabled');
 									}
 
 									$('#more_entry_act_page').text(next_page+1);
-						           	table.processing( false );
-						        }
+									table.processing( false );
+								}
 							})
 						}
 					});
 				});
-		    }
-	    }
+			}
+		}
 	});
 </script>
 <section class="content container-fluid">

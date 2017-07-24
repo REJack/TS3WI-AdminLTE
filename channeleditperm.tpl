@@ -31,14 +31,14 @@
 					<h3 class="box-title">({$cid}) {$channelname} {$lang['permissionlist']}</h3>
 				</div>
 				<div class="box-body">
-					<table data-spy="affix" data-offset-top="230" style="top: 50px; z-index: 1000;"  class="table bg-white" id="TableHeader">
+					<table data-spy="affix" data-offset-top="230" style="top: 50px; z-index: 1000;" class="table bg-white" id="TableHeader">
 						<tr>
 							<th style="width: 5%;">&nbsp;<a href="javascript:Klappen(0)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic0"></i></a></th>
 							<th style="width: 10%;" class="text-center">{$lang['permid']}</th>
 							<th>{$lang['permname']}</th>
 							<th style="width: 5%;" class="text-center">{$lang['value']}</th>
 							<th style="width: 10%;" class="text-center">{$lang['options']}</th>
-							<th style="width: 7%;" class="text-center no-padding"><label for="granttoall">{$lang['grant']}</label><input type="text" class="form-control" id="granttoall" name="granttoall"<td style="vertical-align: middle;" colspan="2" class="no-padding text-center"> maxlength="3" /></th>
+							<th style="width: 7%;" class="text-center no-padding"><label for="granttoall">{$lang['grant']}</label><input type="text" class="form-control" id="granttoall" name="granttoall" style="vertical-align: middle;" colspan="2" class="no-padding text-center" maxlength="3" /></th>
 						</tr>
 					</table>
 					<table class="table table-striped" id="TableContent">
@@ -92,7 +92,7 @@
 													<table class="table table-striped">
 											{/if}
 											{if $key == 4}
-											 		</table>
+													</table>
 												</div>
 											</td>
 										</tr>
@@ -131,7 +131,7 @@
 													<table class="table table-striped">
 											{/if}
 											{if $key == 7}
-								 					</table>
+													</table>
 												</div>
 											</td>
 										</tr>
@@ -145,7 +145,7 @@
 													<table class="table table-striped">
 											{/if}
 											{if $key == 8}
-								 					</table>
+													</table>
 												</div>
 											</td>
 										</tr>		
@@ -186,7 +186,7 @@
 											<table class="table table-striped">
 											{/if}
 											{if $key == 11}
-								 			</table>
+											</table>
 											</div>
 											</td>
 										</tr>
@@ -200,7 +200,7 @@
 													<table class="table table-striped">
 											{/if}
 											{if $key == 12}
-								 					</table>
+													</table>
 												</div>
 											</td>
 										</tr>
@@ -214,7 +214,7 @@
 													<table class="table table-striped">
 											{/if}
 											{if $key == 13}
-								 					</table>
+													</table>
 												</div>
 											</td>
 										</tr>
@@ -228,7 +228,7 @@
 													<table class="table table-striped">
 											{/if}
 											{if $key == 14}
-								 					</table>
+													</table>
 												</div>
 											</td>
 										</tr>
@@ -242,7 +242,7 @@
 													<table class="table table-striped">
 											{/if}
 											{if $key == 15}
-								 					</table>
+													</table>
 												</div>
 											</td>
 										</tr>
@@ -269,7 +269,7 @@
 													<table class="table table-striped">
 											{/if}
 											{if $key == 17}
-								 					</table>
+													</table>
 												</div>
 											</td>
 										</tr>
@@ -283,7 +283,7 @@
 													<table class="table table-striped">
 											{/if}
 											{if $key == 18}
-								 					</table>
+													</table>
 												</div>
 											</td>
 										</tr>
@@ -297,13 +297,13 @@
 													<table class="table table-striped">
 											{/if}
 											{if $key == 19}
-								 					</table>
+													</table>
 												</div>
 											</td>
 										</tr>
 										<tr>
-											 <td>&nbsp;</td>
-											 <td colspan="5">&nbsp;<a href="javascript:Klappen(20)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic20"></i></a>&nbsp;{$lang['delete']}</td>
+											<td>&nbsp;</td>
+											<td colspan="5">&nbsp;<a href="javascript:Klappen(20)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic20"></i></a>&nbsp;{$lang['delete']}</td>
 										</tr>
 										<tr>
 											<td colspan="6">
@@ -338,13 +338,13 @@
 													<table class="table table-striped">
 											{/if}
 											{if $key == 22}
-								 					</table>
+													</table>
 												</div>
 											</td>
 										</tr>
 										<tr>
-											 <td>&nbsp;</td>
-											 <td colspan="5">&nbsp;<a href="javascript:Klappen(23)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic23"></i></a>&nbsp;{$lang['admin']}</td>
+											<td>&nbsp;</td>
+											<td colspan="5">&nbsp;<a href="javascript:Klappen(23)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic23"></i></a>&nbsp;{$lang['admin']}</td>
 										</tr>
 										<tr>
 											<td colspan="6">
@@ -352,7 +352,7 @@
 													<table class="table table-striped">
 											{/if}
 											{if $key == 23}
-								 					</table>
+													</table>
 												</div>
 											</td>
 										</tr>
@@ -366,7 +366,7 @@
 													<table class="table table-striped">
 											{/if}
 											{if $key == 24}
-								 					</table>
+													</table>
 												</div>
 											</td>
 										</tr>
@@ -380,7 +380,7 @@
 													<table class="table table-striped">
 											{/if}
 											{if $key == 25}
-									 				</table>
+													</table>
 												</div>
 											</td>
 										</tr>

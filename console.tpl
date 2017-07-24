@@ -1,26 +1,27 @@
-<form method="post" action="index.php?site=console&amp;sid={$sid}">
-<table class="border" cellpadding="0" cellspacing="0">
-	<tr>
-		<td class="thead">{$lang['queryconsole']}</td>
-	</tr>
-	<tr>
-		<td>{$lang['inputbox']}</td>
-	</tr>
-	<tr>
-		<td>
-			<textarea name="command" cols="50" rows="10"></textarea>	
-		</td>
-	</tr>
-	<tr>
-		<td><input class="button" type="submit" name="execute" value="{$lang['execute']}" /><br /><br /></td>
-	</tr>
-	<tr>
-		<td>{$lang['outputbox']}</td>
-	</tr>
-	<tr>
-		<td>
-			<textarea name="output" cols="80" rows="20" readonly="readonly">{$showOutput}</textarea>	
-		</td>
-	</tr>
-</table>
-</form>
+<section class="content container-fluid">
+	<div class="col-lg-10 col-lg-offset-1">
+		<div class="box box-primary">
+			<div class="box-header">
+				<label for="new_command">
+					<h3 class="box-title">{$lang['queryconsole']} <small>{$lang['inputbox']}</small></h3>
+				</label>
+			</div>
+			<div class="box-body">
+				<form method="post" action="index.php?site=console&amp;sid={$sid}">
+					<textarea name="command" id="new_command" class="form-control resize-vert" rows="3"></textarea>
+					<input class="btn btn-primary btn-flat btn-block" type="submit" name="execute" value="{$lang['execute']}" />
+				</form>
+			</div>
+		</div>
+		<div class="box box-default">
+			<div class="box-header">
+				<label for="output">
+					<h3 class="box-title">{$lang['queryconsole']} - {$lang['outputbox']}</h3>
+				</label>
+			</div>
+			<div class="box-body">
+				<textarea name="output" id="output" rows="10" class="form-control resize-vert" readonly>{$showOutput}</textarea>	
+			</div>
+		</div>
+	</div>
+</section>

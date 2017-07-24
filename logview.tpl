@@ -12,33 +12,33 @@
 {else}
 <script>
 	$(function () {
-	    var table = $("#traffic").DataTable({
-	      "order": [[ 0, "desc" ]],
-	      "processing": true,
-	      "buttons": [
-	          {
-	              text: "{$lang['showmoreentrys']}",
-	              className: "btn btn-primary btn-flat btn_showmoreentrys",
-	              action: function ( e, dt, node, config ) {
-	                add_entries();
-	              }
-	          }
-	      ]
-	    });
+		var table = $("#traffic").DataTable({
+			"order": [[ 0, "desc" ]],
+			"processing": true,
+			"buttons": [
+				{
+					text: "{$lang['showmoreentrys']}",
+					className: "btn btn-primary btn-flat btn_showmoreentrys",
+					action: function ( e, dt, node, config ) {
+						add_entries();
+					}
+				}
+			]
+		});
 
-	    table.buttons().container().appendTo( '#traffic_wrapper .col-sm-6:eq(0)' );
-	    
-	    $('.pagination').addClass('pagination-flat');
-	    $('#traffic_processing').css('top', '5%');
+		table.buttons().container().appendTo( '#traffic_wrapper .col-sm-6:eq(0)' );
+		
+		$('.pagination').addClass('pagination-flat');
+		$('#traffic_processing').css('top', '5%');
 
-	    function add_entries(){
-	      	var begin_pos = $('#begin_pos').val();
-	      	var url = "index.php?site=logview&sid={$sid}";
-			table.processing(true);   
+		function add_entries(){
+			var begin_pos = $('#begin_pos').val();
+			var url = "index.php?site=logview&sid={$sid}";
+			table.processing(true);
 			$('.btn_showmoreentrys').addClass('disabled');
 		
 		{literal}
-	      	$.post(url, {begin_pos: begin_pos }, function(data){
+			$.post(url, {begin_pos: begin_pos }, function(data){
 		{/literal}
 				data = $.parseHTML(data);
 				$.each(data, function(key, itm){
@@ -57,16 +57,16 @@
 								uItm.children[3].innerText,
 								uItm.children[4].innerText
 							] ).draw( false );
-					        if (uKey == lastID) {
+							if (uKey == lastID) {
 								$('#begin_pos').val(base.children[0].children[0].value);
 								$('.btn_showmoreentrys').removeClass('disabled');
-					           	table.processing( false );
-					        }
+								table.processing( false );
+							}
 						});
 					}
 				});
-	      	});
-	    }
+			});
+		}
 	});
 </script>
 <section class="content container-fluid">

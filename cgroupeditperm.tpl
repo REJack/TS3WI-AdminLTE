@@ -33,14 +33,14 @@
 			</div>
 			<div class="box-body">
 				<form method="post" action="index.php?site=cgroupeditperm&amp;sid={$sid}&amp;cgid={$cgid}">
-					<table data-spy="affix" data-offset-top="230" style="top: 50px; z-index: 1000;"  class="table bg-white" id="TableHeader">
+					<table data-spy="affix" data-offset-top="230" style="top: 50px; z-index: 1000;" class="table bg-white" id="TableHeader">
 						<tr>
 							<th style="width: 5%;">&nbsp;<a href="javascript:Klappen(0)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic0"></i></a></th>
 							<th style="width: 10%;" class="text-center">{$lang['permid']}</th>
 							<th>{$lang['permname']}</th>
 							<th style="width: 5%;" class="text-center">{$lang['value']}</th>
 							<th style="width: 10%;" class="text-center">{$lang['options']}</th>
-							<th style="width: 7%;" class="text-center no-padding"><label for="granttoall">{$lang['grant']}</label><input type="text" class="form-control" id="granttoall" name="granttoall"<td style="vertical-align: middle;" colspan="2" class="no-padding text-center"> maxlength="3" /></th>
+							<th style="width: 7%;" class="text-center no-padding"><label for="granttoall">{$lang['grant']}</label><input type="text" class="form-control" id="granttoall" name="granttoall" style="vertical-align: middle;" colspan="2" class="no-padding text-center" maxlength="3" /></th>
 						</tr>
 					</table>
 					<table class="table table-striped" id="TableContent">
@@ -410,7 +410,7 @@
 								<input type='checkbox' {if $value2['permvalue'] == 1}checked="checked"{/if} name="perm[{$value2['permid']}][value]" value="1" />
 							{else}
 								<input {if $value2['permname'] == 'i_icon_id'}id="iconid"{/if} type='text' class="form-control" name="perm[{$value2['permid']}][value]" value="{$value2['permvalue']}" />
-								{if $value2['permname'] == 'i_icon_id'}<a href="javascript:oeffnefenster('site/showallicons.php?ip={$smarty.session.server_ip}&amp;sid={$sid}');">{$lang['set']}</a>{/if}
+								{if $value2['permname'] == 'i_icon_id'}<a href="javascript:oeffnefenster('site/showallicons.php?ip={$smarty.session.server_ip}&amp;sid={$sid}', '{$lang['set']}');">{$lang['set']}</a>{/if}
 							{/if}
 							</td>
 							<td style="width: 10%; vertical-align: middle;" class="text-center">

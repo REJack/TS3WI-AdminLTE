@@ -18,7 +18,7 @@
 	<li><a href="index.php?site=fileupload&amp;sid={$sid}"><i class="mdi mdi-upload mdi-lg"></i>{$lang['iconupload']}</a></li>
 	<li><a href="index.php?site=logview&amp;sid={$sid}"><i class="mdi mdi-format-list-bulleted mdi-lg"></i>{$lang['logview']}</a></li>
 	<li><a href="index.php?site=filelist&amp;sid={$sid}"><i class="mdi mdi-file-multiple mdi-lg"></i> {$lang['filelist']}</a></li>
-	<li><a href="javascript:oeffnefenster('site/interactive.php?sid={$sid}&amp;action=action');"><i class="mdi mdi-checkbox-multiple-marked mdi-lg"></i> {$lang['massaction']}</a></li>
+	<li><a href="javascript:oeffnefenster('site/interactive.php?sid={$sid}&amp;action=action', '{$lang['massaction']}');"><i class="mdi mdi-checkbox-multiple-marked mdi-lg"></i> {$lang['massaction']}</a></li>
 	<li class="header">{$lang['channel']}</li>
 	<li><a href="index.php?site=channel&amp;sid={$sid}"><i class="mdi mdi-comment-multiple-outline mdi-lg"></i> {$lang['channellist']}</a></li>
 {if isset($cid)}
@@ -46,7 +46,7 @@
 	<li><a href="index.php?site=token&amp;sid={$sid}"><i class="mdi mdi-key-variant mdi-lg"></i> {$lang['token']}</a></li>
 	<li class="header">{$lang['backup']}</li>
 	<li><a href="index.php?site=backup&amp;sid={$sid}"><i class="mdi mdi-comment-download-outline mdi-lg"></i> {$lang['chanbackups']}</a></li>
-	<li><a href="index.php?site=serverbackup&amp;sid={$sid}"><i class="mdi mdi-server-download  mdi-lg"></i> {$lang['serverbackups']}</a></li>
+	<li><a href="index.php?site=serverbackup&amp;sid={$sid}"><i class="mdi mdi-server-download mdi-lg"></i> {$lang['serverbackups']}</a></li>
 	<li><a href="index.php?site=permexport&amp;sid={$sid}"><i class="mdi mdi-format-section-download mdi-lg"></i> {$lang['permexport']}</a></li>
 	<li><a href="index.php?site=clientsexport&amp;sid={$sid}"><i class="mdi mdi-account-multiple-download mdi-lg"></i> {$lang['clientsexport']}</a></li>
 	<li><a href="index.php?site=bansexport&amp;sid={$sid}"><i class="mdi mdi-account-off-download mdi-lg"></i> {$lang['bansexport']}</a></li>
