@@ -13,6 +13,9 @@
 <script>
 	$(function () {
 		var table = $("#traffic").DataTable({
+            "language": {
+                "url": dataTableLang
+            },
 			"order": [[ 0, "desc" ]],
 			"processing": true,
 			"buttons": [

@@ -23,12 +23,12 @@
 			<div class="box-body">
 				<form method="post" action="index.php?site=serveredit&amp;sid={$sid}">
 					<table class="table">
-							<tr>
-								<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_password">{$lang['newpassword']}:</label></td>
-								<td class="col-xs-6 col-md-8 col-lg-9">
-									<input type="text" class="form-control" id="new_virtualserver_password" name="newsettings[virtualserver_password]"/>
-								</td>
-							</tr>
+						<tr>
+							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_password">{$lang['newpassword']}:</label></td>
+							<td>
+								<input type="text" class="form-control" id="new_virtualserver_password" name="newsettings[virtualserver_password]"/>
+							</td>
+						</tr>
 					</table>
 					<input class="btn btn-flat bg-lime pull-right" type="submit" name="editpw" value="{$lang['send']}" />
 				</form>
@@ -47,7 +47,7 @@
 					<table class="table">
 						<tr>
 							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_name">{$lang['name']}:</label></td>
-							<td class="col-xs-6 col-md-8 col-lg-9">
+							<td>
 							{if isset($permoverview['b_virtualserver_modify_name']) AND empty($permoverview['b_virtualserver_modify_name'])}
 								 - 
 							{else}
@@ -177,12 +177,12 @@
 							</td>
 						</tr>
 						<tr>
-							<td><label for="new_virtualserver_iconid">{$lang['iconid']}:</label></td>
+							<td><label for="iconid">{$lang['iconid']}:</label></td>
 							<td>
 							{if isset($permoverview['b_virtualserver_modify_icon_id']) AND empty($permoverview['b_virtualserver_modify_icon_id'])}
 								 - 
 							{else}
-								<input id="new_virtualserver_iconid" class="form-control" type="text" name="newsettings[virtualserver_icon_id]" value="{$serverinfo['virtualserver_icon_id']}" />
+								<input id="iconid" class="form-control" type="text" name="newsettings[virtualserver_icon_id]" value="{$serverinfo['virtualserver_icon_id']}" />
 								<a href="javascript:oeffnefenster('site/showallicons.php?ip={$smarty.session.server_ip}&amp;sid={$sid}&amp;port={$serverinfo['virtualserver_port']}', '{$lang['set']}');">{$lang['set']}</a>
 							{/if}
 							</td>
@@ -202,7 +202,7 @@
 					<table class="table">
 						<tr>
 							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_default_server_group">{$lang['servergroup']}:</label></td>
-							<td class="col-xs-6 col-md-8 col-lg-9">
+							<td>
 							{if isset($permoverview['b_virtualserver_modify_default_servergroup']) AND empty($permoverview['b_virtualserver_modify_default_servergroup'])}
 								- 
 							{else}
@@ -263,7 +263,7 @@
 					<table class="table">
 						<tr>
 							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_hostmessage">{$lang['hostmessage']}:</label></td>
-							<td class="col-xs-6 col-md-8 col-lg-9">
+							<td>
 							{if isset($permoverview['b_virtualserver_modify_hostmessage']) AND empty($permoverview['b_virtualserver_modify_hostmessage'])}
 								- 
 							{else}
@@ -370,7 +370,7 @@
 					<table class="table">
 						<tr>
 							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_complain_autoban_count">{$lang['autobancount']}:</label></td>
-							<td class="col-xs-6 col-md-8 col-lg-9">
+							<td>
 							{if isset($permoverview['b_virtualserver_modify_complain']) AND empty($permoverview['b_virtualserver_modify_complain'])}
 								- 
 							{else}
@@ -384,7 +384,12 @@
 							{if isset($permoverview['b_virtualserver_modify_complain']) AND empty($permoverview['b_virtualserver_modify_complain'])}
 								- 
 							{else}
-								<input type="text" class="form-control" id="new_virtualserver_complain_autoban_time" name="newsettings[virtualserver_complain_autoban_time]" value="{$serverinfo['virtualserver_complain_autoban_time']}" />{$lang['seconds']}
+								<div class="input-group">
+									<input type="text" class="form-control" id="new_virtualserver_complain_autoban_time" name="newsettings[virtualserver_complain_autoban_time]" value="{$serverinfo['virtualserver_complain_autoban_time']}" />
+									<div class="input-group-addon">
+										{$lang['seconds']}
+									</div>
+								</div>
 							{/if}
 							</td>
 						</tr>
@@ -394,7 +399,12 @@
 							{if isset($permoverview['b_virtualserver_modify_complain']) AND empty($permoverview['b_virtualserver_modify_complain'])}
 								- 
 							{else}
-								<input type="text" class="form-control" id="new_virtualserver_complain_remove_time" name="newsettings[virtualserver_complain_remove_time]" value="{$serverinfo['virtualserver_complain_remove_time']}" />{$lang['seconds']}
+								<div class="input-group">
+									<input type="text" class="form-control" id="new_virtualserver_complain_remove_time" name="newsettings[virtualserver_complain_remove_time]" value="{$serverinfo['virtualserver_complain_remove_time']}" />
+									<div class="input-group-addon">
+										{$lang['seconds']}
+									</div>
+								</div>
 							{/if}
 							</td>
 						</tr>
@@ -413,7 +423,7 @@
 					<table class="table">
 						<tr>
 							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_antiflood_points_tick_reduce">{$lang['pointstickreduce']}:</label></td>
-							<td class="col-xs-6 col-md-8 col-lg-9">
+							<td>
 							{if isset($permoverview['b_virtualserver_modify_antiflood']) AND empty($permoverview['b_virtualserver_modify_antiflood'])}
 								- 
 							{else}
@@ -456,11 +466,16 @@
 					<table class="table">
 						<tr>
 							<td class="col-xs-6 col-md-4 col-lg-3"><label for="">{$lang['upbandlimit']}:</label></td>
-							<td class="col-xs-6 col-md-8 col-lg-9">
+							<td>
 							{if isset($permoverview['b_virtualserver_modify_ft_settings']) AND empty($permoverview['b_virtualserver_modify_ft_settings'])}
 								- 
 							{else}
-								<input type="text" class="form-control" id="new_virtualserver_max_upload_total_bandwidth" name="newsettings[virtualserver_max_upload_total_bandwidth]" value="{$serverinfo['virtualserver_max_upload_total_bandwidth']}" />Byte/s
+								<div class="input-group">
+									<input type="text" class="form-control" id="new_virtualserver_max_upload_total_bandwidth" name="newsettings[virtualserver_max_upload_total_bandwidth]" value="{$serverinfo['virtualserver_max_upload_total_bandwidth']}" />
+									<div class="input-group-addon">
+										Byte/s
+									</div>
+								</div>
 							{/if}
 							</td>
 						</tr>
@@ -470,7 +485,12 @@
 							{if isset($permoverview['b_virtualserver_modify_ft_quotas']) AND empty($permoverview['b_virtualserver_modify_ft_quotas'])}
 								- 
 							{else}
-								<input type="text" class="form-control" id="new_virtualserver_upload_quota" name="newsettings[virtualserver_upload_quota]" value="{$serverinfo['virtualserver_upload_quota']}" />MiB
+								<div class="input-group">
+									<input type="text" class="form-control" id="new_virtualserver_upload_quota" name="newsettings[virtualserver_upload_quota]" value="{$serverinfo['virtualserver_upload_quota']}" />
+									<div class="input-group-addon">
+										MiB
+									</div>
+								</div>
 							{/if}
 							</td>
 						</tr>
@@ -480,7 +500,12 @@
 							{if isset($permoverview['b_virtualserver_modify_ft_settings']) AND empty($permoverview['b_virtualserver_modify_ft_settings'])}
 								- 
 							{else}
-								<input type="text" class="form-control" id="new_virtualserver_max_download_total_bandwidth" name="newsettings[virtualserver_max_download_total_bandwidth]" value="{$serverinfo['virtualserver_max_download_total_bandwidth']}" />Byte/s
+								<div class="input-group">
+									<input type="text" class="form-control" id="new_virtualserver_max_download_total_bandwidth" name="newsettings[virtualserver_max_download_total_bandwidth]" value="{$serverinfo['virtualserver_max_download_total_bandwidth']}" />
+									<div class="input-group-addon">
+										Byte/s
+									</div>
+								</div>
 							{/if}
 							</td>
 						</tr>
@@ -490,7 +515,12 @@
 							{if isset($permoverview['b_virtualserver_modify_ft_quotas']) AND empty($permoverview['b_virtualserver_modify_ft_quotas'])}
 								- 
 							{else}
-								<input type="text" class="form-control" id="new_virtualserver_download_quota" name="newsettings[virtualserver_download_quota]" value="{$serverinfo['virtualserver_download_quota']}" />MiB
+								<div class="input-group">
+									<input type="text" class="form-control" id="new_virtualserver_download_quota" name="newsettings[virtualserver_download_quota]" value="{$serverinfo['virtualserver_download_quota']}" />
+									<div class="input-group-addon">
+										MiB
+									</div>
+								</div>
 							{/if}
 							</td>
 						</tr>
@@ -510,56 +540,38 @@
 					<table class="table">
 						<tr>
 							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_log_client">{$lang['logclient']}:</label></td>
-							<td class="col-xs-6 col-md-8 col-lg-9">
-							<select class="form-control" id="new_virtualserver_log_client" name="newsettings[virtualserver_log_client]">
-								<option value="1" {if $serverinfo['virtualserver_log_client'] == 1}selected="selected"{/if}>{$lang['yes']}</option>
-								<option value="0" {if $serverinfo['virtualserver_log_client'] == 0}selected="selected"{/if}>{$lang['no']}</option>
-							</select>
+							<td>
+								<input type="checkbox" id="new_virtualserver_log_client" name="newsettings[virtualserver_log_client]" value="1" {if $serverinfo['virtualserver_log_client'] === '1'}checked="checked"{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
 							</td>
 						</tr>
 						<tr>
-							<td><label for="new_virtualserver_log_query">{$lang['logquery']}:</label></td>
-							<td>
-							<select class="form-control" id="new_virtualserver_log_query" name="newsettings[virtualserver_log_query]">
-								<option value="1" {if $serverinfo['virtualserver_log_query'] == 1}selected="selected"{/if}>{$lang['yes']}</option>
-								<option value="0" {if $serverinfo['virtualserver_log_query'] == 0}selected="selected"{/if}>{$lang['no']}</option>
-							</select>
+							<td style="vertical-align: middle;"><label for="new_virtualserver_log_query">{$lang['logquery']}:</label></td>
+							<td style="vertical-align: middle;">
+								<input type="checkbox" id="new_virtualserver_log_query" name="newsettings[virtualserver_log_query]" value="1" {if $serverinfo['virtualserver_log_query'] === '1'}checked="checked"{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
 							</td>
 						</tr>
 						<tr>
-							<td><label for="new_virtualserver_log_channel">{$lang['logchannel']}:</label></td>
-							<td>
-							<select class="form-control" id="new_virtualserver_log_channel" name="newsettings[virtualserver_log_channel]">
-								<option value="1" {if $serverinfo['virtualserver_log_channel'] == 1}selected="selected"{/if}>{$lang['yes']}</option>
-								<option value="0" {if $serverinfo['virtualserver_log_channel'] == 0}selected="selected"{/if}>{$lang['no']}</option>
-							</select>
+							<td style="vertical-align: middle;"><label for="new_virtualserver_log_channel">{$lang['logchannel']}:</label></td>
+							<td style="vertical-align: middle;">
+								<input type="checkbox" id="new_virtualserver_log_channel" name="newsettings[virtualserver_log_channel]" value="1" {if $serverinfo['virtualserver_log_channel'] === '1'}checked="checked"{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
 							</td>
 						</tr>
 						<tr>
-							<td><label for="new_virtualserver_log_permissions">{$lang['logpermissions']}:</label></td>
-							<td>
-							<select class="form-control" id="new_virtualserver_log_permissions" name="newsettings[virtualserver_log_permissions]">
-								<option value="1" {if $serverinfo['virtualserver_log_permissions'] == 1}selected="selected"{/if}>{$lang['yes']}</option>
-								<option value="0" {if $serverinfo['virtualserver_log_permissions'] == 0}selected="selected"{/if}>{$lang['no']}</option>
-							</select>
+							<td style="vertical-align: middle;"><label for="new_virtualserver_log_permissions">{$lang['logpermissions']}:</label></td>
+							<td style="vertical-align: middle;">
+								<input type="checkbox" id="new_virtualserver_log_permissions" name="newsettings[virtualserver_log_permissions]" value="1" {if $serverinfo['virtualserver_log_permissions'] === '1'}checked="checked"{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
 							</td>
 						</tr>
 						<tr>
-							<td><label for="new_virtualserver_log_server">{$lang['logserver']}:</label></td>
-							<td>
-							<select class="form-control" id="new_virtualserver_log_server" name="newsettings[virtualserver_log_server]">
-								<option value="1" {if $serverinfo['virtualserver_log_server'] == 1}selected="selected"{/if}>{$lang['yes']}</option>
-								<option value="0" {if $serverinfo['virtualserver_log_server'] == 0}selected="selected"{/if}>{$lang['no']}</option>
-							</select>
+							<td style="vertical-align: middle;"><label for="new_virtualserver_log_server">{$lang['logserver']}:</label></td>
+							<td style="vertical-align: middle;">
+								<input type="checkbox" id="new_virtualserver_log_server" name="newsettings[virtualserver_log_server]" value="1" {if $serverinfo['virtualserver_log_server'] === '1'}checked="checked"{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
 							</td>
 						</tr>	
 						<tr>
-							<td><label for="new_virtualserver_log_filetransfer">{$lang['logfiletransfer']}:</label></td>
-							<td>
-							<select class="form-control" id="new_virtualserver_log_filetransfer" name="newsettings[virtualserver_log_filetransfer]">
-								<option value="1" {if $serverinfo['virtualserver_log_filetransfer'] == 1}selected="selected"{/if}>{$lang['yes']}</option>
-								<option value="0" {if $serverinfo['virtualserver_log_filetransfer'] == 0}selected="selected"{/if}>{$lang['no']}</option>
-							</select>
+							<td style="vertical-align: middle;"><label for="new_virtualserver_log_filetransfer">{$lang['logfiletransfer']}:</label></td>
+							<td style="vertical-align: middle;">
+								<input type="checkbox" id="new_virtualserver_log_filetransfer" name="newsettings[virtualserver_log_filetransfer]" value="1" {if $serverinfo['virtualserver_log_filetransfer'] === '1'}checked="checked"{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
 							</td>
 						</tr>	
 					</table>

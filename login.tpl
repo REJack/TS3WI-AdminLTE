@@ -26,7 +26,7 @@
 				<option value="{$skey}">{$sdata['alias']}</option>	
 			{/foreach}
 			</select>
-			{/if}
+		{/if}
 		</div>
 		<div class="form-group has-feedback">
 			<input type="text" class="form-control" name="loginUser" value="serveradmin" title="{$lang['username']}" required>

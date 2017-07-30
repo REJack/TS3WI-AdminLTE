@@ -13,6 +13,9 @@
 <script>
 	$(function () {
 		var table = $("#clients").DataTable({
+            "language": {
+                "url": dataTableLang
+            },
 			"order": [[ 0, "desc" ]],
 			"processing": true,
 			"columnDefs": [

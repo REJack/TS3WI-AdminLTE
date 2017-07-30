@@ -28,7 +28,7 @@
 						{foreach key=key2 item=value2 from=$value}
 							<tr>
 								<td>
-									<a href="javascript:Klappen('{$i}')"><i class="mdi mdi-plus-box mdi-lg" title="aus/ein-klappen" id="Pic{$i}"></i></a>
+									<a href="javascript:colapse_rows('{$i}')"><i class="mdi mdi-plus-box mdi-lg" title="aus/ein-klappen" id="Pic{$i}"></i></a>
 									{$key2}
 								</td>
 								<td> &nbsp;</td>

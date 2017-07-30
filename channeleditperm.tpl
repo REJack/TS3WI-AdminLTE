@@ -33,7 +33,7 @@
 				<div class="box-body">
 					<table data-spy="affix" data-offset-top="230" style="top: 50px; z-index: 1000;" class="table bg-white" id="TableHeader">
 						<tr>
-							<th style="width: 5%;">&nbsp;<a href="javascript:Klappen(0)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic0"></i></a></th>
+							<th style="width: 5%;">&nbsp;<a href="javascript:colapse_rows(0)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic0"></i></a></th>
 							<th style="width: 10%;" class="text-center">{$lang['permid']}</th>
 							<th>{$lang['permname']}</th>
 							<th style="width: 5%;" class="text-center">{$lang['value']}</th>
@@ -46,7 +46,7 @@
 						{if $key == 0}
 						<tr>
 							<td colspan="6">
-							&nbsp;<a href="javascript:Klappen(1)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic1"></i></a>&nbsp;{$lang['global']}
+							&nbsp;<a href="javascript:colapse_rows(1)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic1"></i></a>&nbsp;{$lang['global']}
 							</td>
 						</tr>
 						{/if}
@@ -57,7 +57,7 @@
 									<table class="table table-striped">
 										<tr>
 											<td style='width:5%'>&nbsp;</td>
-											<td colspan="5">&nbsp;<a href="javascript:Klappen(2)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic2"></i></a>&nbsp;{$lang['information']}</td>
+											<td colspan="5">&nbsp;<a href="javascript:colapse_rows(2)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic2"></i></a>&nbsp;{$lang['information']}</td>
 										</tr>
 										<tr>
 											<td colspan="6" class="no-padding">
@@ -71,7 +71,7 @@
 										</tr>
 										<tr>
 											<td>&nbsp;</td>
-											<td colspan="5">&nbsp;<a href="javascript:Klappen(3)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic3"></i></a>&nbsp;{$lang['virtualservermanagement']}</td></tr>
+											<td colspan="5">&nbsp;<a href="javascript:colapse_rows(3)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic3"></i></a>&nbsp;{$lang['virtualservermanagement']}</td></tr>
 										<tr>
 											<td colspan="6" class="no-padding">
 												<div style="display:{$display}" id="Lay3">
@@ -84,7 +84,7 @@
 										</tr>
 										<tr>
 											<td>&nbsp;</td>
-											<td colspan="5">&nbsp;<a href="javascript:Klappen(4)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic4"></i></a>&nbsp;{$lang['administration']}</td>
+											<td colspan="5">&nbsp;<a href="javascript:colapse_rows(4)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic4"></i></a>&nbsp;{$lang['administration']}</td>
 										</tr>
 										<tr>
 											<td colspan="6" class="no-padding">
@@ -98,7 +98,7 @@
 										</tr>
 										<tr>
 											<td>&nbsp;</td>
-											<td colspan="5">&nbsp;<a href="javascript:Klappen(5)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic5"></i></a>&nbsp;{$lang['settings']}</td>
+											<td colspan="5">&nbsp;<a href="javascript:colapse_rows(5)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic5"></i></a>&nbsp;{$lang['settings']}</td>
 										</tr>
 										<tr>
 											<td colspan="6" class="no-padding">
@@ -115,7 +115,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td colspan="6">&nbsp;<a href="javascript:Klappen(6)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic6"></i></a>&nbsp;{$lang['virtualserver']}</td>
+							<td colspan="6">&nbsp;<a href="javascript:colapse_rows(6)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic6"></i></a>&nbsp;{$lang['virtualserver']}</td>
 						</tr>
 						<tr>
 							<td colspan="6" class="no-padding">
@@ -123,7 +123,7 @@
 									<table class="table table-striped">
 										<tr>
 											<td style='width:5%'>&nbsp;</td>
-											<td colspan="5">&nbsp;<a href="javascript:Klappen(7)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic7"></i></a>&nbsp;{$lang['information']}</td>
+											<td colspan="5">&nbsp;<a href="javascript:colapse_rows(7)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic7"></i></a>&nbsp;{$lang['information']}</td>
 										</tr>
 										<tr>
 											<td colspan="6">
@@ -137,7 +137,7 @@
 										</tr>
 										<tr>
 											<td>&nbsp;</td>
-											<td colspan="5">&nbsp;<a href="javascript:Klappen(8)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic8"></i></a>&nbsp;{$lang['administration']}</td>
+											<td colspan="5">&nbsp;<a href="javascript:colapse_rows(8)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic8"></i></a>&nbsp;{$lang['administration']}</td>
 										</tr>
 										<tr>
 											<td colspan="6">
@@ -151,7 +151,7 @@
 										</tr>		
 										<tr>
 											<td>&nbsp;</td>
-											<td colspan="5">&nbsp;<a href="javascript:Klappen(9)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic9"></i></a>&nbsp;{$lang['settings']}</td>
+											<td colspan="5">&nbsp;<a href="javascript:colapse_rows(9)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic9"></i></a>&nbsp;{$lang['settings']}</td>
 										</tr>
 										<tr>
 											<td colspan="6">
@@ -168,7 +168,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td colspan="6">&nbsp;<a href="javascript:Klappen(10)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic10"></i></a>&nbsp;{$lang['channel']}</td>
+							<td colspan="6">&nbsp;<a href="javascript:colapse_rows(10)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic10"></i></a>&nbsp;{$lang['channel']}</td>
 						</tr>
 						<tr>
 							<td colspan="6" class="no-padding">
@@ -178,7 +178,7 @@
 										{if $key == 10}
 										<tr>
 											<td style='width:51px'>&nbsp;</td>
-											<td colspan="5">&nbsp;<a href="javascript:Klappen(11)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic11"></i></a>&nbsp;{$lang['information']}</td>
+											<td colspan="5">&nbsp;<a href="javascript:colapse_rows(11)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic11"></i></a>&nbsp;{$lang['information']}</td>
 										</tr>
 										<tr>
 											<td colspan="6">
@@ -192,7 +192,7 @@
 										</tr>
 										<tr>
 											<td>&nbsp;</td>
-											<td colspan="5">&nbsp;<a href="javascript:Klappen(12)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic12"></i></a>&nbsp;{$lang['create']}</td>
+											<td colspan="5">&nbsp;<a href="javascript:colapse_rows(12)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic12"></i></a>&nbsp;{$lang['create']}</td>
 										</tr>
 										<tr>
 											<td colspan="6">
@@ -206,7 +206,7 @@
 										</tr>
 										<tr>
 											<td>&nbsp;</td>
-											<td colspan="5">&nbsp;<a href="javascript:Klappen(13)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic13"></i></a>&nbsp;{$lang['modify']}</td>
+											<td colspan="5">&nbsp;<a href="javascript:colapse_rows(13)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic13"></i></a>&nbsp;{$lang['modify']}</td>
 										</tr>
 										<tr>
 											<td colspan="6">
@@ -220,7 +220,7 @@
 										</tr>
 										<tr>
 											<td>&nbsp;</td>
-											<td colspan="5">&nbsp;<a href="javascript:Klappen(14)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic14"></i></a>&nbsp;{$lang['delete']}</td>
+											<td colspan="5">&nbsp;<a href="javascript:colapse_rows(14)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic14"></i></a>&nbsp;{$lang['delete']}</td>
 										</tr>
 										<tr>
 											<td colspan="6">
@@ -234,7 +234,7 @@
 										</tr>
 										<tr>
 											<td>&nbsp;</td>
-											<td colspan="5">&nbsp;<a href="javascript:Klappen(15)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic15"></i></a>&nbsp;{$lang['access']}</td>
+											<td colspan="5">&nbsp;<a href="javascript:colapse_rows(15)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic15"></i></a>&nbsp;{$lang['access']}</td>
 										</tr>
 										<tr>
 											<td colspan="6">
@@ -251,7 +251,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td colspan="6">&nbsp;<a href="javascript:Klappen(16)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic16"></i></a>&nbsp;{$lang['group']}</td>
+							<td colspan="6">&nbsp;<a href="javascript:colapse_rows(16)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic16"></i></a>&nbsp;{$lang['group']}</td>
 						</tr>
 						<tr>
 							<td colspan="6" class="no-padding">
@@ -261,7 +261,7 @@
 										{if $key == 16}
 										<tr>
 											<td style='width:51px'>&nbsp;</td>
-											<td colspan="5">&nbsp;<a href="javascript:Klappen(17)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic17"></i></a>&nbsp;{$lang['information']}</td>
+											<td colspan="5">&nbsp;<a href="javascript:colapse_rows(17)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic17"></i></a>&nbsp;{$lang['information']}</td>
 										</tr>
 										<tr>
 											<td colspan="6">
@@ -275,7 +275,7 @@
 										</tr>
 										<tr>
 											<td>&nbsp;</td>
-											<td colspan="5">&nbsp;<a href="javascript:Klappen(18)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic18"></i></a>&nbsp;{$lang['create']}</td>
+											<td colspan="5">&nbsp;<a href="javascript:colapse_rows(18)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic18"></i></a>&nbsp;{$lang['create']}</td>
 										</tr>
 										<tr>
 											<td colspan="6">
@@ -289,7 +289,7 @@
 										</tr>
 										<tr>
 											<td>&nbsp;</td>
-											<td colspan="5">&nbsp;<a href="javascript:Klappen(19)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic19"></i></a>&nbsp;{$lang['modify']}</td>
+											<td colspan="5">&nbsp;<a href="javascript:colapse_rows(19)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic19"></i></a>&nbsp;{$lang['modify']}</td>
 										</tr>
 										<tr>
 											<td colspan="6">
@@ -303,7 +303,7 @@
 										</tr>
 										<tr>
 											<td>&nbsp;</td>
-											<td colspan="5">&nbsp;<a href="javascript:Klappen(20)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic20"></i></a>&nbsp;{$lang['delete']}</td>
+											<td colspan="5">&nbsp;<a href="javascript:colapse_rows(20)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic20"></i></a>&nbsp;{$lang['delete']}</td>
 										</tr>
 										<tr>
 											<td colspan="6">
@@ -320,7 +320,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td colspan="6">&nbsp;<a href="javascript:Klappen(21)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic21"></i></a>&nbsp;{$lang['client']}</td>
+							<td colspan="6">&nbsp;<a href="javascript:colapse_rows(21)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic21"></i></a>&nbsp;{$lang['client']}</td>
 						</tr>
 						<tr>
 							<td colspan="6" class="no-padding">
@@ -330,7 +330,7 @@
 										{if $key == 21}
 										<tr>
 											<td style='width:51px'>&nbsp;</td>
-											<td colspan="5">&nbsp;<a href="javascript:Klappen(22)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic22"></i></a>&nbsp;{$lang['information']}</td>
+											<td colspan="5">&nbsp;<a href="javascript:colapse_rows(22)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic22"></i></a>&nbsp;{$lang['information']}</td>
 										</tr>
 										<tr>
 											<td colspan="6">
@@ -344,7 +344,7 @@
 										</tr>
 										<tr>
 											<td>&nbsp;</td>
-											<td colspan="5">&nbsp;<a href="javascript:Klappen(23)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic23"></i></a>&nbsp;{$lang['admin']}</td>
+											<td colspan="5">&nbsp;<a href="javascript:colapse_rows(23)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic23"></i></a>&nbsp;{$lang['admin']}</td>
 										</tr>
 										<tr>
 											<td colspan="6">
@@ -358,7 +358,7 @@
 										</tr>
 										<tr>
 											<td>&nbsp;</td>
-											<td colspan="5">&nbsp;<a href="javascript:Klappen(24)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic24"></i></a>&nbsp;{$lang['basics']}</td>
+											<td colspan="5">&nbsp;<a href="javascript:colapse_rows(24)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic24"></i></a>&nbsp;{$lang['basics']}</td>
 										</tr>
 										<tr>
 											<td colspan="6">
@@ -372,7 +372,7 @@
 										</tr>
 										<tr>
 											<td>&nbsp;</td>
-											<td colspan="5">&nbsp;<a href="javascript:Klappen(25)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic25"></i></a>&nbsp;{$lang['modify']}</td>
+											<td colspan="5">&nbsp;<a href="javascript:colapse_rows(25)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic25"></i></a>&nbsp;{$lang['modify']}</td>
 										</tr>
 										<tr>
 											<td colspan="6">
@@ -389,7 +389,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td colspan="6">&nbsp;<a href="javascript:Klappen(26)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic26"></i></a>&nbsp;{$lang['filetransfer']}</td>
+							<td colspan="6">&nbsp;<a href="javascript:colapse_rows(26)"><i class="mdi mdi-{$disp_pic}-box mdi-lg" title="aus/ein-klappen" id="Pic26"></i></a>&nbsp;{$lang['filetransfer']}</td>
 						</tr>
 						<tr>
 							<td colspan="6" class="no-padding">

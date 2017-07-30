@@ -29,8 +29,8 @@
 				<div class="box-body">
 					<table class="table" cellpadding="1" cellspacing="0">
 						<tr>
-							<td width="50%"><label for="new_virtualserver_name">{$lang['name']}:</label></td>
-							<td width="50%"><input type="text" class="form-control" id="new_virtualserver_name" name="newsettings[virtualserver_name]" value="{$screate_tmp['name']}"/></td>
+							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_name">{$lang['name']}:</label></td>
+							<td><input type="text" class="form-control" id="new_virtualserver_name" name="newsettings[virtualserver_name]" value="{$screate_tmp['name']}"/></td>
 						</tr>
 						<tr>
 							<td><label for="new_virtualserver_port">{$lang['port']}:</label></td>
@@ -88,36 +88,18 @@
 				<div class="box-body">
 					<table class="table">
 						<tr>
-							<td width="50%"><label for="new_virtualserver_hostmessage">{$lang['hostmessage']}:</label></td>
-							<td width="50%"><input type="text" class="form-control" id="new_virtualserver_hostmessage" name="newsettings[virtualserver_hostmessage]" value="{$screate_tmp['hostmsg']}"/></td>
+							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_hostmessage">{$lang['hostmessage']}:</label></td>
+							<td><input type="text" class="form-control" id="new_virtualserver_hostmessage" name="newsettings[virtualserver_hostmessage]" value="{$screate_tmp['hostmsg']}"/></td>
 						</tr>
 						<tr>
 							<td><label for="new_virtualserver_hostmessage_mode">{$lang['hostmessageshow']}:</label></td>
 							<td>
-								<div class="radio">
-									<label>
-										<input {if $screate_tmp['hostmsgshow'] === '0'} checked="checked" {/if} type="radio" id="new_virtualserver_hostmessage_mode" name="newsettings[virtualserver_hostmessage_mode]" value="0" />
-										{$lang['nomessage']}
-									</label>
-								</div>
-								<div class="radio">
-									<label>
-										<input {if $screate_tmp['hostmsgshow'] === '1'} checked="checked" {/if} type="radio" id="" name="newsettings[virtualserver_hostmessage_mode]" value="1" />
-										{$lang['showmessagelog']} 
-									</label>
-								</div>
-								<div class="radio">
-									<label>
-										<input {if $screate_tmp['hostmsgshow'] === '2'} checked="checked" {/if} type="radio" id="" name="newsettings[virtualserver_hostmessage_mode]" value="2" />
-										{$lang['showmodalmessage']}
-									</label>
-								</div>					
-								<div class="radio">
-									<label>
-										<input {if $screate_tmp['hostmsgshow'] === '3'} checked="checked" {/if} type="radio" id="" name="newsettings[virtualserver_hostmessage_mode]" value="3" />
-										{$lang['modalandexit']} 
-									</label>
-								</div>					
+								<select class="form-control" id="new_virtualserver_hostmessage_mode" name="newsettings[virtualserver_hostmessage_mode]">
+									<option value="0" {if $serverinfo['virtualserver_hostmessage_mode'] == 0}selected='selected'{/if}>{$lang['nomessage']}</option>
+									<option value="1" {if $serverinfo['virtualserver_hostmessage_mode'] == 1}selected='selected'{/if}>{$lang['showmessagelog']}</option>
+									<option value="2" {if $serverinfo['virtualserver_hostmessage_mode'] == 2}selected='selected'{/if}>{$lang['showmodalmessage']}</option>
+									<option value="3" {if $serverinfo['virtualserver_hostmessage_mode'] == 3}selected='selected'{/if}>{$lang['modalandexit']}</option>
+								</select>
 							</td>
 						</tr>
 						<tr>
@@ -163,8 +145,8 @@
 				<div class="box-body">
 					<table class="table" cellpadding="1" cellspacing="0">
 						<tr>
-							<td width="50%"><label for="new_virtualserver_complain_autoban_count">{$lang['autobancount']}:</label></td>
-							<td width="50%"><input type="text" class="form-control" id="new_virtualserver_complain_autoban_count" name="newsettings[virtualserver_complain_autoban_count]" value="{$screate_tmp['autobancount']}"/></td>
+							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_complain_autoban_count">{$lang['autobancount']}:</label></td>
+							<td><input type="text" class="form-control" id="new_virtualserver_complain_autoban_count" name="newsettings[virtualserver_complain_autoban_count]" value="{$screate_tmp['autobancount']}"/></td>
 						</tr>
 						<tr>
 							<td><label for="new_virtualserver_complain_autoban_time">{$lang['autobantime']}:</label></td>
@@ -197,8 +179,8 @@
 				<div class="box-body">
 					<table class="table" cellpadding="1" cellspacing="0">
 						<tr>
-							<td width="50%"><label for="new_virtualserver_antiflood_points_tick_reduce">{$lang['pointstickreduce']}:</label></td>
-							<td width="50%"><input type="text" class="form-control" id="new_virtualserver_antiflood_points_tick_reduce" name="newsettings[virtualserver_antiflood_points_tick_reduce]" value="{$screate_tmp['pointstickreduce']}"/></td>
+							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_antiflood_points_tick_reduce">{$lang['pointstickreduce']}:</label></td>
+							<td><input type="text" class="form-control" id="new_virtualserver_antiflood_points_tick_reduce" name="newsettings[virtualserver_antiflood_points_tick_reduce]" value="{$screate_tmp['pointstickreduce']}"/></td>
 						</tr>
 						<tr>
 							<td><label for="new_virtualserver_antiflood_points_needed_command_bl</label>ock">{$lang['pointsneededblockcmd']}:</td>
@@ -221,8 +203,8 @@
 				<div class="box-body">
 					<table class="table" cellpadding="1" cellspacing="0">
 						<tr>
-							<td width="50%"><label for="new_virtualserver_max_upload_total_bandwidth">{$lang['upbandlimit']}:</label></td>
-							<td width="50%">
+							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_max_upload_total_bandwidth">{$lang['upbandlimit']}:</label></td>
+							<td>
 								<div class="input-group">
 									<input type="text" class="form-control" id="new_virtualserver_max_upload_total_bandwidth" name="newsettings[virtualserver_max_upload_total_bandwidth]" value="{$screate_tmp['uploadbandwidthlimit']}"/> 
 									<span class="input-group-addon">Byte/s</span>
@@ -269,105 +251,39 @@
 				<div class="box-body">
 					<table class="table" cellpadding="1" cellspacing="0">
 						<tr>
-							<td width="50%"><label for="new_virtualserver_log_client">{$lang['logclient']}:</label></td>
-							<td width="50%">
-								<div class="radio-inline">
-									<label>
-										<input type="radio" id="new_virtualserver_log_client" name="newsettings[virtualserver_log_client]" value="1" {if $screate_tmp['virtualserver_log_client'] === '1'}checked="checked"{/if} />
-										{$lang['yes']}
-									</label>
-								</div>
-								<div class="radio-inline">
-									<label>
-										<input type="radio" id="" name="newsettings[virtualserver_log_client]" value="0" {if $screate_tmp['virtualserver_log_client'] === '0'}checked="checked"{/if} />
-										{$lang['no']}
-									</label>
-								</div>
+							<td style="vertical-align: middle;" class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_log_client">{$lang['logclient']}:</label></td>
+							<td no-padding" style="vertical-align: middle;">
+								<input type="checkbox" id="new_virtualserver_log_client" name="newsettings[virtualserver_log_client]" value="1" {if $screate_tmp['virtualserver_log_client'] === '1'}checked="checked"{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
 							</td>
 						</tr>
 						<tr>
-							<td><label for="new_virtualserver_log_query">{$lang['logquery']}:</label></td>
-							<td>
-								<div class="radio-inline">
-									<label>
-										<input type="radio" id="new_virtualserver_log_query" name="newsettings[virtualserver_log_query]" value="1" {if $screate_tmp['virtualserver_log_query'] === '1'}checked="checked"{/if} />
-										{$lang['yes']}
-									</label>
-								</div>
-								<div class="radio-inline">
-									<label>
-										<input type="radio" id="" name="newsettings[virtualserver_log_query]" value="0" {if $screate_tmp['virtualserver_log_query'] === '0'}checked="checked"{/if} />
-										{$lang['no']}
-									</label>
-								</div>
+							<td style="vertical-align: middle;"><label for="new_virtualserver_log_query">{$lang['logquery']}:</label></td>
+							<td style="vertical-align: middle;">
+								<input type="checkbox" id="new_virtualserver_log_query" name="newsettings[virtualserver_log_query]" value="1" {if $screate_tmp['virtualserver_log_query'] === '1'}checked="checked"{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
 							</td>
 						</tr>
 						<tr>
-							<td><label for="new_virtualserver_log_channel">{$lang['logchannel']}:</label></td>
-							<td>
-								<div class="radio-inline">
-									<label>
-										<input type="radio" id="new_virtualserver_log_channel" name="newsettings[virtualserver_log_channel]" value="1" {if $screate_tmp['virtualserver_log_channel'] === '1'}checked="checked"{/if} />
-										{$lang['yes']}
-									</label>
-								</div>
-								<div class="radio-inline">
-									<label>
-										<input type="radio" id="" name="newsettings[virtualserver_log_channel]" value="0" {if $screate_tmp['virtualserver_log_channel'] === '0'}checked="checked"{/if} />
-										{$lang['no']}
-									</label>
-								</div>
+							<td style="vertical-align: middle;"><label for="new_virtualserver_log_channel">{$lang['logchannel']}:</label></td>
+							<td style="vertical-align: middle;">
+								<input type="checkbox" id="new_virtualserver_log_channel" name="newsettings[virtualserver_log_channel]" value="1" {if $screate_tmp['virtualserver_log_channel'] === '1'}checked="checked"{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
 							</td>
 						</tr>
 						<tr>
-							<td><label for="new_virtualserver_log_permissions">{$lang['logpermissions']}:</label></td>
-							<td>
-								<div class="radio-inline">
-									<label>
-										<input type="radio" id="new_virtualserver_log_permissions" name="newsettings[virtualserver_log_permissions]" value="1" {if $screate_tmp['virtualserver_log_permissions'] === '1'}checked="checked"{/if} />
-										{$lang['yes']}
-									</label>
-								</div>
-								<div class="radio-inline">
-									<label>
-										<input type="radio" id="" name="newsettings[virtualserver_log_permissions]" value="0" {if $screate_tmp['virtualserver_log_permissions'] === '0'}checked="checked"{/if} />
-										{$lang['no']}
-									</label>
-								</div>
+							<td style="vertical-align: middle;"><label for="new_virtualserver_log_permissions">{$lang['logpermissions']}:</label></td>
+							<td style="vertical-align: middle;">
+								<input type="checkbox" id="new_virtualserver_log_permissions" name="newsettings[virtualserver_log_permissions]" value="1" {if $screate_tmp['virtualserver_log_permissions'] === '1'}checked="checked"{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
 							</td>
 						</tr>
 						<tr>
-							<td><label for="new_virtualserver_log_server">{$lang['logserver']}:</label></td>
-							<td>
-								<div class="radio-inline">
-									<label>
-										<input type="radio" id="new_virtualserver_log_server" name="newsettings[virtualserver_log_server]" value="1" {if $screate_tmp['virtualserver_log_server'] === '1'}checked="checked"{/if} />
-										{$lang['yes']}
-									</label>
-								</div>
-								<div class="radio-inline">
-									<label>
-										<input type="radio" id="" name="newsettings[virtualserver_log_server]" value="0" {if $screate_tmp['virtualserver_log_server'] === '0'}checked="checked"{/if} />
-										{$lang['no']}
-									</label>
-								</div>
+							<td style="vertical-align: middle;"><label for="new_virtualserver_log_server">{$lang['logserver']}:</label></td>
+							<td style="vertical-align: middle;">
+								<input type="checkbox" id="new_virtualserver_log_server" name="newsettings[virtualserver_log_server]" value="1" {if $screate_tmp['virtualserver_log_server'] === '1'}checked="checked"{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
 							</td>
 						</tr>	
 						<tr>
-							<td><label for="new_virtualserver_log_filetransfer">{$lang['logfiletransfer']}:</label></td>
-							<td>
-								<div class="radio-inline">
-									<label>
-										<input type="radio" id="new_virtualserver_log_filetransfer" name="newsettings[virtualserver_log_filetransfer]" value="1" {if $screate_tmp['virtualserver_log_filetransfer'] === '1'}checked="checked"{/if} />
-										{$lang['yes']}
-									</label>
-								</div>
-								<div class="radio-inline">
-									<label>
-										<input type="radio" id="" name="newsettings[virtualserver_log_filetransfer]" value="0" {if $screate_tmp['virtualserver_log_filetransfer'] === '0'}checked="checked"{/if} />
-										{$lang['no']}
-									</label>
-								</div>
+							<td style="vertical-align: middle;"><label for="new_virtualserver_log_filetransfer">{$lang['logfiletransfer']}:</label></td>
+							<td style="vertical-align: middle;">
+								<input type="checkbox" id="new_virtualserver_log_filetransfer" name="newsettings[virtualserver_log_filetransfer]" value="1" {if $screate_tmp['virtualserver_log_filetransfer'] === '1'}checked="checked"{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
 							</td>
 						</tr>	
 					</table>

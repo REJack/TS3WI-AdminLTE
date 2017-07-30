@@ -52,6 +52,7 @@
 		<link href="templates/{$tmpl}/assets/css/materialdesignicons.css" rel="stylesheet" />
 		<link href="templates/{$tmpl}/assets/css/mdi-customs.css" rel="stylesheet" />
 		<link href="templates/{$tmpl}/assets/css/customs.css" rel="stylesheet" />
+		<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
@@ -61,12 +62,26 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>
+		<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/js/app.min.js"></script>
 		<script type="text/javascript">
+{if $lang['welcomemsg'] == "Willkommensnachricht"}
+			var dataTableLang = '//cdn.datatables.net/plug-ins/1.10.15/i18n/German.json';
+{else if $lang['welcomemsg'] == "Welkomstbericht"}
+			var dataTableLang = '//cdn.datatables.net/plug-ins/1.10.15/i18n/Dutch.json';
+{else if $lang['welcomemsg'] == "Message d'accueil"}
+			var dataTableLang = '//cdn.datatables.net/plug-ins/1.10.15/i18n/French.json';
+{else}
+			var dataTableLang = '//cdn.datatables.net/plug-ins/1.10.15/i18n/English.json';
+{/if}
 			var checkflag = false;
 			var conf_arr = new Array();
 
-			function Klappen(selected_id) 
+			function oeffnefenster(url, title = '') {
+				return open_modal(url, title);
+			}
+
+			function colapse_rows(selected_id) 
 			{
 				if(selected_id == 0)
 				{
@@ -88,17 +103,17 @@
 					{
 						if ($('#Pic'+i) != null)
 						{
-							var KlappText = $('#Lay'+i);
-							var KlappBild = $('#Pic'+i);
+							var colapse_text = $('#Lay'+i);
+							var colapse_pic = $('#Pic'+i);
 							if (openAll == 1) 
 							{
-								KlappText.fadeIn(1000);
-								KlappBild.removeClass('mdi-plus-box').addClass('mdi-minus-box');
+								colapse_text.fadeIn(1000);
+								colapse_pic.removeClass('mdi-plus-box').addClass('mdi-minus-box');
 							} 
 							else 
 							{
-								KlappText.fadeOut(1000);
-								KlappBild.removeClass('mdi-minus-box').addClass('mdi-plus-box');
+								colapse_text.fadeOut(1000);
+								colapse_pic.removeClass('mdi-minus-box').addClass('mdi-plus-box');
 							}
 							i++;
 						}
@@ -108,36 +123,58 @@
 						}
 					}
 				} else {
-					var KlappTextID = $('#Lay'+selected_id);
-					var KlappBildID = $('#Pic'+selected_id);
+					var colapse_textID = $('#Lay'+selected_id);
+					var colapse_picID = $('#Pic'+selected_id);
 
-					if (KlappTextID.is(':visible')) 
+					if (colapse_textID.is(':visible')) 
 					{
-						KlappTextID.fadeOut(1000);
-						KlappBildID.removeClass('mdi-minus-box').addClass('mdi-plus-box');
+						colapse_textID.fadeOut(1000);
+						colapse_picID.removeClass('mdi-minus-box').addClass('mdi-plus-box');
 					} 
 					else 
 					{
-						KlappTextID.fadeIn(1000);
-						KlappBildID.removeClass('mdi-plus-box').addClass('mdi-minus-box');
+						colapse_textID.fadeIn(1000);
+						colapse_picID.removeClass('mdi-plus-box').addClass('mdi-minus-box');
 					}
 				}
 			}
-				
 
-			function oeffnefenster (url, title)
+			function open_modal(url, title = '')
 			{
-				var iframe_id = 'iframe'+Math.random();
-				$('#ajaxModal .modal-title').text(title);
-				$('#ajaxModal .modal-body').html('<iframe id="'+iframe_id+'" src="'+url+'" height="0" width="100%" src="" frameborder="0" allowfullscreen>');
-				$('#ajaxModal .modal-body iframe').load(function() {
-					$(this).css('height', document.getElementById(iframe_id).contentWindow.document.body.offsetHeight+'px');
-				});
-				$('#ajaxModal .modal-body iframe').unload(function(){
-					$('#ajaxModal').modal('hide');
-				})
-				$('#ajaxModal').modal('show');
+				if (url.indexOf('showallicons.php') != -1)
+				{
+					fenster = window.open(url, "fenster1", "width=350,height=150,status=no,scrollbars=yes,resizable=no");
+					fenster.opener.name="opener";
+					fenster.focus();
+				} 
+				else
+				{
+					var iframe_id = 'iframe'+Math.random();
+					$('#ajaxModal .modal-body').html('<iframe id="'+iframe_id+'" src="'+url+'" height="0" width="100%" src="" frameborder="0" allowfullscreen>');
+					$('#ajaxModal .modal-body iframe').load(function() {
+						var height = document.getElementById(iframe_id).contentWindow.document.body.offsetHeight;
+						$(this).css('height', (height+20)+'px');
+						console.log(document.getElementById(iframe_id));
+						console.log($('#frame'));
+					});
+					
+					$('#ajaxModal .modal-title').text(title);				
+					
+					if (title){
+						$('#ajaxModal .modal-title').text(title);				
+					} else {
+						$(window).on('message', function(e){
+							console.log(e);
+							$('#ajaxModal .modal-title').text(e.originalEvent.data);
+						});					
+					}
+					$('#ajaxModal .modal-body iframe').unload(function(){
+						$('#ajaxModal').modal('hide');
+					})
+					$('#ajaxModal').modal('show');
+				}
 			}
+
 			function hide_select(selected_value)
 			{
 				if ($('#groups').is(':hidden'))
@@ -186,7 +223,7 @@
 				return checkflag;
 			}
 		
-			function confirmArray(sid, name, port, action)
+			function confirm_array(sid, name, port, action)
 			{
 				conf_arr[sid] = new Object();
 				conf_arr[sid]['name'] = name;
@@ -202,7 +239,7 @@
 				}
 			}
 
-			function confirmAction()
+			function confirm_action()
 			{
 				var text = "Möchtest du folgende Aktion wirklich ausführen?\n\n";
 				for(var i in conf_arr)
@@ -223,7 +260,7 @@
 				return text;
 			}
 
-			function resizeTable()
+			function resize_table()
 			{
 				var ContentWidth = $('#TableContent').width();
 				$('#TableHeader').width(ContentWidth);
@@ -234,10 +271,10 @@
 				if ($('#TableHeader'))
 				{				
 					$(window).on('resize', function(){
-						resizeTable();
+						resize_table();
 					});
 				
-					resizeTable();
+					resize_table();
 				} 
 			});
 		</script>
@@ -316,9 +353,7 @@
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 						<h4 class="modal-title"></h4>
 					</div>
-					<div class="modal-body">
-						<div class="embed-responsive">
-						</div>
+					<div class="modal-body" style="background: #ecf0f5;">
 					</div>
 				</div>
 			</div>

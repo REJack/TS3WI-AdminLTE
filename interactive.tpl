@@ -1,29 +1,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="de">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ionicons/1.5.2/css/ionicons.min.css">
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/css/AdminLTE.min.css">
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/css/skins/_all-skins.min.css">
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/all.css">
-		<link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css">
-		<link href="../templates/{$tmpl}/assets/css/materialdesignicons.css" rel="stylesheet" />
-		<link href="../templates/{$tmpl}/assets/css/mdi-customs.css" rel="stylesheet" />
-		<link href="../templates/{$tmpl}/assets/css/customs.css" rel="stylesheet" />
-		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
-		<script src="//cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
-		<script src="//cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
-		<script src="//cdn.datatables.net/plug-ins/1.10.15/api/processing().js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/js/app.min.js"></script>
-		<title>TS3 Webinterface - Interactive</title>
-	</head>
-<body>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ionicons/1.5.2/css/ionicons.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/css/AdminLTE.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/css/skins/_all-skins.min.css">
+	<link href="../templates/{$tmpl}/assets/css/materialdesignicons.css" rel="stylesheet" />
+	<link href="../templates/{$tmpl}/assets/css/mdi-customs.css" rel="stylesheet" />
+	<link href="../templates/{$tmpl}/assets/css/customs.css" rel="stylesheet" />
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/js/app.min.js"></script>
+	<title>TS3 Webinterface - Interactive</title>
+	<script type="text/javascript">
+	{if !isset($smarty.get.clid)}
+		var pageTitle = "{$lang['server']} {$lang['massaction']}";
+	{/if}
+	</script>
+</head>
+<body style="background: #ecf0f5;" onload="window.parent.postMessage(pageTitle, '*')" class="no-padding no-margin">
 {if !isset($smarty.get.clid)}
 	<form class="form-inline" method="post" name="f2" action="interactive.php?sid={$smarty.get.sid}">
 		<div class="row">

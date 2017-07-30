@@ -57,7 +57,7 @@
 						<th colspan="7">
 						</th>
 						<th class="no-padding">
-							<input class="btn btn-flat btn-primary btn-block" type="submit" name="massaction" value="{$lang['action']}" onclick="return confirm(confirmAction())" />
+							<input class="btn btn-flat btn-primary btn-block" type="submit" name="massaction" value="{$lang['action']}" onclick="return confirm(confirm_action())" />
 						</th>
 					</tr>
 				{foreach key=key item=value from=$serverlist}
@@ -78,7 +78,7 @@
 						<td style="vertical-align: middle;" class="text-center">{$value['virtualserver_clientsonline']} / {$value['virtualserver_maxclients']}</td>
 						<td style="vertical-align: middle;" class="text-center"><input type="checkbox" name="caction[{$value['virtualserver_id']}][auto]" value="1" {if $value['virtualserver_autostart'] == 1}checked="checked"{/if}/></td>
 						<td class="text-right no-padding">
-							<select class="form-control" id="caction{$value['virtualserver_id']}" name="caction[{$value['virtualserver_id']}][action]" onchange="confirmArray('{$value['virtualserver_id']}', '{$value['virtualserver_name']|addslashes}', '{$value['virtualserver_port']}', '');">
+							<select class="form-control" id="caction{$value['virtualserver_id']}" name="caction[{$value['virtualserver_id']}][action]" onchange="confirm_array('{$value['virtualserver_id']}', '{$value['virtualserver_name']|addslashes}', '{$value['virtualserver_port']}', '');">
 								<option value="false">{$lang['select']}</option>
 								<option value="start">{$lang['start']}</option>
 								<option value="stop">{$lang['stop']}</option>
@@ -91,7 +91,7 @@
 						<th colspan="7">
 						</th>
 						<th class="no-padding">
-							<input class="btn btn-flat btn-primary btn-block" type="submit" name="massaction" value="{$lang['action']}" onclick="return confirm(confirmAction())" />
+							<input class="btn btn-flat btn-primary btn-block" type="submit" name="massaction" value="{$lang['action']}" onclick="return confirm(confirm_action())" />
 						</th>
 					</tr>
 					{else}
