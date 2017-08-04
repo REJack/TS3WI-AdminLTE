@@ -1,5 +1,5 @@
 <section class="content container-fluid">
-	<div class="col-lg-10 col-lg-offset-1">
+	<div class="col-lg-10 col-lg-offset-1 no-padding">
 	{if !empty($error)}
 		<div class="alert alert-danger">{$error}</div>
 	{/if}
@@ -407,7 +407,7 @@
 								<td style="vertical-align: middle;">{$value2['permname']} <br />({$value2['permdesc']})</td>
 								<td style="width: 5%; vertical-align: middle;" class="text-center no-padding">
 								{if $value2['permname']|substr:0:2 != 'i_'}
-									<input type='checkbox' {if $value2['permvalue'] == 1}checked="checked"{/if} name="perm[{$value2['permid']}][value]" value="1" />
+									<input type='checkbox' {if $value2['permvalue'] == 1}checked{/if} name="perm[{$value2['permid']}][value]" value="1" />
 								{else}
 									<input {if $value2['permname'] == 'i_icon_id'}id="iconid"{/if} class="form-control" type='text' name="perm[{$value2['permid']}][value]" value="{$value2['permvalue']}" />
 									{if $value2['permname'] == 'i_icon_id'}
@@ -416,7 +416,7 @@
 								{/if}
 								</td>
 								<td style="width: 5%; vertical-align: middle;" class="text-center">
-									<input type='checkbox' {if $value2['permskip'] ==1}checked="checked"{/if} name="perm[{$value2['permid']}][skip]" value="1" />
+									<input type='checkbox' {if $value2['permskip'] ==1}checked{/if} name="perm[{$value2['permid']}][skip]" value="1" />
 								</td>
 								<td style="width: 10%; vertical-align: middle;" class="text-center">
 								{if $value2['available'] == 1}

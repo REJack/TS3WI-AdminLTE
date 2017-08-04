@@ -1,6 +1,6 @@
 {if isset($permoverview['b_channel_create_permanent']) AND isset($permoverview['b_channel_create_semi_permanent']) AND isset($permoverview['b_channel_create_temporary']) AND empty($permoverview['b_channel_create_permanent']) AND empty($permoverview['b_channel_create_semi_permanent']) AND empty($permoverview['b_channel_create_temporary'])}
 <section class="content container-fluid">
-	<div class="col-lg-10 col-lg-offset-1">
+	<div class="col-lg-10 col-lg-offset-1 no-padding">
 		<div class="box box-danger">
 			<div class="box-header"><h3 class="box-title">{$lang['error']}</h3></div>
 			<div class="box-body">
@@ -11,7 +11,7 @@
 </section>
 {else}
 <section class="content container-fluid">
-	<div class="col-lg-10 col-lg-offset-1">
+	<div class="col-lg-10 col-lg-offset-1 no-padding">
 	{if !empty($error)}
 		<div class="alert alert-danger">{$error}</div>
 	{/if}
@@ -133,7 +133,7 @@
 								{if !isset($permoverview['b_channel_create_semi_permanent']) OR $permoverview['b_channel_create_semi_permanent']==1}
 									<div class="radio">
 										<label>
-											<input type="radio" name="chantyp" value="1" checked="checked" />
+											<input type="radio" name="chantyp" value="1" checked />
 											{$lang['semipermanent']}
 										</label>
 									</div>

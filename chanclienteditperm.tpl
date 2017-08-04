@@ -1,5 +1,5 @@
 <section class="content container-fluid">
-	<div class="col-lg-10 col-lg-offset-1">
+	<div class="col-lg-10 col-lg-offset-1 no-padding">
 	{if !empty($error)}
 		<div class="alert alert-danger">{$error}</div>
 	{/if}
@@ -45,7 +45,7 @@
 					<input type="hidden" name="cldbid" value="{$smarty.post.cldbid}" />
 					<div class="checkbox">
 						<label>
-							<input type="checkbox" name="showmyperms" value="1" onchange="submit()" {if $showmyperms == 1}checked="checked"{/if} />
+							<input type="checkbox" name="showmyperms" value="1" onchange="submit()" {if $showmyperms == 1}checked{/if} />
 							{$lang['showgrantedonly']}
 						</label>
 					</div>
@@ -430,7 +430,7 @@
 								<td style="vertical-align: middle;">{$value2['permname']} <br />({$value2['permdesc']})</td>
 								<td style="width: 5%; vertical-align: middle;" class="text-center no-padding">
 								{if $value2['permname']|substr:0:2 != 'i_'}
-									<input type='checkbox' {if $value2['permvalue'] == 1}checked="checked"{/if} name="perm[{$value2['permid']}][value]" value="1" />
+									<input type='checkbox' {if $value2['permvalue'] == 1}checked{/if} name="perm[{$value2['permid']}][value]" value="1" />
 								{else}
 									<input {if $value2['permname'] == 'i_icon_id'}id="iconid"{/if} type='text' name="perm[{$value2['permid']}][value]" value="{$value2['permvalue']}" />
 									{if $value2['permname'] == 'i_icon_id'}<a href="javascript:oeffnefenster('site/showallicons.php?ip={$smarty.session.server_ip}&amp;sid={$sid}', '{$lang['set']}');">{$lang['set']}</a>{/if}

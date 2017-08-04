@@ -1,5 +1,5 @@
 <section class="content container-fluid">
-	<div class="col-lg-10 col-lg-offset-1">
+	<div class="col-lg-10 col-lg-offset-1 no-padding">
 		<div class="box box-primary">
 			<div class="box-header">
 				<label for="new_command">

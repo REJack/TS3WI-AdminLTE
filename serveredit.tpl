@@ -4,7 +4,7 @@
 	</h1>
 </section>
 <section class="content container-fluid">
-	<div class="col-lg-10 col-lg-offset-1" style="position: relative;">
+	<div class="col-lg-10 col-lg-offset-1 no-padding" style="position: relative;">
 	{if !empty($error)}
 		<div class="alert alert-danger">{$error}</div>
 	{/if}
@@ -541,37 +541,37 @@
 						<tr>
 							<td class="col-xs-6 col-md-4 col-lg-3"><label for="new_virtualserver_log_client">{$lang['logclient']}:</label></td>
 							<td>
-								<input type="checkbox" id="new_virtualserver_log_client" name="newsettings[virtualserver_log_client]" value="1" {if $serverinfo['virtualserver_log_client'] === '1'}checked="checked"{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
+								<input type="checkbox" id="new_virtualserver_log_client" name="newsettings[virtualserver_log_client]" value="1" {if $serverinfo['virtualserver_log_client'] === '1'}checked{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
 							</td>
 						</tr>
 						<tr>
 							<td style="vertical-align: middle;"><label for="new_virtualserver_log_query">{$lang['logquery']}:</label></td>
 							<td style="vertical-align: middle;">
-								<input type="checkbox" id="new_virtualserver_log_query" name="newsettings[virtualserver_log_query]" value="1" {if $serverinfo['virtualserver_log_query'] === '1'}checked="checked"{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
+								<input type="checkbox" id="new_virtualserver_log_query" name="newsettings[virtualserver_log_query]" value="1" {if $serverinfo['virtualserver_log_query'] === '1'}checked{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
 							</td>
 						</tr>
 						<tr>
 							<td style="vertical-align: middle;"><label for="new_virtualserver_log_channel">{$lang['logchannel']}:</label></td>
 							<td style="vertical-align: middle;">
-								<input type="checkbox" id="new_virtualserver_log_channel" name="newsettings[virtualserver_log_channel]" value="1" {if $serverinfo['virtualserver_log_channel'] === '1'}checked="checked"{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
+								<input type="checkbox" id="new_virtualserver_log_channel" name="newsettings[virtualserver_log_channel]" value="1" {if $serverinfo['virtualserver_log_channel'] === '1'}checked{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
 							</td>
 						</tr>
 						<tr>
 							<td style="vertical-align: middle;"><label for="new_virtualserver_log_permissions">{$lang['logpermissions']}:</label></td>
 							<td style="vertical-align: middle;">
-								<input type="checkbox" id="new_virtualserver_log_permissions" name="newsettings[virtualserver_log_permissions]" value="1" {if $serverinfo['virtualserver_log_permissions'] === '1'}checked="checked"{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
+								<input type="checkbox" id="new_virtualserver_log_permissions" name="newsettings[virtualserver_log_permissions]" value="1" {if $serverinfo['virtualserver_log_permissions'] === '1'}checked{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
 							</td>
 						</tr>
 						<tr>
 							<td style="vertical-align: middle;"><label for="new_virtualserver_log_server">{$lang['logserver']}:</label></td>
 							<td style="vertical-align: middle;">
-								<input type="checkbox" id="new_virtualserver_log_server" name="newsettings[virtualserver_log_server]" value="1" {if $serverinfo['virtualserver_log_server'] === '1'}checked="checked"{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
+								<input type="checkbox" id="new_virtualserver_log_server" name="newsettings[virtualserver_log_server]" value="1" {if $serverinfo['virtualserver_log_server'] === '1'}checked{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
 							</td>
 						</tr>	
 						<tr>
 							<td style="vertical-align: middle;"><label for="new_virtualserver_log_filetransfer">{$lang['logfiletransfer']}:</label></td>
 							<td style="vertical-align: middle;">
-								<input type="checkbox" id="new_virtualserver_log_filetransfer" name="newsettings[virtualserver_log_filetransfer]" value="1" {if $serverinfo['virtualserver_log_filetransfer'] === '1'}checked="checked"{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
+								<input type="checkbox" id="new_virtualserver_log_filetransfer" name="newsettings[virtualserver_log_filetransfer]" value="1" {if $serverinfo['virtualserver_log_filetransfer'] === '1'}checked{/if} data-toggle="toggle" data-width="100%" data-onstyle="primary" data-offstyle="warning" data-size="small" data-on="{$lang['yes']}" data-off="{$lang['no']}"/>
 							</td>
 						</tr>	
 					</table>

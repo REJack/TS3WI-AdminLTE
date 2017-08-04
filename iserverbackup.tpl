@@ -1,5 +1,5 @@
 <section class="content container-fluid">
-	<div class="col-lg-10 col-lg-offset-1">
+	<div class="col-lg-10 col-lg-offset-1 no-padding">
 	{if $hoststatus === false AND $serverhost === true}
 		<div class="alert alert-warning">{$lang['nohoster']}</div>
 	{else}
@@ -82,13 +82,13 @@
 						{/foreach}	
 					{else}
 					<tr>
-						<td colspan="3" class="text-center">No Backups found!</td>
+						<td colspan="3" class="text-center"><p class="lead no-margin">No Backups found!</p></td>
 					</tr>
 					{/if}
 						{/if}
 					{else}
 					<tr>
-						<td colspan="3" class="text-center">No Backups found!</td>
+						<td colspan="3" class="text-center"><p class="lead no-margin">No Backups found!</p></td>
 					</tr>
 					{/if}
 				</table>
@@ -162,13 +162,13 @@
 						{/foreach}
 					{else}
 					<tr>
-						<td colspan="3" class="text-center">No Backups found!</td>
+						<td colspan="3" class="text-center"><p class="lead no-margin">No Backups found!</p></td>
 					</tr>
 							{/if}
 						{/if}
 					{else}
 					<tr>
-						<td colspan="3" class="text-center">No Backups found!</td>
+						<td colspan="3" class="text-center"><p class="lead no-margin">No Backups found!</p></td>
 					</tr>
 					{/if}
 				</table>

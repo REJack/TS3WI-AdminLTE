@@ -1,6 +1,6 @@
 {if isset($permoverview['b_virtualserver_client_list']) AND empty($permoverview['b_virtualserver_client_list']) OR isset($permoverview['b_virtualserver_client_dblist']) AND empty($permoverview['b_virtualserver_client_dblist'])}
 <section class="content container-fluid">
-	<div class="col-lg-10 col-lg-offset-1">
+	<div class="col-lg-10 col-lg-offset-1 no-padding">
 		<div class="box box-danger">
 			<div class="box-header"><h3 class="box-title">{$lang['error']}</h3></div>
 			<div class="box-body">
@@ -19,22 +19,32 @@
 			"order": [[ 0, "desc" ]],
 			"processing": true,
 			"columnDefs": [
-				{ "orderable": false, "targets": 6 }
+				{ targets: 'no-sort', orderable: false },
+				{ targets: 'no-search', searchable: false }
 			],
-			"buttons": [
-					{
-					text: "{$lang['showmoreentrys']} <span id='more_entry_act_page'>1</span>/<span id='more_entry_max_pages'>{if $pages|string_format:'%d' == 0}1{else}{$pages}{/if}</span>",
-					className: "btn btn-primary btn-flat {if $pages|string_format:'%d' == 0}disabled{/if}",
-					action: function ( e, dt, node, config ) {
-						add_entries();
-					}
-				}
-			]
+			initComplete: function() {
+				var api = this.api();
+
+				new $.fn.dataTable.Buttons(api, {
+					"buttons": [
+						{
+							text: "{$lang['showmoreentrys']} <span id='more_entry_act_page'>1</span>/<span id='more_entry_max_pages'>{if $pages|string_format:'%d' == 0}1{else}{$pages}{/if}</span>",
+							className: "btn btn-primary btn-flat {if $pages|string_format:'%d' == 0}disabled{/if}",
+							action: function ( e, dt, node, config ) {
+								add_entries();
+							}
+						}
+					]
+				});
+
+				$('#clients_length').parent('.col-sm-6').removeClass('col-sm-6').addClass('col-sm-4').after('<div class="col-sm-4 text-center"><div id="clients_buttons"></div></div>');
+				$('#clients_filter').parent('.col-sm-6').removeClass('col-sm-6').addClass('col-sm-4');
+				$('#clients_processing').css('top', '7%');
+				api.buttons().container().prependTo( '#clients_buttons' );
+				$('.pagination').addClass('pagination-flat');
+			}
 		});
 
-		table.buttons().container().appendTo( '#clients_wrapper .col-sm-6:eq(0)' );
-		$('#clients_processing').css('top', '5%');
-		$('.pagination').addClass('pagination-flat');
 
 		var next_page = 0;
 
@@ -83,7 +93,7 @@
 	});
 </script>
 <section class="content container-fluid">
-	<div class="col-lg-10 col-lg-offset-1">
+	<div class="col-lg-10 col-lg-offset-1 no-padding">
 		<div class="box box-info">
 			<div class="box-header">
 				<h3 class="box-title">{$lang['searchfor']}{$lang['client']}</h3>
@@ -122,7 +132,7 @@
 							<th class="text-center">{$lang['nickname']}</th>
 							<th class="text-center">{$lang['created']}</th>
 							<th class="text-center">{$lang['lastonline']}</th>
-							<th class="text-center">{$lang['status']}</th>
+							<th class="text-center no-sort">{$lang['status']}</th>
 							<th></th>
 						</tr>
 					</thead>

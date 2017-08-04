@@ -19,7 +19,7 @@
 		<table style="padding:10px;" cellpadding="1" cellspacing="0">
 			<tr>
 				<td class="login">{$lang['username']}:</td>
-				<td><input type="text" name="loginHostUser" value="" /></td>
+				<td><input type="text" name="loginHostUser" /></td>
 			</tr>
 			<tr>
 				<td class="login">{$lang['password']}:</td>

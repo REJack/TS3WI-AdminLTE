@@ -1,5 +1,5 @@
 <section class="content container-fluid">
-	<div class="col-lg-10 col-lg-offset-1">
+	<div class="col-lg-10 col-lg-offset-1 no-padding">
 	{if !empty($error)}
 		<div class="alert alert-danger">{$error}</div>
 	{/if}
@@ -33,7 +33,7 @@
 			</div>
 		</form>		
 	</div>
-	<div class="col-lg-10 col-lg-offset-1">
+	<div class="col-lg-10 col-lg-offset-1 no-padding">
 		<div class="box box-info">
 			<div class="box-body">
 				<form method="post" action="index.php?site=fileupload&amp;sid={$sid}">

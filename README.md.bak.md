@@ -1,0 +1,38 @@
+### Next
+ - [ ] reviewed serverview.tpl
+ - [ ] reviewed serveredit.tpl
+ - [ ] reviewed temppw.tpl
+ - [ ] reviewed fileupload.tpl
+ - [ ] reviewed filelist.tpl
+
+### ToDo for v1.0.0-rc2
+ - [ ] reviewed channel.tpl
+ - [ ] reviewed channeledit.tpl
+ - [ ] reviewed channeleditperm.tpl
+ - [ ] reviewed channelview.tpl
+ - [ ] reviewed createchannel.tpl
+ - [ ] reviewed counter.tpl
+ - [ ] reviewed clients.tpl
+ - [ ] reviewed cleditperm.tpl
+ - [ ] reviewed complainlist.tpl
+ - [ ] reviewed chanclienteditperm.tpl
+ - [ ] reviewed clientcleaner.tpl
+ - [ ] reviewed banlist.tpl
+ - [ ] reviewed banadd.tpl
+ - [ ] reviewed sgroups.tpl
+ - [ ] reviewed sgroupclients.tpl
+ - [ ] reviewed sgroupeditperm.tpl
+ - [ ] reviewed sgroupadd.tpl
+ - [ ] reviewed cgroups.tpl
+ - [ ] reviewed cgroupclients.tpl
+ - [ ] reviewed cgroupeditperm.tpl
+ - [ ] reviewed cgroupadd.tpl
+ - [ ] reviewed token.tpl
+ - [ ] reviewed backup.tpl
+ - [ ] reviewed serverbackup.tpl
+ - [ ] reviewed permexport.tpl
+ - [ ] reviewed clientsexport.tpl
+ - [ ] reviewed bansexport.tpl
+ - [ ] reviewed console.tpl
+ - [ ] reviewed filebrowser.tpl
+ - [ ] reviewed interactive.tpl

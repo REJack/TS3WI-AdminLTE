@@ -44,35 +44,53 @@
 		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 		<title>Teamspeak 3 - Webinterface</title>
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="templates/{$tmpl}/assets/css/materialdesignicons.css" />
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/css/AdminLTE.min.css">
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/css/skins/_all-skins.min.css">
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/all.css">
-		<link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css">
-		<link href="templates/{$tmpl}/assets/css/materialdesignicons.css" rel="stylesheet" />
-		<link href="templates/{$tmpl}/assets/css/mdi-customs.css" rel="stylesheet" />
-		<link href="templates/{$tmpl}/assets/css/customs.css" rel="stylesheet" />
-		<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="templates/{$tmpl}/assets/css/customs.css" />
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/js/app.min.js"></script>
+		<script src="templates/{$tmpl}/assets/js/adminlte-remember.js"></script>
+{if $site == "clients" || $site == "logview" || $site == "server"}
+		<link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css">
 		<script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 		<script src="//cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
 		<script src="//cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
 		<script src="//cdn.datatables.net/plug-ins/1.10.15/api/processing().js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>
-		<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/js/app.min.js"></script>
+{else if $site == "serveredit"}
+		<link rel="stylesheet" href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css">
+		<script src="//gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+{else if $site == "createserver"}
+		<link rel="stylesheet" href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css">
+		<link rel="stylesheet" href="templates/{$tmpl}/assets/css/smart_wizard.min.css">
+		<link rel="stylesheet" href="templates/{$tmpl}/assets/css/smart_wizard_theme_arrows.min.css">
+		<script src="//gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+		<script src="templates/{$tmpl}/assets/js/jquery.smartWizard.min.js"></script>
+{/if}
 		<script type="text/javascript">
 {if $lang['welcomemsg'] == "Willkommensnachricht"}
 			var dataTableLang = '//cdn.datatables.net/plug-ins/1.10.15/i18n/German.json';
+			var previousText = 'Zurück',
+				nextText = "Nächste";
 {else if $lang['welcomemsg'] == "Welkomstbericht"}
 			var dataTableLang = '//cdn.datatables.net/plug-ins/1.10.15/i18n/Dutch.json';
+			var previousText = 'Vorige',
+				nextText = "Volgende";
 {else if $lang['welcomemsg'] == "Message d'accueil"}
 			var dataTableLang = '//cdn.datatables.net/plug-ins/1.10.15/i18n/French.json';
+			var previousText = 'Pr&eacute;c&eacute;dent',
+				nextText = "Suivant";
 {else}
 			var dataTableLang = '//cdn.datatables.net/plug-ins/1.10.15/i18n/English.json';
+			var previousText = 'Previous',
+				nextText = 'Next';
 {/if}
 			var checkflag = false;
 			var conf_arr = new Array();
@@ -212,12 +230,12 @@
 			{
 				if (checkflag == false) 
 				{
-					$('form input[type="checkbox"]').prop('checked', true);
+					$('form input[type="checkbox"]:enabled').prop('checked', true);
 					checkflag = true;
 				}
 				else 
 				{
-					$('form input[type="checkbox"]').prop('checked', false);
+					$('form input[type="checkbox"]:enabled').prop('checked', false);
 					checkflag = false;
 				}
 				return checkflag;
@@ -268,13 +286,13 @@
 
 			$(function ()
 			{
+				$('.no-br br').replaceWith(' ');
 				if ($('#TableHeader'))
 				{				
+					resize_table();
 					$(window).on('resize', function(){
 						resize_table();
 					});
-				
-					resize_table();
 				} 
 			});
 		</script>
@@ -331,13 +349,13 @@
 					</ul>
 				</section>
 			</aside>
-			<div class="content-wrapper container-fluid">
+			<div class="content-wrapper">
 				{include file="{$tmpl}/showupdate.tpl"}
 				{include file="{$tmpl}/{$site}.tpl"}
 			</div>
 			<footer class="main-footer">
 				<div class="pull-right hidden-xs">
-					<b>Template Version:</b> 1.0.0-rc0 &nbsp;&nbsp;
+					<b>Template Version:</b> 1.0.0-rc2 &nbsp;&nbsp;
 				</div>
 				<strong>
 					{$footer}. 

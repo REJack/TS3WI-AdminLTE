@@ -1,5 +1,5 @@
 <section class="content container-fluid">
-	<div class="col-lg-10 col-lg-offset-1">
+	<div class="col-lg-10 col-lg-offset-1 no-padding">
 		{if !empty($error)}
 		<div class="alert alert-danger">{$error}</div>
 		{/if}
@@ -39,7 +39,7 @@
 						</tr>
 						<tr>
 							<th><label for="new_targetid">{$lang['targetid']}</label></th>
-							<td><input type="text" name="targetid" class="form-control" id="new_targetid" value="" /></td>
+							<td><input type="text" name="targetid" class="form-control" id="new_targetid" /></td>
 						</tr>
 					</table>
 					<input class="btn btn-primary btn-flat btn-block" type="submit" name="showcommands" value="{$lang['view']}" />

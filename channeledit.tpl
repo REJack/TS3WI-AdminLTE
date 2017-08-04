@@ -4,7 +4,7 @@
 	</h1>
 </section>
 <section class="content container-fluid">
-	<div class="col-lg-10 col-lg-offset-1">
+	<div class="col-lg-10 col-lg-offset-1 no-padding">
 		{if !empty($error)}
 		<div class="alert alert-danger">{$error}</div>
 		{/if}
@@ -140,7 +140,7 @@
 							{if !isset($permoverview['b_channel_modify_make_temporary']) or $permoverview['b_channel_modify_make_temporary'] == 1}
 								<div class="radio">
 									<label>	
-										<input type="radio" name="chantyp" value="0" {if $channelinfo['channel_flag_permanent'] == 0 AND $channelinfo['channel_flag_semi_permanent'] == 0}checked="checked"{/if} />
+										<input type="radio" name="chantyp" value="0" {if $channelinfo['channel_flag_permanent'] == 0 AND $channelinfo['channel_flag_semi_permanent'] == 0}checked{/if} />
 										{$lang['temporary']}
 									</label>
 								</div>
@@ -148,7 +148,7 @@
 							{if !isset($permoverview['b_channel_modify_make_semi_permanent']) or $permoverview['b_channel_modify_make_semi_permanent'] == 1}
 								<div class="radio">
 									<label>	
-										<input type="radio" name="chantyp" value="1" {if $channelinfo['channel_flag_semi_permanent'] == 1}checked="checked"{/if} />
+										<input type="radio" name="chantyp" value="1" {if $channelinfo['channel_flag_semi_permanent'] == 1}checked{/if} />
 										{$lang['semipermanent']}
 									</label>
 								</div>
@@ -156,7 +156,7 @@
 							{if !isset($permoverview['b_channel_modify_make_permanent']) or $permoverview['b_channel_modify_make_permanent'] == 1}
 								<div class="radio">
 									<label>	
-										<input type="radio" name="chantyp" value="2" {if $channelinfo['channel_flag_permanent'] == 1 AND $channelinfo['channel_flag_default']==0}checked="checked"{/if} />
+										<input type="radio" name="chantyp" value="2" {if $channelinfo['channel_flag_permanent'] == 1 AND $channelinfo['channel_flag_default']==0}checked{/if} />
 										{$lang['permanent']}
 									</label>
 								</div>
@@ -164,7 +164,7 @@
 							{if !isset($permoverview['b_channel_modify_make_default']) or $permoverview['b_channel_modify_make_default'] == 1}
 								<div class="radio">
 									<label>	
-										<input type="radio" name="chantyp" value="3" {if $channelinfo['channel_flag_default'] == 1}checked="checked"{/if} />
+										<input type="radio" name="chantyp" value="3" {if $channelinfo['channel_flag_default'] == 1}checked{/if} />
 										{$lang['default']}
 									</label>
 								</div>

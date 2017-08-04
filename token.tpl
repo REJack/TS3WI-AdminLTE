@@ -6,7 +6,7 @@
 	<div class="alert alert-info">{$noerror}</div>
 	{/if}
 {if isset($permoverview['b_virtualserver_token_list']) AND empty($permoverview['b_virtualserver_token_list'])}
-	<div class="col-lg-10 col-lg-offset-1">
+	<div class="col-lg-10 col-lg-offset-1 no-padding">
 		<div class="box box-danger">
 			<div class="box-header"><h3 class="box-title">{$lang['error']}</h3></div>
 			<div class="box-body">
@@ -15,7 +15,7 @@
 		</div>
 	</div>
 {else}
-	<div class="col-lg-10 col-lg-offset-1">
+	<div class="col-lg-10 col-lg-offset-1 no-padding">
 		<div class="box box-primary">
 			<div class="box-header">
 				<h3 class="box-title">{$lang['tokenlist']}</h3>
@@ -95,7 +95,7 @@
 	</div>
 {/if}
 {if isset($permoverview['b_virtualserver_token_add']) AND empty($permoverview['b_virtualserver_token_add'])}
-	<div class="col-lg-10 col-lg-offset-1">
+	<div class="col-lg-10 col-lg-offset-1 no-padding">
 		<div class="box box-danger">
 			<div class="box-header"><h3 class="box-title">{$lang['error']}</h3></div>
 			<div class="box-body">
@@ -162,7 +162,7 @@
 						<tr>
 							<th><label for="new_description">{$lang['description']}</label></th>
 							<td class="no-padding">
-								<input type="text" class="form-control" id="new_description" name="description" value="" />
+								<input type="text" class="form-control" id="new_description" name="description" />
 							</td>
 						</tr>
 						<tr>

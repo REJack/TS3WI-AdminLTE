@@ -1,6 +1,6 @@
 {if isset($permoverview['b_virtualserver_log_view']) AND empty($permoverview['b_virtualserver_log_view'])}
 <section class="content container-fluid">
-	<div class="col-lg-10 col-lg-offset-1">
+	<div class="col-lg-10 col-lg-offset-1 no-padding">
 		<div class="box box-danger">
 			<div class="box-header"><h3 class="box-title">{$lang['error']}</h3></div>
 			<div class="box-body">
@@ -13,27 +13,39 @@
 <script>
 	$(function () {
 		var table = $("#traffic").DataTable({
-            "language": {
-                "url": dataTableLang
-            },
+			"language": {
+				"url": dataTableLang
+			},
 			"order": [[ 0, "desc" ]],
+			"columnDefs": [
+				{ targets: 'no-sort', orderable: false },
+				{ targets: 'no-search', searchable: false }
+			],
 			"processing": true,
-			"buttons": [
-				{
-					text: "{$lang['showmoreentrys']}",
-					className: "btn btn-primary btn-flat btn_showmoreentrys",
-					action: function ( e, dt, node, config ) {
-						add_entries();
-					}
-				}
-			]
+			initComplete: function() {
+				var api = this.api();
+
+				new $.fn.dataTable.Buttons(api, {
+					"buttons": [
+						{
+							text: "{$lang['showmoreentrys']}",
+							className: "btn btn-primary btn-flat btn_showmoreentrys",
+							action: function ( e, dt, node, config ) {
+								add_entries();
+							}
+						}
+					]
+				});
+
+				$('#traffic_length').parent('.col-sm-6').removeClass('col-sm-6').addClass('col-sm-4').after('<div class="col-sm-4 text-center"><div id="traffic_buttons"></div></div>');
+				$('#traffic_filter').parent('.col-sm-6').removeClass('col-sm-6').addClass('col-sm-4');		
+				$('#traffic_processing').css('top', '7%');
+				$('.pagination').addClass('pagination-flat');
+				api.buttons().container().prependTo( '#traffic_buttons' );
+		}
 		});
 
-		table.buttons().container().appendTo( '#traffic_wrapper .col-sm-6:eq(0)' );
 		
-		$('.pagination').addClass('pagination-flat');
-		$('#traffic_processing').css('top', '5%');
-
 		function add_entries(){
 			var begin_pos = $('#begin_pos').val();
 			var url = "index.php?site=logview&sid={$sid}";
@@ -73,18 +85,18 @@
 	});
 </script>
 <section class="content container-fluid">
-	<div class="col-lg-10 col-lg-offset-1">
+	<div class="col-lg-10 col-lg-offset-1 no-padding">
 		<div class="box box-primary">
 			<div class="box-body" id="main_content">
 				<input type="hidden" id="begin_pos" name="begin_pos" value="{$begin_pos}"/>
 				<table class="table table-striped" id="traffic">
 					<thead>
 						<tr>
-							<th style="width:20%">{$lang['date']}</th>
-							<th style="width:5%">{$lang['level']}</th>
-							<th style="width:10%">{$lang['type']}</th>
-							<th style="width:10%">{$lang['serverid']}</th>
-							<th style="width:55%">{$lang['message']}</th>
+							<th width="20%">{$lang['date']}</th>
+							<th width="5%">{$lang['level']}</th>
+							<th width="10%">{$lang['type']}</th>
+							<th width="10%">{$lang['serverid']}</th>
+							<th width="55%">{$lang['message']}</th>
 						</tr>
 					</thead>
 					<tbody>

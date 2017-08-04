@@ -4,9 +4,7 @@ AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
 ## Milestones
  - [x] rework all used views (v1.0.0-rc0)
  - [x] change some stuff with JS Plugins (v1.0.0-rc1)
- - [ ] review any new template-file, modernize them & rework any form with tables to inline form (v1.0.0-rc2)
-   - [ ] add abilty to remember box-colapse state & sidebar-colapse
-   - [ ] add for any box a colapse btn (not main content)
+ - [ ] review any new template-file, modernize them, rework any form with tables to vertical form and set xs/sm view (v1.0.0-rc2)
  - [ ] check any view in xs, sm, md & lg (v1.0.0-rc3)
  - [ ] release first full version (v1.0.0)
 
@@ -25,57 +23,75 @@ AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
     - [x] change yes/no radios to BS-Switch
 
 ### Done
+ - [x] reviewed serverview.tpl
+ - [x] changed `<div class="col-lg-10 col-lg-offset-1">` to `<div class="col-lg-10 col-lg-offset-1 no-padding">` in any view
+ - [x] changed `checked="checked"` to `checked` in any view
+ - [x] removed `value=""` in any view
+ - [x] merged `mdi-customs.css` with `materialdesignicons.css`
+ - [x] ordered css syntaxes in `customs.css`
+ - [x] removed unused CSS files
+ - [x] reviewed iserverbackup.tpl
+ - [x] reviewed logview.tpl
+ - [x] reviewed instanceedit.tpl
+   - [x] add ability to change checkbox without submit
+ - [x] reviewed servertraffic.tpl
+   - [x] changed position of `autorefesh`-btn
+ - [x] reviewed createserver.tpl
+   - [x] switched Boxes to Form Wizard (jquery.smartWizard.min.js & smart_wizard.min.css)
+ - [x] reviewed server.tpl
+   - [x] switched default table to DataTables
+   - [x] add ability to change checkbox without submit
+ - [x] add abilty to remember box-colapse state & sidebar-colapse (adminlte-remember.js)
  - [x] reviewed login.tpl
  - [x] reviewed error.tpl
  - [x] reviewed mainbar.tpl
+   - [x] fixed link names while collapsed sidebar
  - [x] reviewed index.tpl
+   - [x] added `.no-br` (jQuery function)
+   - [x] changed JS/CSS order for specific views, to load only needed files
  - [x] reviewed head.tpl
 
+### ToDO for v1.0.0-rc2
+ - [ ] change original DataTables icons (GlyphIcons) to MaterialsDesignIcons
+ - [ ] add for almost every box a `collapse`-btn & `data-name`-attribute
+
 ### Next
- - [ ] reviewed server.tpl
- - [ ] reviewed createserver.tpl
- - [ ] reviewed servertraffic.tpl
- - [ ] reviewed instanceedit.tpl
- - [ ] reviewed logview.tpl
- - [ ] reviewed iserverbackup.tpl
- - [ ] reviewed serverview.tpl
+ - [ ] reviewed serveredit.tpl
+ - [ ] reviewed temppw.tpl
+ - [ ] reviewed fileupload.tpl
+ - [ ] reviewed filelist.tpl
 
 ### ToDo for v1.0.0-rc2
- - [ ] reviewed backup.tpl
- - [ ] reviewed banadd.tpl
- - [ ] reviewed banlist.tpl
- - [ ] reviewed bansexport.tpl
- - [ ] reviewed cgroupadd.tpl
- - [ ] reviewed cgroupclients.tpl
- - [ ] reviewed cgroupeditperm.tpl
- - [ ] reviewed cgroups.tpl
- - [ ] reviewed chanclienteditperm.tpl
  - [ ] reviewed channel.tpl
  - [ ] reviewed channeledit.tpl
  - [ ] reviewed channeleditperm.tpl
  - [ ] reviewed channelview.tpl
- - [ ] reviewed cleditperm.tpl
- - [ ] reviewed clientcleaner.tpl
- - [ ] reviewed clients.tpl
- - [ ] reviewed clientsexport.tpl
- - [ ] reviewed complainlist.tpl
- - [ ] reviewed console.tpl
- - [ ] reviewed counter.tpl
  - [ ] reviewed createchannel.tpl
- - [ ] reviewed filebrowser.tpl
- - [ ] reviewed filelist.tpl
- - [ ] reviewed fileupload.tpl
- - [ ] reviewed interactive.tpl
- - [ ] reviewed permexport.tpl
- - [ ] reviewed serverbackup.tpl
- - [ ] reviewed serveredit.tpl
- - [ ] reviewed sgroupadd.tpl
+ - [ ] reviewed counter.tpl
+ - [ ] reviewed clients.tpl
+ - [ ] reviewed cleditperm.tpl
+ - [ ] reviewed complainlist.tpl
+ - [ ] reviewed chanclienteditperm.tpl
+ - [ ] reviewed clientcleaner.tpl
+ - [ ] reviewed banlist.tpl
+ - [ ] reviewed banadd.tpl
+ - [ ] reviewed sgroups.tpl
  - [ ] reviewed sgroupclients.tpl
  - [ ] reviewed sgroupeditperm.tpl
- - [ ] reviewed sgroups.tpl
- - [ ] reviewed showupdate.tpl
- - [ ] reviewed temppw.tpl
+ - [ ] reviewed sgroupadd.tpl
+ - [ ] reviewed cgroups.tpl
+ - [ ] reviewed cgroupclients.tpl
+ - [ ] reviewed cgroupeditperm.tpl
+ - [ ] reviewed cgroupadd.tpl
  - [ ] reviewed token.tpl
+ - [ ] reviewed backup.tpl
+ - [ ] reviewed serverbackup.tpl
+ - [ ] reviewed permexport.tpl
+ - [ ] reviewed clientsexport.tpl
+ - [ ] reviewed bansexport.tpl
+ - [ ] reviewed console.tpl
+ - [ ] reviewed filebrowser.tpl
+ - [ ] reviewed interactive.tpl
 
 ### Views [Not in Use]
 - hostlogin.tpl

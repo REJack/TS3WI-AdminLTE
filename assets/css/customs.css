@@ -1,6 +1,214 @@
+/* TABLE MODS*/
+.table-td-no-padding > tbody > tr > td, 
+.table-td-no-padding > tfoot > tr > td{
+	padding: 0px;
+}
+.table-th-no-padding > thead > tr > th, 
+.table-th-no-padding > tbody > tr > th, 
+.table-th-no-padding > tfoot > tr > th{
+	padding: 0px;
+}
+.table-vert-mid > thead > tr > td, 
+.table-vert-mid > tbody > tr > td, 
+.table-vert-mid > tfoot > tr > td,
+.table-vert-mid > thead > tr > th, 
+.table-vert-mid > tbody > tr > th, 
+.table-vert-mid > tfoot > tr > th{
+	vertical-align: middle;
+}
+
+/* TEXTAREA MODS*/
+.resize-vert{
+	resize: vertical;
+}
+
+/* FOOTER MODS*/
+.main-footer strong br {
+	display: none;
+}
+
+/* SMARTWIZARD MODS */
+#smartwizard{
+	box-shadow: none;
+}
+
+/* BOX MODS */
+.box-header > .box-tools-extra {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+/* BOOTSTRAP-TOGGLE MODS */
+.toggle { border-radius: 0px;}
+.toggle .toggle-handle { border-radius: 0px; }
+.toggle-group { transition: left 0.7s; -webkit-transition: left 0.7s; }
+
+/* TSVIEW*/
+.content{
+    width: 100%;
+}
+
+.place{
+    float: left;
+    width: 16px;
+    height: 16px;
+}
+
+.pwchanimg{
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url('../images/channel_private.svg');
+}
+.chanimg{
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url('../images/channel_green_subscribed.svg');
+    background-size: 16px 16px;
+}
+.channame{
+    float: left;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    font-weight: lighter;
+}
+.fullimg{
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url('../images/channel_red_subscribed.svg');
+    background-size: 16px 16px;
+}
+.clear{
+    clear:both;
+}
+.away_img{
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url('../images/away.svg');
+    background-size: 16px 16px;
+}
+.away_msg{
+    float: left;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: lighter;
+}
+.hwhead_img{
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url('../images/hardware_output_muted.svg');
+    background-size: 16px 16px;
+}
+.hwmic_img{
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url('../images/hardware_input_muted.svg');
+    background-size: 16px 16px;
+}
+.head_img{
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url('../images/output_muted.svg');
+    background-size: 16px 16px;
+}
+.mic_img{
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url('../images/input_muted.svg');
+    background-size: 16px 16px;
+}
+.player_on_img{
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url('../images/player_on.svg');
+    background-size: 16px 16px;
+}
+.player_img{
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url('../images/player_off.svg');
+    background-size: 16px 16px;
+}
+.player_command_img{
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url('../images/player_commander_off.svg');
+    background-size: 16px 16px;
+}
+.player_command_on_img{
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url('../images/player_commander_on.svg');
+    background-size: 16px 16px;
+}
+.clientnick{
+    float: left;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+}
+.channel{
+    height: 16px;
+    line-height: 16px;
+    margin-bottom: 3px;
+}
+.client{
+    height: 16px;
+    line-height: 16px;
+    margin-bottom: 3px;
+}
+.server_img{
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url('../images/server_green.svg');
+    background-size: 16px 16px;
+}
+.servername{
+    float: left;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: lighter;
+}
+
+/* EXTRA BG COLORS */
 .bg-white{
 	background: #ffffff;
 }
+
+/* EXTRA BOX COLORS */
 .box.box-border-gray {
 	border-top-color: #d2d6de;
 }
@@ -52,186 +260,3 @@
 .box.box-border-maroon {
 	border-top-color: #d81b60;
 }
-.main-footer strong br {
-	display: none;
-}
-
-.resize-vert{
-	resize: vertical;
-}
-
-a.server_info{
-	color: #000;
-}
-a.start_server{
-	color: #093;
-}
-a.stop_server{
-	color: red;
-}
-a.remove_server{
-	color: #c30;
-}
-
-
-div.content{
-	width: 100%;
-}
-
-div.place{
-	float: left;
-	width: 16px;
-	height: 16px;
-}
-
-div.pwchanimg{
-	float: left;
-	width: 16px;
-	height: 16px;
-	margin-right: 4px;
-	background-image: url('../images/channel_private.svg');
-}
-div.chanimg{
-	float: left;
-	width: 16px;
-	height: 16px;
-	margin-right: 4px;
-	background-image: url('../images/channel_green_subscribed.svg');
-	background-size: 16px 16px;
-}
-div.channame{
-	float: left;
-	height: 16px;
-	line-height: 16px;
-	font-size: 12px;
-	font-weight: lighter;
-}
-div.fullimg{
-	float: left;
-	width: 16px;
-	height: 16px;
-	margin-right: 4px;
-	background-image: url('../images/channel_red_subscribed.svg');
-	background-size: 16px 16px;
-}
-div.clear{
-	clear:both;
-}
-div.away_img{
-	float: left;
-	width: 16px;
-	height: 16px;
-	margin-right: 4px;
-	background-image: url('../images/away.svg');
-	background-size: 16px 16px;
-}
-div.away_msg{
-	float: left;
-	height: 16px;
-	line-height: 16px;
-	font-size: 12px;
-	font-style: normal;
-	font-weight: lighter;
-}
-div.hwhead_img{
-	float: left;
-	width: 16px;
-	height: 16px;
-	margin-right: 4px;
-	background-image: url('../images/hardware_output_muted.svg');
-	background-size: 16px 16px;
-}
-div.hwmic_img{
-	float: right;
-	width: 16px;
-	height: 16px;
-	margin-right: 4px;
-	background-image: url('../images/hardware_input_muted.svg');
-	background-size: 16px 16px;
-}
-div.head_img{
-	float: left;
-	width: 16px;
-	height: 16px;
-	margin-right: 4px;
-	background-image: url('../images/output_muted.svg');
-	background-size: 16px 16px;
-}
-div.mic_img{
-	float: right;
-	width: 16px;
-	height: 16px;
-	margin-right: 4px;
-	background-image: url('../images/input_muted.svg');
-	background-size: 16px 16px;
-}
-div.player_on_img{
-	float: left;
-	width: 16px;
-	height: 16px;
-	margin-right: 4px;
-	background-image: url('../images/player_on.svg');
-	background-size: 16px 16px;
-}
-div.player_img{
-	float: left;
-	width: 16px;
-	height: 16px;
-	margin-right: 4px;
-	background-image: url('../images/player_off.svg');
-	background-size: 16px 16px;
-}
-div.player_command_img{
-	float: left;
-	width: 16px;
-	height: 16px;
-	margin-right: 4px;
-	background-image: url('../images/player_commander_off.svg');
-	background-size: 16px 16px;
-}
-div.player_command_on_img{
-	float: left;
-	width: 16px;
-	height: 16px;
-	margin-right: 4px;
-	background-image: url('../images/player_commander_on.svg');
-	background-size: 16px 16px;
-}
-div.clientnick{
-	float: left;
-	height: 16px;
-	line-height: 16px;
-	font-size: 12px;
-	font-style: normal;
-	font-weight: bold;
-}
-div.channel{
-	height: 16px;
-	line-height: 16px;
-	margin-bottom: 3px;
-}
-div.client{
-	height: 16px;
-	line-height: 16px;
-	margin-bottom: 3px;
-}
-div.server_img{
-	float: left;
-	width: 16px;
-	height: 16px;
-	margin-right: 4px;
-	background-image: url('../images/server_green.svg');
-	background-size: 16px 16px;
-}
-div.servername{
-	float: left;
-	height: 16px;
-	line-height: 16px;
-	font-size: 12px;
-	font-style: normal;
-	font-weight: lighter;
-}
-
-.toggle { border-radius: 0px;}
-.toggle .toggle-handle { border-radius: 0px; }
-.toggle-group { transition: left 0.7s; -webkit-transition: left 0.7s; }

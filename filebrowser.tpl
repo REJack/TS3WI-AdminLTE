@@ -85,7 +85,7 @@
 			</div>
 			<div class="box-body">
 				<div class="form-group">
-					<input type="text" class="form-control" name="fname" value="" />
+					<input type="text" class="form-control" name="fname" />
 				</div>
 				<input type="submit" class="btn bg-teal btn-flat btn-block" name="createdir" value="{$lang['create']}" />
 			</div>
