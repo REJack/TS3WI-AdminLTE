@@ -12,7 +12,7 @@ $(function () {
             localStorage.setItem('box_state', JSON.stringify(boxstates));
         }
     });
-    boxstates.forEach(function(box) {
+    boxstates.each(function(box) {
         if (box.state == 0)
             $('.box[data-name="'+box.boxname+'"]').addClass('collapsed-box').find('.btn-box-tool[data-widget="collapse"] i').removeClass('fa-minus').addClass('fa-plus');
         else if (box.state == 1)
