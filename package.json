@@ -6,8 +6,8 @@
   },
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-contrib-compress": "^1.4.3",
     "grunt-contrib-copy": "^1.0.0",
-    "grunt-move": "^0.1.3",
-    "grunt-string-replace": "^1.3.1"
+    "grunt-move": "^0.1.3"
   }
 }

@@ -1,17 +1,33 @@
 language: node_js
-
 node_js:
-  - "lts/*"
-
+- lts/*
 addons:
   apt:
     packages:
-      - tree
-
+    - tree
 before_script:
   - npm install grunt-cli -g
-
 script:
   - npm i
   - grunt
   - tree -I node_modules
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: hrd2yCNFWcPeK3/bQiBD1L6XNROXNZnAJ6aULdx2HxsPeq4Ihml1+C+54t55cF7QyxQKcUePpuuSfu5c4034bCPJ7uVtEb811Bd4JthSKvbW6BUbkPD5U0x7a7RA/RxXftbdYHWQQp55CtsxeKy4SVkw1VhEaBL66XWoXGCSZ2D+LMo6QD/Zpad7RK5hZ6jrS2T3jdc+78YqdjgMNNO0s03EXzTBjZaV7h0LWNG12Q2WEexsXilyHIPyFMcmgrqGXC1svNpIA5TuIVRM40+1nrtm6yKeRpfhpwpesIfSCBYYG0dzlG0wZ6jq3Abr1PHpZiNGhPCcHZNqusFyuozCjocnjXwf+19w9xCqLZfS0XGcXAFJUTNg0PaSb4CQVa/DE0Vz4xS8G/OXjjhpXo1fzsYAoLfZe+HS+lOwVtW0bS5T4GK0ngt4o4YyGAmTmH/yi/HjWUbPEGGFDeIc6qcQXaMcq2rjG3LzdovtYCEfS6boE6MI1kd/eUDPajHg4PCXA+tqRAnANFqTyEDVNbbCSE8vsTHk2nqo15IYjb6rLcdGs6xvBB0/P2J1pWSM59wzyl67b8+7G6ihoCDp3uWghcdGCOP3UOnGG0Sl2BZ2BMUjgQKmmysb6kl0lyAV5GfpJpA7H0f0/+LNd5+C6gKKP44uReeOEyzUX/5HRq/H7L4=
+  file: 
+    - adminlte_black.zip
+    - adminlte_black-light.zip
+    - adminlte_blue.zip
+    - adminlte_blue-light.zip
+    - adminlte_green.zip
+    - adminlte_green-light.zip
+    - adminlte_purple.zip
+    - adminlte_purple-light.zip
+    - adminlte_red.zip
+    - adminlte_red-light.zip
+    - adminlte_yellow.zip
+    - adminlte_yellow-light.zip
+  on:
+    tags: true
