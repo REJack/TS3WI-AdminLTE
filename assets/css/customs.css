@@ -1,35 +1,46 @@
 /* TABLE MODS*/
-.table-td-no-padding > tbody > tr > td, 
-.table-td-no-padding > tfoot > tr > td{
-	padding: 0px;
+.table-td-no-padding > tbody > tr > td,
+.table-td-no-padding > tfoot > tr > td {
+    padding: 0px;
 }
-.table-th-no-padding > thead > tr > th, 
-.table-th-no-padding > tbody > tr > th, 
-.table-th-no-padding > tfoot > tr > th{
-	padding: 0px;
+
+.table-th-no-padding > thead > tr > th,
+.table-th-no-padding > tbody > tr > th,
+.table-th-no-padding > tfoot > tr > th {
+    padding: 0px;
 }
-.table-vert-mid > thead > tr > td, 
-.table-vert-mid > tbody > tr > td, 
+
+.table-vert-mid > thead > tr > td,
+.table-vert-mid > tbody > tr > td,
 .table-vert-mid > tfoot > tr > td,
-.table-vert-mid > thead > tr > th, 
-.table-vert-mid > tbody > tr > th, 
-.table-vert-mid > tfoot > tr > th{
-	vertical-align: middle;
+.table-vert-mid > thead > tr > th,
+.table-vert-mid > tbody > tr > th,
+.table-vert-mid > tfoot > tr > th {
+    vertical-align: middle;
+}
+
+.table-responsive > .table > tbody > tr > td.col-no-white-space,
+.table-responsive > .table > tbody > tr > th.col-no-white-space,
+.table-responsive > .table > tfoot > tr > td.col-no-white-space,
+.table-responsive > .table > tfoot > tr > th.col-no-white-space,
+.table-responsive > .table > thead > tr > td.col-no-white-space,
+.table-responsive > .table > thead > tr > th.col-no-white-space {
+    white-space: normal !important;
 }
 
 /* TEXTAREA MODS*/
-.resize-vert{
-	resize: vertical;
+.resize-vert {
+    resize: vertical;
 }
 
 /* FOOTER MODS*/
 .main-footer strong br {
-	display: none;
+    display: none;
 }
 
 /* SMARTWIZARD MODS */
-#smartwizard{
-	box-shadow: none;
+#smartwizard {
+    box-shadow: none;
 }
 
 /* BOX MODS */
@@ -39,30 +50,55 @@
     top: 5px;
 }
 
+/* FAKE FILE MODS*/
+.fake-file-input-name {
+    cursor: pointer;
+}
+
+/* INPUT GROUP MODS*/
+.input-group .input-group-btn {
+    border-radius: 0 !important;
+}
+
+.input-group .input-group-btn .btn:focus,
+.input-group .input-group-btn .btn:hover {
+    border-color: #cccccc !important;
+}
+
 /* BOOTSTRAP-TOGGLE MODS */
-.toggle { border-radius: 0px;}
-.toggle .toggle-handle { border-radius: 0px; }
-.toggle-group { transition: left 0.7s; -webkit-transition: left 0.7s; }
+.toggle {
+    border-radius: 0px;
+}
+
+.toggle .toggle-handle {
+    border-radius: 0px;
+}
+
+.toggle-group {
+    transition: left 0.7s;
+    -webkit-transition: left 0.7s;
+}
 
 /* TSVIEW*/
-.content{
+.content {
     width: 100%;
 }
 
-.place{
+.place {
     float: left;
     width: 16px;
     height: 16px;
 }
 
-.pwchanimg{
+.pwchanimg {
     float: left;
     width: 16px;
     height: 16px;
     margin-right: 4px;
     background-image: url('../images/channel_private.svg');
 }
-.chanimg{
+
+.chanimg {
     float: left;
     width: 16px;
     height: 16px;
@@ -70,14 +106,16 @@
     background-image: url('../images/channel_green_subscribed.svg');
     background-size: 16px 16px;
 }
-.channame{
+
+.channame {
     float: left;
     height: 16px;
     line-height: 16px;
     font-size: 12px;
     font-weight: lighter;
 }
-.fullimg{
+
+.fullimg {
     float: left;
     width: 16px;
     height: 16px;
@@ -85,10 +123,12 @@
     background-image: url('../images/channel_red_subscribed.svg');
     background-size: 16px 16px;
 }
-.clear{
-    clear:both;
+
+.clear {
+    clear: both;
 }
-.away_img{
+
+.away_img {
     float: left;
     width: 16px;
     height: 16px;
@@ -96,7 +136,8 @@
     background-image: url('../images/away.svg');
     background-size: 16px 16px;
 }
-.away_msg{
+
+.away_msg {
     float: left;
     height: 16px;
     line-height: 16px;
@@ -104,7 +145,8 @@
     font-style: normal;
     font-weight: lighter;
 }
-.hwhead_img{
+
+.hwhead_img {
     float: left;
     width: 16px;
     height: 16px;
@@ -112,7 +154,8 @@
     background-image: url('../images/hardware_output_muted.svg');
     background-size: 16px 16px;
 }
-.hwmic_img{
+
+.hwmic_img {
     float: right;
     width: 16px;
     height: 16px;
@@ -120,7 +163,8 @@
     background-image: url('../images/hardware_input_muted.svg');
     background-size: 16px 16px;
 }
-.head_img{
+
+.head_img {
     float: left;
     width: 16px;
     height: 16px;
@@ -128,7 +172,8 @@
     background-image: url('../images/output_muted.svg');
     background-size: 16px 16px;
 }
-.mic_img{
+
+.mic_img {
     float: right;
     width: 16px;
     height: 16px;
@@ -136,7 +181,8 @@
     background-image: url('../images/input_muted.svg');
     background-size: 16px 16px;
 }
-.player_on_img{
+
+.player_on_img {
     float: left;
     width: 16px;
     height: 16px;
@@ -144,7 +190,8 @@
     background-image: url('../images/player_on.svg');
     background-size: 16px 16px;
 }
-.player_img{
+
+.player_img {
     float: left;
     width: 16px;
     height: 16px;
@@ -152,7 +199,8 @@
     background-image: url('../images/player_off.svg');
     background-size: 16px 16px;
 }
-.player_command_img{
+
+.player_command_img {
     float: left;
     width: 16px;
     height: 16px;
@@ -160,7 +208,8 @@
     background-image: url('../images/player_commander_off.svg');
     background-size: 16px 16px;
 }
-.player_command_on_img{
+
+.player_command_on_img {
     float: left;
     width: 16px;
     height: 16px;
@@ -168,7 +217,8 @@
     background-image: url('../images/player_commander_on.svg');
     background-size: 16px 16px;
 }
-.clientnick{
+
+.clientnick {
     float: left;
     height: 16px;
     line-height: 16px;
@@ -176,17 +226,20 @@
     font-style: normal;
     font-weight: bold;
 }
-.channel{
+
+.channel {
     height: 16px;
     line-height: 16px;
     margin-bottom: 3px;
 }
-.client{
+
+.client {
     height: 16px;
     line-height: 16px;
     margin-bottom: 3px;
 }
-.server_img{
+
+.server_img {
     float: left;
     width: 16px;
     height: 16px;
@@ -194,7 +247,8 @@
     background-image: url('../images/server_green.svg');
     background-size: 16px 16px;
 }
-.servername{
+
+.servername {
     float: left;
     height: 16px;
     line-height: 16px;
@@ -204,59 +258,75 @@
 }
 
 /* EXTRA BG COLORS */
-.bg-white{
-	background: #ffffff;
+.bg-white {
+    background: #ffffff;
 }
 
 /* EXTRA BOX COLORS */
 .box.box-border-gray {
-	border-top-color: #d2d6de;
+    border-top-color: #d2d6de;
 }
+
 .box.box-border-gray-light {
-	border-top-color: #f7f7f7
+    border-top-color: #f7f7f7
 }
+
 .box.box-border-black {
-	border-top-color: #111111;
+    border-top-color: #111111;
 }
+
 .box.box-border-red {
-	border-top-color: #dd4b39;
+    border-top-color: #dd4b39;
 }
+
 .box.box-border-yellow {
-	border-top-color: #f39c12;
+    border-top-color: #f39c12;
 }
+
 .box.box-border-aqua {
-	border-top-color: #00c0ef;
+    border-top-color: #00c0ef;
 }
+
 .box.box-border-blue {
-	border-top-color: #0073b7;
+    border-top-color: #0073b7;
 }
+
 .box.box-border-light-blue {
-	border-top-color: #3c8dbc;
+    border-top-color: #3c8dbc;
 }
+
 .box.box-border-green {
-	border-top-color: #00a65a;
+    border-top-color: #00a65a;
 }
+
 .box.box-border-navy {
-	border-top-color: #001f3f;
+    border-top-color: #001f3f;
 }
+
 .box.box-border-teal {
-	border-top-color: #39cccc;
+    border-top-color: #39cccc;
 }
+
 .box.box-border-olive {
-	border-top-color: #3d9970;
+    border-top-color: #3d9970;
 }
+
 .box.box-border-lime {
-	border-top-color: #01ff70;
+    border-top-color: #01ff70;
 }
+
 .box.box-border-orange {
-	border-top-color: #ff851b;
+    border-top-color: #ff851b;
 }
+
 .box.box-border-fuchsia {
-	border-top-color: #f012be;
+    border-top-color: #f012be;
 }
+
 .box.box-border-purple {
-	border-top-color: #605ca8;
+    border-top-color: #605ca8;
 }
+
 .box.box-border-maroon {
-	border-top-color: #d81b60;
+    border-top-color: #d81b60;
 }
