@@ -7,3 +7,4 @@ before_script:
 script:
   - npm i
   - grunt
+  - tree -I node_modules
