@@ -1,6 +1,13 @@
 language: node_js
+
 node_js:
   - "lts/*"
+
+addons:
+  apt:
+    packages:
+      - tree
+
 before_script:
   - npm install grunt-cli -g
 
