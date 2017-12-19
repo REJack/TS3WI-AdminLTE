@@ -1,0 +1,11 @@
+{
+  "name": "TS3WI-AdminLTE",
+  "private": true,
+  "scripts": {
+    "build-all": "grunt build-all"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-string-replace": "^1.3.1"
+  }
+}
