@@ -10,7 +10,6 @@ before_script:
 script:
   - npm i
   - grunt
-  - tree -I node_modules
 deploy:
   provider: releases
   skip_cleanup: true
