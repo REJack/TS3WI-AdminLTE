@@ -23,8 +23,11 @@ AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
     - [x] change yes/no radios to BS-Switch
 
 ### Done
+ - [x] reviewed fileupload.tpl
+ - [x] reviewed temppw.tpl
+ - [x] reviewed serveredit.tpl
+   - [x] reworked form and reordered boxes
  - [x] reviewed serverview.tpl
- - [x] changed `<div class="col-lg-10 col-lg-offset-1">` to `<div class="col-lg-10 col-lg-offset-1 no-padding">` in any view
  - [x] changed `checked="checked"` to `checked` in any view
  - [x] removed `value=""` in any view
  - [x] merged `mdi-customs.css` with `materialdesignicons.css`
@@ -54,21 +57,21 @@ AdminLTE Template for Teamspeak 3 Webinterface by Psychokiller
 ### ToDO for v1.0.0-rc2
  - [ ] change original DataTables icons (GlyphIcons) to MaterialsDesignIcons
  - [ ] add for almost every box a `collapse`-btn & `data-name`-attribute
+ - [ ] add responsive functionality to any DataTable's table
+ - [ ] remove self-created fixed header and use DataTable's function
 
 ### Next
- - [ ] reviewed serveredit.tpl
- - [ ] reviewed temppw.tpl
- - [ ] reviewed fileupload.tpl
  - [ ] reviewed filelist.tpl
-
-### ToDo for v1.0.0-rc2
  - [ ] reviewed channel.tpl
  - [ ] reviewed channeledit.tpl
  - [ ] reviewed channeleditperm.tpl
  - [ ] reviewed channelview.tpl
  - [ ] reviewed createchannel.tpl
  - [ ] reviewed counter.tpl
+
+### ToDo for v1.0.0-rc2
  - [ ] reviewed clients.tpl
+   - [x] fixed the responsive table
  - [ ] reviewed cleditperm.tpl
  - [ ] reviewed complainlist.tpl
  - [ ] reviewed chanclienteditperm.tpl

@@ -1,10 +1,12 @@
 {if isset($permoverview['b_virtualserver_client_list']) AND empty($permoverview['b_virtualserver_client_list']) OR isset($permoverview['b_virtualserver_client_dblist']) AND empty($permoverview['b_virtualserver_client_dblist'])}
 <section class="content container-fluid">
-	<div class="col-lg-10 col-lg-offset-1 no-padding">
-		<div class="box box-danger">
-			<div class="box-header"><h3 class="box-title">{$lang['error']}</h3></div>
-			<div class="box-body">
-				<p class="lead">{$lang['nopermissions']}</p>
+	<div class="row">
+		<div class="col-xs-12 col-xs-offset-0 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+			<div class="box box-danger">
+				<div class="box-header"><h3 class="box-title">{$lang['error']}</h3></div>
+				<div class="box-body">
+					<p class="lead">{$lang['nopermissions']}</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -16,9 +18,12 @@
             "language": {
                 "url": dataTableLang
             },
+            "autoWidth": false,
 			"order": [[ 0, "desc" ]],
 			"processing": true,
 			"columnDefs": [
+				{ targets: 0, responsivePriority: 1},
+				{ targets: 6, responsivePriority: 2},
 				{ targets: 'no-sort', orderable: false },
 				{ targets: 'no-search', searchable: false }
 			],
@@ -37,8 +42,8 @@
 					]
 				});
 
-				$('#clients_length').parent('.col-sm-6').removeClass('col-sm-6').addClass('col-sm-4').after('<div class="col-sm-4 text-center"><div id="clients_buttons"></div></div>');
-				$('#clients_filter').parent('.col-sm-6').removeClass('col-sm-6').addClass('col-sm-4');
+				$('#clients_length').parent('.col-sm-6').removeClass('col-sm-6').addClass('col-sm-6 col-md-4');
+				$('#clients_filter').parent('.col-sm-6').removeClass('col-sm-6').addClass('col-sm-6 col-md-4 col-md-push-4').after('<div class="col-sm-12 col-md-4 col-md-pull-4 text-center"><div id="clients_buttons"></div></div>');		
 				$('#clients_processing').css('top', '7%');
 				api.buttons().container().prependTo( '#clients_buttons' );
 				$('.pagination').addClass('pagination-flat');
@@ -93,7 +98,7 @@
 	});
 </script>
 <section class="content container-fluid">
-	<div class="col-lg-10 col-lg-offset-1 no-padding">
+	<div class="col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 no-padding">
 		<div class="box box-info">
 			<div class="box-header">
 				<h3 class="box-title">{$lang['searchfor']}{$lang['client']}</h3>
@@ -124,7 +129,7 @@
 			</div>
 			<div class="box-body">
 				<input type="hidden" name="next_page" id="next_page" value="0">
-				<table class="table table-striped" id="clients">
+				<table class="table table-striped dt-responsive" id="clients">
 					<thead>				
 						<tr>
 							<th class="text-center">{$lang['dbid']}</th>

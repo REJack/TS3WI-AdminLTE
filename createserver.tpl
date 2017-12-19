@@ -1,5 +1,5 @@
 <section class="content container-fluid">
-	<div class="col-lg-10 col-lg-offset-1 no-padding" style="position: relative;">
+	<div class="col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 no-padding" style="position: relative;">
 {if $hoststatus === false AND $serverhost === true}
 	<div class="alert alert-warning">{$lang['nohoster']}</div>
 {else}
@@ -20,8 +20,8 @@
 				<div id="smartwizard">
 					<ul>
 						<li><a href="#step-1">{$lang['basics']}</a></li>
-						<li><a href="#step-2">{$lang['host']}</a></li>
-						<li><a href="#step-3">{$lang['autoban']}</a></li>
+						<li><a href="#step-2">{$lang['autoban']}</a></li>
+						<li><a href="#step-3">{$lang['host']}</a></li>
 						<li><a href="#step-4">{$lang['antiflood']}</a></li>
 						<li><a href="#step-5">{$lang['transfers']}</a></li>
 						<li><a href="#step-6">{$lang['logs']}</a></li>
@@ -97,6 +97,26 @@
 							</div>
 						</div>
 						<div id="step-2" class="">
+							<div class="form-group">
+								<label for="new_virtualserver_complain_autoban_count">{$lang['autobancount']}:</label>
+								<input type="text" class="form-control" id="new_virtualserver_complain_autoban_count" name="newsettings[virtualserver_complain_autoban_count]" value="{$screate_tmp['autobancount']}"/>
+							</div>
+							<div class="form-group">
+								<label for="new_virtualserver_complain_autoban_time">{$lang['autobantime']}:</label>
+								<div class="input-group">
+									<input type="text" class="form-control" id="new_virtualserver_complain_autoban_time" name="newsettings[virtualserver_complain_autoban_time]" value="{$screate_tmp['autobantime']}"/>
+									<span class="input-group-addon">{$lang['seconds']}</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="new_virtualserver_complain_remove_time">{$lang['removetime']}:</label>
+								<div class="input-group">
+									<input type="text" class="form-control" id="new_virtualserver_complain_remove_time" name="newsettings[virtualserver_complain_remove_time]" value="{$screate_tmp['removetime']}"/>
+									<span class="input-group-addon">{$lang['seconds']}</span>
+								</div>
+							</div>	
+						</div>
+						<div id="step-3" class="">
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
@@ -156,26 +176,6 @@
 									</div>
 								</div>
 							</div>		                		
-						</div>
-						<div id="step-3" class="">
-							<div class="form-group">
-								<label for="new_virtualserver_complain_autoban_count">{$lang['autobancount']}:</label>
-								<input type="text" class="form-control" id="new_virtualserver_complain_autoban_count" name="newsettings[virtualserver_complain_autoban_count]" value="{$screate_tmp['autobancount']}"/>
-							</div>
-							<div class="form-group">
-								<label for="new_virtualserver_complain_autoban_time">{$lang['autobantime']}:</label>
-								<div class="input-group">
-									<input type="text" class="form-control" id="new_virtualserver_complain_autoban_time" name="newsettings[virtualserver_complain_autoban_time]" value="{$screate_tmp['autobantime']}"/>
-									<span class="input-group-addon">{$lang['seconds']}</span>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="new_virtualserver_complain_remove_time">{$lang['removetime']}:</label>
-								<div class="input-group">
-									<input type="text" class="form-control" id="new_virtualserver_complain_remove_time" name="newsettings[virtualserver_complain_remove_time]" value="{$screate_tmp['removetime']}"/>
-									<span class="input-group-addon">{$lang['seconds']}</span>
-								</div>
-							</div>	
 						</div>
 						<div id="step-4" class="">
 							<div class="form-group">

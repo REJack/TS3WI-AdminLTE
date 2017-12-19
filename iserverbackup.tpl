@@ -1,5 +1,5 @@
 <section class="content container-fluid">
-	<div class="col-lg-10 col-lg-offset-1 no-padding">
+	<div class="col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 no-padding">
 	{if $hoststatus === false AND $serverhost === true}
 		<div class="alert alert-warning">{$lang['nohoster']}</div>
 	{else}

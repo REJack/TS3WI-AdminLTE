@@ -15,8 +15,8 @@
 	<li><a href="index.php?site=servertraffic&amp;sid={$sid}"><i class="mdi mdi-server-network mdi-lg"></i> <span>{$lang['virtualtraffic']}</span></a></li>
 	<li><a href="index.php?site=serveredit&amp;sid={$sid}"><i class="mdi mdi-server-edit mdi-lg"></i> <span>{$lang['serveredit']}</span></a></li>
 	<li><a href="index.php?site=temppw&amp;sid={$sid}"><i class="mdi mdi-lock mdi-lg"></i> <span>{$lang['temppw']}</span></a></li>
-	<li><a href="index.php?site=fileupload&amp;sid={$sid}"><i class="mdi mdi-upload mdi-lg"></i>{$lang['iconupload']}</a></li>
-	<li><a href="index.php?site=logview&amp;sid={$sid}"><i class="mdi mdi-format-list-bulleted mdi-lg"></i>{$lang['logview']}</a></li>
+	<li><a href="index.php?site=fileupload&amp;sid={$sid}"><i class="mdi mdi-upload mdi-lg"></i> <span>{$lang['iconupload']}</span></a></li>
+	<li><a href="index.php?site=logview&amp;sid={$sid}"><i class="mdi mdi-format-list-bulleted mdi-lg"></i> <span>{$lang['logview']}</span></a></li>
 	<li><a href="index.php?site=filelist&amp;sid={$sid}"><i class="mdi mdi-file-multiple mdi-lg"></i> <span>{$lang['filelist']}</span></a></li>
 	<li><a href="javascript:oeffnefenster('site/interactive.php?sid={$sid}&amp;action=action', '{$lang['massaction']}');"><i class="mdi mdi-checkbox-multiple-marked mdi-lg"></i> <span>{$lang['massaction']}</span></a></li>
 	<li class="header">{$lang['channel']}</li>
@@ -40,7 +40,7 @@
 	<li class="header">{$lang['groups']}</li>
 	<li><a href="index.php?site=sgroups&amp;sid={$sid}"><i class="mdi mdi-server-account mdi-lg"></i> <span>{$lang['servergroups']}</span></a></li>
 	<li><a href="index.php?site=sgroupadd&amp;sid={$sid}"><i class="mdi mdi-server-account-plus mdi-lg"></i> <span>{$lang['addservergroup']}</span></a></li>
-	<li><a href="index.php?site=cgroups&amp;sid={$sid}"><i class="mdi mdi-comment-multiple-account-outline mdi-lg"></i>{$lang['channelgroups']}</a></li>
+	<li><a href="index.php?site=cgroups&amp;sid={$sid}"><i class="mdi mdi-comment-multiple-account-outline mdi-lg"></i> <span>{$lang['channelgroups']}</span></a></li>
 	<li><a href="index.php?site=cgroupadd&amp;sid={$sid}"><i class="mdi mdi-comment-multiple-account-plus-outline mdi-lg"></i> <span>{$lang['addchannelgroup']}</span></a></li>
 	<li class="header">{$lang['token']}</li>
 	<li><a href="index.php?site=token&amp;sid={$sid}"><i class="mdi mdi-key-variant mdi-lg"></i> <span>{$lang['token']}</span></a></li>

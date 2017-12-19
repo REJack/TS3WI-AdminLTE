@@ -58,9 +58,11 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/js/app.min.js"></script>
 		<script src="templates/{$tmpl}/assets/js/adminlte-remember.js"></script>
 {if $site == "clients" || $site == "logview" || $site == "server"}
-		<link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css">
-		<script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
-		<script src="//cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
+		<link rel="stylesheet" href="//cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+		<link rel="stylesheet" href="//cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css">
+		<script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+		<script src="//cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+		<script src="//cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
 		<script src="//cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
 		<script src="//cdn.datatables.net/plug-ins/1.10.15/api/processing().js"></script>
 {else if $site == "serveredit"}
@@ -286,6 +288,13 @@
 
 			$(function ()
 			{
+				$('.fake-file .fake-file-button-browse, .fake-file .fake-file-input-name').on('click', function() {
+					$(this).parents('.fake-file').find('.fake-file-input-upload').click();
+				});
+				$('.fake-file .fake-file-input-upload').on('change', function() {
+					$(this).parents('.fake-file').find('.fake-file-input-name').val($(this)[0].files[0].name);
+				});
+
 				$('.no-br br').replaceWith(' ');
 				if ($('#TableHeader'))
 				{				
