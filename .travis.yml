@@ -3,3 +3,7 @@ node_js:
   - "lts/*"
 before_script:
   - npm install grunt-cli -g
+
+script:
+  - npm i
+  - grunt
