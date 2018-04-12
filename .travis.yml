@@ -5,12 +5,9 @@ node_js:
 addons:
   apt:
     packages:
-    - tree
-before_script:
-  - npm install grunt-cli -g
+    - zip
 script:
-  - npm i
-  - grunt
+  - ./_PREPARE.sh
 deploy:
   provider: releases
   skip_cleanup: true
